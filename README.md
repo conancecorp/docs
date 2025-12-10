@@ -26,7 +26,7 @@ npm install
 npm run docs:dev
 ```
 
-Le site est accessible sur [http://localhost:5173](http://localhost:5173)
+Le site est accessible sur `http://localhost:5173`
 
 ### Build de production
 
