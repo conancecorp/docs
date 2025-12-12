@@ -1,5 +1,7 @@
 import { defineConfig } from 'vitepress'
 
+const currentYear = new Date().getFullYear()
+
 export default defineConfig({
   title: 'Conance Documentation',
   description: 'Documentation officielle de Conance - Gestion de commissions pour cabinets de gestion de patrimoine',
@@ -118,12 +120,12 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'linkedin', link: 'https://linkedin.com/company/conance' }
+      { icon: 'linkedin', link: 'https://www.linkedin.com/company/conance-fr' }
     ],
 
     footer: {
       message: 'Documentation officielle de Conance',
-      copyright: 'Copyright © 2024 Conance. Tous droits réservés.'
+      copyright: `Copyright © ${currentYear} Conance. Tous droits réservés.`
     },
 
     search: {
