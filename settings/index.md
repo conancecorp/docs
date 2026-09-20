@@ -1,59 +1,41 @@
 # Paramètres
 
-Configurez Conance selon vos besoins depuis la section Paramètres.
+Le menu **Paramètres** regroupe vos préférences personnelles, les référentiels métier du cabinet et, pour les administrateurs, les réglages sensibles.
 
-## Accès aux paramètres
+## Mon compte
 
-Cliquez sur **Paramètres** dans le menu latéral pour accéder aux différentes options de configuration.
+| Section | Contenu | Guide |
+|---------|---------|-------|
+| Profil | Prénom, nom, mot de passe | [Profil utilisateur](/settings/profile) |
+| Sécurité | Authentification à deux facteurs (application, clés d'accès, code par email), appareils de confiance, politique d'entreprise | [Sécurité](/settings/security) |
+| Sessions actives | Appareils connectés, révocation | [Sessions actives](/settings/sessions) |
+| Paramètres généraux | Tailles de page, colonnes visibles, mémorisation des filtres, détection des fichiers déjà importés | [Paramètres généraux](/settings/general) |
+| Personnalisation du tableau de bord | Graphiques et blocs affichés | [Tableau de bord](/settings/dashboard) |
 
-## Sections disponibles
+## Données métier
 
-### Types d'opération
+Ces référentiels sont partagés par tout le cabinet.
 
-Configurez les types d'opération pour chaque partenaire. Ces types correspondent aux libellés utilisés dans les fichiers de commissions.
+| Section | Contenu | Guide |
+|---------|---------|-------|
+| Types d'opération | Les libellés de chaque partenaire et leur nature | [Types d'opération](/settings/operation-types) |
+| Natures d'opération | Natures livrées et personnalisées, couleur, caractère récurrent | [Natures d'opération](/settings/operation-natures) |
+| Détails partenaire | Déclinaisons d'un partenaire (entités, gammes) | [Détails partenaire](/settings/partner-details) |
+| Types de produits personnalisés | Types au-delà d'OPCVM, SCPI, Assurance-vie… | [Types de produits](/settings/custom-products) |
+| Activités personnalisées | Activités au-delà de CIF et Courtage | [Activités](/settings/custom-activities) |
+| Entités | Agences ou cabinets internes, pour ventiler l'activité | [Entités](/settings/entities) |
 
-→ [Gérer les types d'opération](/settings/operation-types)
+## Administration du cabinet
 
-### Produits personnalisés
+Réservé aux administrateurs de l'entreprise.
 
-Créez et gérez des produits spécifiques à votre entreprise.
+| Section | Contenu | Guide |
+|---------|---------|-------|
+| Fonctionnalités IA | Consentement du cabinet au traitement par IA | [Fonctionnalités IA](/settings/ai-features) |
+| Gestion des données | Volumes par catégorie, suppression, remise à zéro | [Gestion des données](/settings/data-management) |
 
-→ [Gérer les produits personnalisés](/settings/custom-products)
+## Et l'entreprise ?
 
-### Profil utilisateur
-
-Modifiez vos informations personnelles et vos préférences.
-
-→ [Gérer votre profil](/settings/profile)
-
-### Sessions actives
-
-Visualisez et gérez vos sessions de connexion actives.
-
-## Paramètres d'entreprise
-
-Les paramètres de l'entreprise sont accessibles aux administrateurs :
+Membres, rôles, abonnement, crédits IA et multi-cabinets se gèrent dans **Gestion entreprise**.
 
 → [Gestion d'entreprise](/company/)
-
-## Personnalisation du tableau de bord
-
-Personnalisez l'affichage de votre tableau de bord :
-
-1. Accédez au **Tableau de bord**
-2. Cliquez sur **Personnaliser**
-3. Sélectionnez les widgets à afficher
-4. Enregistrez vos préférences
-
-## Thème d'affichage
-
-Conance propose deux thèmes :
-
-- **Clair** : Fond blanc, texte sombre
-- **Sombre** : Fond sombre, texte clair
-
-Pour changer de thème, utilisez le bouton de basculement dans la barre de navigation.
-
-::: tip Préférence système
-Par défaut, Conance suit la préférence de votre système d'exploitation.
-:::

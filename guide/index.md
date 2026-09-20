@@ -1,38 +1,36 @@
 # Introduction
 
-Bienvenue dans la documentation officielle de **Conance**, la plateforme de gestion de commissions conçue pour les cabinets de gestion de patrimoine.
+Bienvenue dans la documentation de **Conance**, la plateforme de pilotage des commissions pour les cabinets de gestion de patrimoine.
 
-## Qu'est-ce que Conance ?
+## Ce que fait Conance
 
-Conance est une solution SaaS qui vous permet de :
+Un cabinet reçoit chaque mois des dizaines de bordereaux, chacun dans le format de son partenaire. Conance les fait entrer, les rend comparables et en tire ce que le cabinet a besoin de savoir :
 
-- **Importer** vos relevés de commissions depuis vos partenaires (compagnies d'assurance, sociétés de gestion, etc.)
-- **Centraliser** toutes vos données : conseillers, clients, partenaires, produits et contrats
-- **Analyser** vos commissions avec des tableaux de bord et des filtres avancés
-- **Collaborer** avec votre équipe grâce à un système de rôles et permissions
+| Étape | Ce que Conance fait |
+|-------|---------------------|
+| **Faire entrer** | Import CSV, Excel, OpenDocument et PDF avec un mapping mémorisé par format ; extraction de tableaux PDF gratuite, IA en secours |
+| **Fiabiliser** | Rapprochement des numéros de contrat approximatifs, fusion des doublons, natures communes à tous les partenaires, annulation intégrale d'un import raté |
+| **Analyser** | Tableau de bord, encours retenu par les partenaires, production, répartitions par client, partenaire, conseiller |
+| **Anticiper** | Prévisionnel de l'année (combien, et quand), commissions attendues qui n'arrivent pas, écarts sur les montants annoncés |
+| **Déclarer** | Préparation des chiffres de la FRA CIF, avec alertes d'incomplétude |
+| **Collaborer** | Rôles et permissions, multi-cabinets pour les groupements, double authentification |
 
-## À qui s'adresse Conance ?
+## À qui s'adresse Conance
 
-Conance est conçu pour :
-
-- Les **cabinets de gestion de patrimoine** (CGP)
-- Les **conseillers en investissements financiers** (CIF)
+- Les **cabinets de gestion de patrimoine** (CGP) et **conseillers en investissements financiers** (CIF)
 - Les **courtiers** en assurance et produits financiers
+- Les **groupements et prestataires** qui tiennent le back-office de plusieurs cabinets
 
-## Fonctionnalités principales
+## Comment lire cette documentation
 
-| Fonctionnalité | Description |
-|----------------|-------------|
-| Import de données | Importez vos fichiers CSV et Excel avec un mapping intelligent |
-| Gestion des commissions | Filtrez, modifiez et exportez vos commissions |
-| Tableau de bord | Visualisez vos performances avec des graphiques |
-| Multi-utilisateurs | Gérez votre équipe avec des rôles personnalisés |
-| Configurations sauvegardées | Réutilisez vos configurations d'import |
+| Section | Pour |
+|---------|------|
+| [Guide](/guide/getting-started) | Démarrer : compte, entreprise, premier import |
+| [Fonctionnalités](/features/) | Chaque écran, en détail |
+| [Paramètres](/settings/) | Préférences, référentiels, sécurité |
+| [Entreprise](/company/) | Équipe, rôles, abonnement, crédits IA, multi-cabinets |
+| [FAQ](/faq/) | Les questions qui reviennent |
 
-## Prêt à commencer ?
-
-Suivez notre guide de [premiers pas](/guide/getting-started) pour configurer votre compte et importer vos premières données.
-
-::: tip Besoin d'aide ?
-Notre équipe support est disponible à [support@conance.io](mailto:support@conance.io) pour répondre à vos questions.
+::: tip Support
+[support@conance.io](mailto:support@conance.io) — nous répondons aussi aux questions de méthode (comment mapper tel partenaire, comment lire tel indicateur).
 :::

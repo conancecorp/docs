@@ -4,7 +4,7 @@ const currentYear = new Date().getFullYear()
 
 export default defineConfig({
   title: 'Conance Documentation',
-  description: 'Documentation officielle de Conance - Gestion de commissions pour cabinets de gestion de patrimoine',
+  description: 'Documentation officielle de Conance - Pilotage des commissions pour cabinets de gestion de patrimoine',
   lang: 'fr-FR',
 
   head: [
@@ -44,13 +44,18 @@ export default defineConfig({
         {
           text: 'Fonctionnalités',
           items: [
-            { text: 'Vue d\'ensemble', link: '/features/' }
+            { text: 'Vue d\'ensemble', link: '/features/' },
+            { text: 'Tableaux, filtres et colonnes', link: '/features/tables' }
           ]
         },
         {
-          text: 'Tableau de bord',
+          text: 'Analyse',
           items: [
-            { text: 'Dashboard', link: '/features/dashboard' }
+            { text: 'Tableau de bord', link: '/features/dashboard' },
+            { text: 'Pilotage', link: '/features/pilotage/' },
+            { text: 'Commissions attendues', link: '/features/pilotage/expected-commissions' },
+            { text: 'Prévisionnel', link: '/features/pilotage/forecast' },
+            { text: 'Réglementaire (FRA CIF)', link: '/features/reglementaire' }
           ]
         },
         {
@@ -59,23 +64,25 @@ export default defineConfig({
           items: [
             { text: 'Vue d\'ensemble', link: '/features/import/' },
             { text: 'Upload de fichier', link: '/features/import/upload' },
-            { text: 'Mapping des colonnes', link: '/features/import/mapping' },
-            { text: 'Pré-analyse', link: '/features/import/pre-analysis' },
-            { text: 'Détection des doublons', link: '/features/import/smart-matching' },
+            { text: 'Mapping des données', link: '/features/import/mapping' },
+            { text: 'Configuration produits et types', link: '/features/import/pre-analysis' },
+            { text: 'Correspondances de contrats', link: '/features/import/smart-matching' },
+            { text: 'Import depuis un PDF', link: '/features/import/pdf' },
             { text: 'Configurations sauvegardées', link: '/features/import/saved-configs' },
-            { text: 'Historique des imports', link: '/features/import/history' }
+            { text: 'Historique des imports', link: '/features/import/history' },
+            { text: 'Annuler un import', link: '/features/import/undo' }
           ]
         },
         {
           text: 'Gestion des données',
           items: [
             { text: 'Commissions', link: '/features/commissions' },
-            { text: 'Conseillers', link: '/features/advisors' },
-            { text: 'Clients', link: '/features/clients' },
-            { text: 'Partenaires', link: '/features/partners' },
-            { text: 'Produits', link: '/features/products' },
             { text: 'Contrats', link: '/features/contracts/' },
-            { text: 'Fusion de contrats', link: '/features/contracts/merge' }
+            { text: 'Fusion de contrats', link: '/features/contracts/merge' },
+            { text: 'Clients', link: '/features/clients' },
+            { text: 'Conseillers', link: '/features/advisors' },
+            { text: 'Partenaires', link: '/features/partners' },
+            { text: 'Produits', link: '/features/products' }
           ]
         },
         {
@@ -89,12 +96,32 @@ export default defineConfig({
       ],
       '/settings/': [
         {
-          text: 'Paramètres',
+          text: 'Mon compte',
           items: [
             { text: 'Vue d\'ensemble', link: '/settings/' },
+            { text: 'Profil utilisateur', link: '/settings/profile' },
+            { text: 'Sécurité (2FA)', link: '/settings/security' },
+            { text: 'Sessions actives', link: '/settings/sessions' },
+            { text: 'Paramètres généraux', link: '/settings/general' },
+            { text: 'Personnalisation du tableau de bord', link: '/settings/dashboard' }
+          ]
+        },
+        {
+          text: 'Données métier',
+          items: [
             { text: 'Types d\'opération', link: '/settings/operation-types' },
-            { text: 'Produits personnalisés', link: '/settings/custom-products' },
-            { text: 'Profil utilisateur', link: '/settings/profile' }
+            { text: 'Natures d\'opération', link: '/settings/operation-natures' },
+            { text: 'Détails partenaire', link: '/settings/partner-details' },
+            { text: 'Types de produits personnalisés', link: '/settings/custom-products' },
+            { text: 'Activités personnalisées', link: '/settings/custom-activities' },
+            { text: 'Entités (agences, cabinets)', link: '/settings/entities' }
+          ]
+        },
+        {
+          text: 'Administration du cabinet',
+          items: [
+            { text: 'Fonctionnalités IA', link: '/settings/ai-features' },
+            { text: 'Gestion des données', link: '/settings/data-management' }
           ]
         }
       ],
@@ -105,7 +132,9 @@ export default defineConfig({
             { text: 'Vue d\'ensemble', link: '/company/' },
             { text: 'Membres', link: '/company/members' },
             { text: 'Rôles et permissions', link: '/company/roles' },
-            { text: 'Abonnement', link: '/company/subscription' }
+            { text: 'Abonnement et facturation', link: '/company/subscription' },
+            { text: 'Crédits IA', link: '/company/ai-credits' },
+            { text: 'Multi-cabinets', link: '/company/multi-cabinets' }
           ]
         }
       ],

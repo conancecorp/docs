@@ -1,92 +1,58 @@
 # Historique des imports
 
-Consultez l'historique de tous vos imports et accédez aux détails de chaque opération.
+**Import → Historique** liste tous les imports du cabinet, leur état, et donne accès au compte rendu, à la reprise et à l'[annulation](/features/import/undo).
 
-## Accéder à l'historique
+## Colonnes
 
-L'historique des imports est accessible depuis la page **Import**, dans l'onglet **Historique**.
+| Colonne | Description |
+|---------|-------------|
+| Nom | Nom de l'import (fichier ou libellé) |
+| Date | Date et heure de lancement |
+| Statut | Voir ci-dessous |
+| Progression | Avancement en pourcentage |
+| Utilisateur | Qui a lancé l'import |
+| Fichiers | Nombre de fichiers |
+| Actions | Détails, progression, reprendre, annuler |
 
-## Informations affichées
+Une recherche filtre par nom, utilisateur ou statut.
 
-Pour chaque import, vous voyez :
+## Statuts
 
-| Information | Description |
-|-------------|-------------|
-| Date | Date et heure de l'import |
-| Fichier | Nom du fichier importé |
-| Partenaire | Partenaire concerné |
-| Statut | Succès, En cours, Erreur |
-| Statistiques | Nombre d'éléments créés/modifiés |
+| Statut | Signification |
+|--------|---------------|
+| **En attente** | L'import attend une action : en général la [résolution de correspondances](/features/import/smart-matching) |
+| **En cours** | Traitement en cours — vous pouvez suivre la progression ou continuer à travailler ailleurs |
+| **Terminé** | Import achevé |
+| **Échoué** | L'import s'est arrêté sur une erreur ; le compte rendu en donne la cause |
+| **Annulé** | L'import a été [annulé](/features/import/undo) : ses effets ont été retirés |
 
-## Statuts d'import
+## Actions
 
-| Statut | Description |
-|--------|-------------|
-| ✅ Succès | Import terminé sans erreur |
-| ⏳ En cours | Import en cours de traitement |
-| ⚠️ Partiel | Import terminé avec des avertissements |
-| ❌ Erreur | Import échoué |
+| Action | Disponible quand | Effet |
+|--------|------------------|-------|
+| **Voir les détails** | Toujours | Ouvre le compte rendu |
+| **Voir la progression** | En cours | Rouvre l'écran de progression |
+| **Reprendre l'import** | En attente | Rouvre la résolution des correspondances puis importe les commissions restantes |
+| **Annuler l'import** | Terminé ou en cours (hors déjà annulé) | Ouvre le dialogue d'[annulation](/features/import/undo) |
 
-## Détails d'un import
+## Compte rendu d'un import
 
-Cliquez sur un import pour voir les détails :
+Le détail affiche l'utilisateur, la date de fin, le nombre de fichiers, puis le **compte rendu** :
 
-### Statistiques détaillées
+- Commissions, contrats, conseillers, clients **créés** et **mis à jour**
+- Lignes en erreur, avec la raison pour chacune
+- La liste des **fichiers importés**, avec un lien vers le [Stockage](/features/storage)
 
-- Nombre de **commissions** créées / modifiées
-- Nombre de **contrats** créés / modifiés
-- Nombre de **conseillers** créés
-- Nombre de **clients** créés
-
-### Répartition par type
-
-Visualisez la répartition des commissions par :
-- Nature d'opération
-- Partenaire
-- Produit
-
-### Erreurs et avertissements
-
-Si des erreurs se sont produites :
-
-- Liste des lignes en erreur
-- Raison de l'erreur pour chaque ligne
-- Possibilité de télécharger un fichier d'erreurs
-
-## Fichier d'erreurs
-
-Quand un import génère des erreurs, vous pouvez télécharger un fichier contenant :
-
-- Les lignes qui n'ont pas pu être importées
-- La raison de l'échec pour chaque ligne
-
-Ce fichier vous permet de corriger les données et de relancer un import.
+Quand des erreurs ont été détectées, l'étape 4 de l'assistant propose **Voir les fichiers d'erreurs** : les lignes refusées, avec leur motif, sont déposées dans le [Stockage](/features/storage) pour que vous puissiez les corriger puis réimporter uniquement ces lignes.
 
 ## Traçabilité des commissions
 
-Chaque commission conserve une référence vers l'import qui l'a créée :
+Chaque commission garde la référence de son **fichier d'import**. Sur la page [Commissions](/features/commissions), le filtre **Fichier d'import** isole tout ce qu'un fichier a créé ; sur le tableau de bord, un clic sur un mois liste les fichiers importés ce mois-là.
 
-- Depuis une commission, vous pouvez voir de quel import elle provient
-- Depuis les filtres de commissions, vous pouvez filtrer par fichier d'import
+## Gérer l'historique
 
-## Recherche et filtrage
+Le bouton **Gérer l'historique** nettoie les imports antérieurs à une période choisie. Les **métadonnées** des fichiers sont conservées pour la traçabilité des commissions ; seuls les détails d'exécution sont archivés.
 
-Filtrez l'historique par :
-
-- **Période** : Date de début et fin
-- **Partenaire** : Imports d'un partenaire spécifique
-- **Statut** : Succès, Erreur, etc.
-
-## Rétention des données
-
-L'historique des imports est conservé indéfiniment. Les fichiers sources sont stockés dans votre [espace de stockage](/features/storage).
-
-## Bonnes pratiques
-
-::: tip Vérification post-import
-Après chaque import, consultez les détails pour vérifier que les données ont été correctement traitées.
-:::
-
-::: tip Correction des erreurs
-En cas d'erreurs, téléchargez le fichier d'erreurs, corrigez les données dans votre fichier source, et relancez un import uniquement pour les lignes corrigées.
+::: warning Un import archivé n'est plus annulable
+Le journal des modifications d'un import est purgé à l'archivage. Si vous pensez devoir annuler un import, faites-le avant de nettoyer l'historique.
 :::

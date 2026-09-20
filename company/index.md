@@ -1,96 +1,45 @@
 # Gestion d'entreprise
 
-Gérez les paramètres de votre entreprise, vos membres et votre abonnement.
+Le menu **Gestion entreprise** est réservé aux administrateurs de l'entreprise. Il regroupe cinq onglets.
 
-## Accès
+| Onglet | Contenu | Guide |
+|--------|---------|-------|
+| **Abonnement** | Plan actuel, limites et utilisation, changement de plan, factures | [Abonnement et facturation](/company/subscription) |
+| **Membres** | Utilisateurs de l'entreprise, invitations | [Membres](/company/members) |
+| **Rôles** | Rôles personnalisés et leurs permissions | [Rôles et permissions](/company/roles) |
+| **Paramètres** | Informations de l'entreprise | Ci-dessous |
+| **Intelligence Artificielle** | Solde de crédits, consommation, recharge automatique | [Crédits IA](/company/ai-credits) |
 
-La gestion d'entreprise est accessible aux **administrateurs** depuis le menu **Gestion d'entreprise**.
+Les cabinets sous plan **Groupe** disposent en plus du menu **Cabinets** → [Multi-cabinets](/company/multi-cabinets).
 
-::: info Droits requis
-Seuls les utilisateurs avec le rôle administrateur d'entreprise peuvent accéder à ces paramètres.
-:::
+## Qui est administrateur ?
 
-## Sections disponibles
+- La personne qui **crée** l'entreprise
+- Tout membre invité avec la case **Administrateur** cochée, ou dont le rôle porte la permission `company:admin`
 
-### Informations de l'entreprise
+Un administrateur peut nommer d'autres administrateurs. Gardez-en au moins deux.
 
-Visualisez et modifiez les informations de votre entreprise :
+## Paramètres de l'entreprise
 
-- Nom
-- Email
-- Téléphone
-- Adresse
+L'onglet **Paramètres** modifie :
 
-### Membres
+| Champ | |
+|-------|--|
+| Nom | Affiché dans l'interface et sur les factures |
+| Email | Contact principal |
+| Téléphone | |
+| Adresse | |
+| Site web | |
 
-Gérez les utilisateurs de votre entreprise :
+**Enregistrer** applique ; **Annuler les modifications** rétablit les valeurs en cours.
 
-- Inviter de nouveaux membres
-- Modifier les rôles
-- Révoquer des accès
+## Sécurité du cabinet
 
-→ [Gérer les membres](/company/members)
+Deux réglages sensibles vivent dans **Paramètres** (le menu) et non ici :
 
-### Rôles et permissions
+- imposer la [double authentification](/settings/security#politique-d-entreprise) à tous les membres ;
+- activer ou non les [fonctionnalités IA](/settings/ai-features).
 
-Configurez les rôles et leurs permissions :
+## Vider ou fermer un cabinet
 
-- Créer des rôles personnalisés
-- Définir les accès par rôle
-
-→ [Gérer les rôles](/company/roles)
-
-### Abonnement
-
-Gérez votre abonnement et consultez vos factures :
-
-- Voir le plan actuel
-- Changer de plan
-- Télécharger les factures
-
-→ [Gérer l'abonnement](/company/subscription)
-
-## Modifier les informations de l'entreprise
-
-1. Accédez à **Gestion d'entreprise**
-2. Cliquez sur **Modifier**
-3. Mettez à jour les informations
-4. Enregistrez
-
-### Informations modifiables
-
-| Champ | Description |
-|-------|-------------|
-| Nom | Nom de l'entreprise |
-| Email | Email de contact |
-| Téléphone | Numéro de téléphone |
-| Adresse | Adresse postale |
-| Code postal | Code postal |
-| Ville | Ville |
-| Pays | Pays |
-
-## Statistiques de l'entreprise
-
-La page affiche un résumé de votre utilisation :
-
-- **Membres** : Nombre d'utilisateurs / limite
-- **Stockage** : Espace utilisé / disponible
-- **Contrats** : Nombre de contrats / limite
-- **Commissions** : Nombre de commissions / limite
-
-## Quotas et limites
-
-Les limites dépendent de votre abonnement :
-
-| Élément | Plan Gratuit | Plan Premium |
-|---------|--------------|--------------|
-| Membres | 3 | Variable |
-| Stockage | 100 Mo | Variable |
-| Contrats | 100 | Variable |
-| Commissions | 100 | Variable |
-
-::: warning Dépassement de quota
-Quand vous approchez d'une limite, une alerte s'affiche. Pensez à upgrader votre plan si nécessaire.
-:::
-
-→ [Voir les options d'abonnement](/company/subscription)
+→ [Gestion des données](/settings/data-management) pour purger ; [support@conance.io](mailto:support@conance.io) pour fermer le compte.

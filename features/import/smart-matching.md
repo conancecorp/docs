@@ -1,117 +1,75 @@
-# Détection des doublons
+# Correspondances de contrats
 
-Lors de l'import de commissions, Conance détecte automatiquement les numéros de contrat qui ressemblent à des contrats existants pour éviter la création de doublons.
+À l'import, chaque numéro de contrat du fichier est recherché dans votre base. Quand il n'existe pas exactement mais **ressemble** à un contrat connu du même partenaire, Conance vous demande de trancher plutôt que de créer un doublon.
 
-## Quand cette fonctionnalité se déclenche
+## Quand cela se déclenche
 
-La détection des doublons s'active **uniquement lors de l'import de commissions** quand :
+Lors de l'import de **commissions** ou de **contrats**, si :
 
-1. Un numéro de contrat dans votre fichier ne correspond pas exactement à un contrat existant
-2. Mais ce numéro ressemble à un contrat existant du même partenaire
+1. le numéro n'existe ni comme numéro principal ni comme [numéro alternatif](/features/contracts/#numeros-alternatifs-alias) d'un contrat ;
+2. un contrat du **même partenaire** a un numéro proche.
 
-**Exemple :**
-- Votre fichier contient le contrat `"CONT-2024-001"`
-- En base, vous avez un contrat `"CONT2024001"` chez le même partenaire
-- Conance détecte la similarité et vous demande de confirmer
+**Exemple :** le fichier contient `CONT-2024-001`, la base contient `CONT2024001` chez le même partenaire.
 
-## Comment ça fonctionne
+## Score de similarité
 
-### Calcul de la similarité
-
-Conance compare le numéro importé avec les contrats existants du même partenaire en utilisant plusieurs méthodes :
+Conance compare le numéro importé aux contrats du partenaire selon plusieurs méthodes :
 
 | Méthode | Description | Exemple |
 |---------|-------------|---------|
-| Normalisation | Supprime espaces, tirets | `"AB-123"` = `"AB123"` |
-| Inclusion | Un numéro contient l'autre | `"12345"` ≈ `"A12345B"` |
-| Similarité textuelle | Caractères en commun | `"ABC123"` ≈ `"ABC124"` |
+| Normalisation | Ignore espaces, tirets, zéros non significatifs | `AB-123` = `AB123` |
+| Inclusion | Un numéro contient l'autre | `12345` ≈ `A12345B` |
+| Similarité textuelle | Caractères et ordre en commun | `ABC123` ≈ `ABC124` |
 
-### Seuils de décision
-
-| Score | Action |
-|-------|--------|
-| **≥ 90%** | Association automatique (pas de confirmation requise) |
-| **65% - 90%** | Confirmation manuelle requise |
-| **< 65%** | Pas de correspondance, nouveau contrat créé |
+| Score | Décision |
+|-------|----------|
+| **≥ 90 %** | Association automatique, sans question |
+| **65 % – 90 %** | Votre confirmation est requise |
+| **< 65 %** | Aucun rapprochement : nouveau contrat |
 
 ## La fenêtre de résolution
 
-Quand des correspondances nécessitent votre validation, une fenêtre s'affiche avec :
+Quand des confirmations sont requises, l'import des commissions concernées est mis **en attente** et la fenêtre **Résolution des correspondances approximatives** s'ouvre, une correspondance à la fois (**Précédent** / **Suivant**).
 
-### Informations affichées
+Pour chaque correspondance :
 
-Pour chaque correspondance à résoudre :
+- **Numéro importé** et **client importé** (si présent dans le fichier)
+- **Candidats trouvés** : contrats existants avec leur score, client, produit, conseiller
 
-- **Numéro importé** : Le numéro de contrat présent dans votre fichier
-- **Nom du client** : Si disponible dans le fichier
-- **Candidats** : Liste des contrats existants qui ressemblent au numéro importé
+| Action | Résultat |
+|--------|----------|
+| Sélectionner un candidat | Le numéro importé devient un **numéro alternatif** du contrat choisi ; les commissions lui sont rattachées |
+| **Créer un nouveau contrat** | Un contrat est créé avec le numéro importé |
+| **Rechercher un autre contrat** | Recherche par numéro ou nom de client si le bon contrat n'est pas parmi les candidats |
+| **Afficher plus de candidats** | Charge cinq candidats supplémentaires |
 
-Pour chaque candidat :
+Actions groupées :
 
-- Numéro de contrat existant
-- **Score de similarité** (ex: "87% de correspondance")
-- Nom du client associé
-- Produit associé
-- Date de création
+- **Résolution auto** : associe chaque correspondance à son meilleur candidat
+- **Nouveau pour tous** : crée un nouveau contrat pour chaque correspondance
 
-### Actions possibles
+**Terminer** applique vos choix et lance l'import des commissions en attente.
 
-Pour chaque correspondance, vous pouvez :
+## Reprendre plus tard
 
-| Action | Description | Résultat |
-|--------|-------------|----------|
-| **Associer** | Lier au contrat existant sélectionné | Le numéro importé devient un alias du contrat |
-| **Créer nouveau** | Créer un nouveau contrat | Un nouveau contrat est créé avec ce numéro |
-| **Rechercher** | Chercher manuellement un autre contrat | Permet de trouver un contrat par recherche |
+Vous pouvez fermer la fenêtre : l'import reste au statut **En attente** dans l'[historique](/features/import/history). L'action **Reprendre l'import** rouvre la résolution. Depuis l'étape 4, **Résoudre les correspondances** et **Importer les commissions restantes** font la même chose.
 
-### Actions groupées
+## Associations mémorisées
 
-Pour traiter rapidement plusieurs correspondances :
+Chaque association que vous validez manuellement est **mémorisée** : au prochain import, ce numéro sera rattaché sans question — y compris si le contrat appartient à un autre partenaire que celui de l'import (cas des plateformes dont la base contrats et les bordereaux ne nomment pas les partenaires de la même façon). Si deux associations existent pour le même numéro, la fenêtre de résolution est rouverte.
 
-- **Résolution auto** : Associe automatiquement au meilleur candidat pour toutes les correspondances
-- **Nouveau pour tous** : Crée un nouveau contrat pour toutes les correspondances
-
-## Numéros alternatifs
-
-Quand vous choisissez **Associer**, le numéro importé est ajouté comme **numéro alternatif** du contrat existant.
-
-**Avantage** : Lors des prochains imports, ce numéro sera reconnu automatiquement et associé au bon contrat sans intervention.
-
-**Exemple :**
-1. Premier import : `"CONT-2024-001"` → vous l'associez au contrat `"CONT2024001"`
-2. Le numéro `"CONT-2024-001"` est ajouté aux numéros alternatifs
-3. Prochain import : `"CONT-2024-001"` est reconnu automatiquement
+Elles se consultent et se retirent dans **Import → Configurations → Associations de contrats mémorisées**. Retirer une association ne modifie pas le contrat ; elle ne sera simplement plus appliquée automatiquement. Le numéro alternatif, lui, se retire depuis la [fiche du contrat](/features/contracts/).
 
 ## Bonnes pratiques
 
-::: tip Vérifiez attentivement
-Même avec un score élevé, vérifiez que le client et le produit correspondent avant d'associer. Deux contrats peuvent avoir des numéros similaires mais être différents.
+::: tip Vérifiez le client
+Même à 89 %, deux contrats de numéros proches peuvent appartenir à deux clients. Le nom du client importé et celui des candidats sont affichés côte à côte pour cette raison.
 :::
 
-::: tip Utilisez la recherche
-Si le bon contrat n'apparaît pas dans les candidats, utilisez la fonction de recherche pour le trouver manuellement.
+::: tip Doublons déjà créés
+Si des doublons existent malgré tout, utilisez la [fusion de contrats](/features/contracts/merge) : les numéros des contrats fusionnés deviennent des alias du contrat conservé.
 :::
 
-::: tip Standardisez vos numéros
-Pour éviter ces situations, essayez d'utiliser le même format de numéro de contrat dans tous vos fichiers d'import.
+::: tip Noms alternatifs de partenaire
+Le même mécanisme existe pour les **partenaires** : renseignez les [noms alternatifs](/features/partners#noms-alternatifs) d'un partenaire pour qu'un fichier qui l'appelle autrement soit reconnu.
 :::
-
-## FAQ
-
-### Pourquoi je ne vois pas cette fenêtre ?
-
-La détection ne s'affiche que si :
-- Vous importez des commissions (pas juste des contrats)
-- Le numéro de contrat n'existe pas exactement
-- Un contrat similaire existe chez le même partenaire
-- Le score de similarité est entre 65% et 90%
-
-### Que se passe-t-il si je me trompe ?
-
-Si vous associez par erreur :
-- Le numéro alternatif peut être retiré depuis la fiche du contrat
-- Vous pouvez utiliser la [fusion de contrats](/features/contracts/merge) si nécessaire
-
-### Les 5 candidats affichés ne suffisent pas ?
-
-Cliquez sur **Afficher plus de candidats** pour charger 5 candidats supplémentaires.

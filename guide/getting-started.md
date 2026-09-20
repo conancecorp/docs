@@ -1,63 +1,66 @@
 # Premiers pas
 
-Ce guide vous accompagne dans la configuration initiale de votre compte Conance.
+De l'inscription au premier import, en une séance.
 
-## Étapes de démarrage
+## 1. Créer votre compte
 
-### 1. Créer votre compte
+Sur [app.conance.io](https://app.conance.io), inscrivez-vous, choisissez un plan (le plan Gratuit suffit pour commencer) et vérifiez votre email avec le code à 6 chiffres reçu.
 
-Rendez-vous sur [app.conance.io](https://app.conance.io) et créez votre compte en quelques clics.
+→ [Créer un compte](/guide/create-account)
 
-→ [Guide détaillé : Créer un compte](/guide/create-account)
+## 2. Créer ou rejoindre une entreprise
 
-### 2. Créer ou rejoindre une entreprise
+Créez l'entreprise si vous êtes le premier de votre cabinet — vous en devenez administrateur. Sinon, rejoignez-la avec le lien d'invitation qu'un administrateur vous a envoyé.
 
-Après la vérification de votre email, vous devez créer votre entreprise ou rejoindre une entreprise existante via une invitation.
+→ [Créer ou rejoindre une entreprise](/guide/create-company)
 
-→ [Guide détaillé : Créer ou rejoindre une entreprise](/guide/create-company)
+## 3. Sécuriser
 
-### 3. Configurer vos données de base
+Activez la [double authentification](/settings/security) ; en tant qu'administrateur, rendez-la obligatoire pour le cabinet. Cela prend deux minutes et vaut pour toute la vie du compte.
 
-Avant d'importer vos premières commissions, nous vous recommandons de :
+## 4. Premier import
 
-1. **Ajouter vos partenaires** - Les compagnies et sociétés de gestion avec lesquelles vous travaillez
-2. **Configurer vos produits** - Les produits financiers que vous distribuez
-3. **Ajouter vos conseillers** - Les membres de votre équipe commerciale
+Prenez le dernier bordereau d'un partenaire et lancez l'[import](/features/import/) :
 
-::: tip Conseil
-Vous pouvez également créer ces données automatiquement lors de votre premier import. Conance détectera les nouvelles entités et vous proposera de les créer.
+1. **Upload** : déposez le fichier ; pour un Excel, choisissez l'onglet
+2. **Mapping** : essayez **Complétion basique**, puis vérifiez champ par champ. Activez les sections *Contrats*, *Commissions*, et si le fichier les contient, *Conseillers* et *Clients*. Créez le partenaire à la volée
+3. **Configuration** : donnez un type et une activité aux produits, une nature aux types d'opération
+4. **Import** : suivez la progression
+
+Sauvegardez la configuration à la fin du mapping : le prochain bordereau du même partenaire s'importera en trois clics.
+
+::: tip Pas de fichier propre ?
+Un relevé PDF se dépose tel quel : l'[extraction PDF](/features/import/pdf) le convertit en tableau, gratuitement dans la plupart des cas.
 :::
 
-### 4. Importer vos premières commissions
+## 5. Vérifier
 
-Une fois votre environnement configuré, vous pouvez importer vos relevés de commissions.
+- Sur **Commissions**, filtrez par *Fichier d'import* et comparez le total au relevé.
+- Sur **Import → Historique**, ouvrez le compte rendu : créés, mis à jour, erreurs.
+- Si quelque chose ne va pas, **Annuler l'import** remet tout en l'état, puis réimportez avec la configuration corrigée.
 
-→ [Guide détaillé : Import de données](/features/import/)
+## 6. Compléter le référentiel
 
-## Parcours recommandé
+Au fil des imports :
+
+- Les **types d'opération** de chaque partenaire se rattachent à une nature commune — [Types d'opération](/settings/operation-types)
+- Les **produits** reçoivent type et activité — [Produits](/features/products)
+- Mappez la colonne **Base de calcul** (assiette) chaque fois que le partenaire la fournit : c'est elle qui alimente l'encours retenu
+
+## 7. Analyser
+
+Une fois deux ou trois bordereaux importés par partenaire :
+
+- [Tableau de bord](/features/dashboard) — volumes et répartitions
+- [Pilotage](/features/pilotage/) — encours retenu, prévisionnel, commissions attendues
+- [Réglementaire](/features/reglementaire) — préparation de la FRA
+
+## 8. Inviter l'équipe
+
+[Invitez](/company/members) vos collaborateurs avec un [rôle](/company/roles) adapté : lecture, comptabilité, import.
+
+## Parcours résumé
 
 ```
-1. Créer un compte
-       ↓
-2. Créer votre entreprise
-       ↓
-3. Inviter votre équipe (optionnel)
-       ↓
-4. Ajouter vos partenaires
-       ↓
-5. Importer vos commissions
-       ↓
-6. Analyser vos données
+Compte  →  Entreprise  →  2FA  →  Import n° 1  →  Vérifier  →  Configurer  →  Analyser  →  Équipe
 ```
-
-## Vidéo de présentation
-
-<!-- TODO: Ajouter la vidéo de présentation -->
-
-::: info À venir
-Une vidéo de présentation sera bientôt disponible.
-:::
-
-## Besoin d'accompagnement ?
-
-Notre équipe peut vous accompagner dans la prise en main de Conance. Contactez-nous à [support@conance.io](mailto:support@conance.io).

@@ -1,145 +1,63 @@
 # Actions en masse
 
-Les actions en masse vous permettent de modifier ou supprimer plusieurs éléments simultanément.
+Les actions en masse s'appliquent à une sélection de lignes — ou à **tout ce qui correspond au filtre courant**, sur toutes les pages.
 
 ## Disponibilité
 
-Les actions en masse sont disponibles pour :
+| Page | Modifier en masse | Supprimer en masse | Autre |
+|------|-------------------|--------------------|-------|
+| Commissions | Type d'opération, code ISIN, n° facture, code apporteur, période | Oui | — |
+| Contrats | Conseiller, partenaire, produit, détail partenaire, client, entité | Oui | Fusionner |
+| Produits | Type, activité, partenaire | Oui | — |
+| Clients | — | Oui | — |
+| Conseillers | — | Oui | — |
+| Partenaires | — | Oui | — |
 
-- **Commissions**
-- **Conseillers**
-- **Clients**
-- **Contrats**
+## Sélectionner
 
-## Modification en masse
+1. Cochez les lignes voulues, ou la case d'en-tête pour toute la page
+2. Si le filtre contient plus de lignes que la page, la barre de sélection propose de **sélectionner tous les éléments correspondants** : l'action portera alors sur l'ensemble du filtre, pages suivantes comprises. Le nombre total est affiché
 
-### Comment modifier en masse
+→ [Tableaux, filtres et colonnes](/features/tables#selection-et-actions-groupees)
 
-1. Accédez à la page de l'entité concernée (ex: Commissions)
-2. **Sélectionnez les éléments** à modifier en cochant les cases
-3. Cliquez sur **Modifier la sélection**
-4. Choisissez les champs à modifier
-5. Définissez les nouvelles valeurs
-6. Confirmez la modification
+## Modifier en masse
 
-### Champs modifiables (Commissions)
+1. Sélectionnez, puis **Modifier** dans la barre de sélection
+2. Le dialogue rappelle le nombre d'éléments concernés (et, pour les commissions de plusieurs partenaires, la répartition)
+3. Renseignez uniquement les champs à changer — un champ laissé sur **Ne pas modifier** est conservé
+4. **Appliquer**
 
-Pour les commissions, vous pouvez modifier en masse :
+## Supprimer en masse
 
-| Champ | Description |
-|-------|-------------|
-| Nature | Type de commission |
-| Type d'opération | Libellé de l'opération |
-| Produit | Produit associé |
-| Code ISIN | Code du produit |
-| Numéro de facture | Référence de facturation |
+1. Sélectionnez, puis **Supprimer**
+2. Confirmez
 
-### Champs modifiables (Conseillers)
-
-Pour les conseillers :
-
-| Champ | Description |
-|-------|-------------|
-| Statut | Actif / Inactif |
-
-## Suppression en masse
-
-### Comment supprimer en masse
-
-1. Accédez à la page de l'entité concernée
-2. **Sélectionnez les éléments** à supprimer
-3. Cliquez sur **Supprimer la sélection**
-4. Vérifiez le résumé de suppression
-5. Confirmez en tapant le nombre d'éléments à supprimer
-6. Validez
-
-::: danger Attention - Action irréversible
-La suppression en masse est définitive et ne peut pas être annulée. Vérifiez attentivement votre sélection avant de confirmer.
+::: warning Rétention de 30 jours
+Les lignes supprimées disparaissent des listes mais **comptent encore dans vos quotas pendant 30 jours**. Supprimer pour libérer de la place ne produit d'effet qu'au bout de ce délai. Voir [Quotas et rétention](/company/subscription#quotas-et-retention).
 :::
 
-### Confirmation de sécurité
-
-Pour éviter les suppressions accidentelles, Conance vous demande de confirmer en saisissant le nombre exact d'éléments à supprimer.
-
-**Exemple :**
-```
-Vous êtes sur le point de supprimer 25 commissions.
-Pour confirmer, tapez "25" :
-```
-
-## Sélection des éléments
-
-### Sélection individuelle
-
-Cochez la case à gauche de chaque élément que vous souhaitez sélectionner.
-
-### Sélection de la page
-
-Cochez la case en en-tête de colonne pour sélectionner tous les éléments de la page actuelle.
-
-### Sélection avec filtres
-
-::: tip Astuce
-Utilisez les filtres pour affiner la liste avant de sélectionner. Vous pouvez ainsi cibler précisément les éléments à modifier ou supprimer.
-
-**Exemple :** Filtrez les commissions d'un partenaire spécifique, puis sélectionnez toute la page pour les modifier en masse.
+::: danger Irréversible
+Il n'y a pas de corbeille. Pour retirer les effets d'un **import** entier, utilisez plutôt l'[annulation d'import](/features/import/undo) : elle est ciblée, et rétablit aussi ce que l'import avait modifié.
 :::
 
-## Cas d'usage courants
+## Cas d'usage
 
-### Corriger une nature de commission
+### Requalifier des commissions après un import
 
-Après un import, vous réalisez que certaines commissions ont été importées avec la mauvaise nature :
+Le type d'opération a été mal choisi : filtrez par *Fichier d'import* et par *Type d'opération*, sélectionnez tout, **Modifier** → nouveau type d'opération. La nature suit.
 
-1. Filtrez les commissions concernées
-2. Sélectionnez-les
-3. Modifiez en masse la nature
-4. Confirmez
+### Réaffecter un portefeuille
 
-### Supprimer un import erroné
+Un conseiller quitte le cabinet : sur **Contrats**, filtrez par ce conseiller, sélectionnez tout, **Modifier** → nouveau conseiller. Les commissions futures suivront le contrat. Passez ensuite l'ancien conseiller en inactif.
 
-Un fichier a été importé par erreur :
+### Qualifier les produits d'un partenaire
 
-1. Filtrez les commissions par **fichier d'import**
-2. Sélectionnez toutes les commissions
-3. Supprimez en masse
+Sur **Produits**, filtrez par partenaire, sélectionnez tout, **Modifier** → activité *Courtage*.
 
-### Désactiver plusieurs conseillers
+### Poser un numéro de facture sur un bordereau
 
-Suite à un départ groupé :
+Sur **Commissions**, filtrez par *Fichier d'import*, sélectionnez tout, **Modifier** → n° de facture.
 
-1. Sélectionnez les conseillers concernés
-2. Modifiez en masse leur statut en "Inactif"
+## Volume
 
-## Limites et performances
-
-### Nombre d'éléments
-
-Il n'y a pas de limite stricte au nombre d'éléments modifiables ou supprimables en masse, mais :
-
-- Les opérations sur un grand nombre d'éléments peuvent prendre du temps
-- Privilégiez des lots de quelques centaines d'éléments
-
-### Temps de traitement
-
-Le temps de traitement dépend du nombre d'éléments :
-
-| Nombre d'éléments | Temps estimé |
-|-------------------|--------------|
-| 1-100 | Quelques secondes |
-| 100-500 | 10-30 secondes |
-| 500+ | 1 minute ou plus |
-
-## Bonnes pratiques
-
-::: tip Testez sur un petit échantillon
-Avant une modification en masse importante, testez d'abord sur quelques éléments pour vérifier que le résultat correspond à vos attentes.
-:::
-
-::: tip Utilisez les filtres
-Les filtres sont vos meilleurs alliés pour cibler précisément les éléments à traiter.
-:::
-
-::: warning Sauvegardez vos données
-Pour les suppressions importantes, assurez-vous d'avoir un export de vos données au préalable.
-:::
+Les opérations tournent côté serveur ; quelques milliers de lignes se traitent en quelques secondes. Les très grosses sélections peuvent prendre un peu plus longtemps : la page se met à jour à la fin.

@@ -1,120 +1,50 @@
-# Gestion du stockage
+# Stockage
 
-La page Stockage vous permet de gérer les fichiers uploadés dans Conance.
+La page **Stockage** regroupe tous les fichiers du cabinet : ceux que vous avez importés, ceux que Conance a produits (exports, extractions PDF, fichiers d'erreurs).
 
-## Vue d'ensemble
+## En-tête
 
-Votre espace de stockage contient :
+Trois indicateurs : nombre de fichiers, espace **utilisé** sur le quota du plan, fichiers **nouveaux sur 30 jours**.
 
-- **Fichiers d'import** : Les fichiers CSV/Excel que vous avez importés
-- **Documents** : Autres fichiers associés
+## Catégories
 
-## Espace disponible
+| Catégorie | Contenu |
+|-----------|---------|
+| **Imports** | Les fichiers sources des imports (CSV, Excel, PDF) et les fichiers d'erreurs |
+| **Exports** | Les CSV produits par la page [Export](/features/export) |
+| **Extractions** | Les PDF et les CSV produits par l'[extraction PDF](/features/import/pdf) |
 
-Votre espace de stockage dépend de votre abonnement :
+## Colonnes et filtres
 
-| Plan | Espace |
-|------|--------|
-| Gratuit | 100 Mo |
-| Premium | Variable selon l'offre |
+Nom du fichier, type, catégorie, taille. Filtres par **type de fichier** (CSV, Excel et ses variantes, OpenDocument, PDF, texte) et par **catégorie** ; recherche par nom.
 
-### Vérifier l'espace utilisé
+→ [Tableaux, filtres et colonnes](/features/tables)
 
-1. Accédez à la page **Stockage**
-2. Consultez la jauge d'utilisation en haut de page
+## Actions
 
-## Liste des fichiers
+| Action | Détail |
+|--------|--------|
+| **Prévisualiser** | Aperçu du contenu. Pour un fichier d'import : configuration détectée (onglet, délimiteur, encodage, nombre de lignes). Pour un export : filtres appliqués |
+| **Importer** | Lance l'assistant d'import sur ce fichier — par exemple un CSV d'extraction ou un fichier d'erreurs corrigé |
+| **Renommer** | Change le nom affiché |
+| **Télécharger** | Récupère le fichier |
+| **Supprimer** | Confirmation requise |
 
-La liste affiche pour chaque fichier :
-
-- **Nom** : Nom du fichier
-- **Type** : Format (CSV, XLSX, etc.)
-- **Taille** : Poids du fichier
-- **Date** : Date d'upload
-- **Catégorie** : Import, Document, etc.
-
-## Recherche et filtrage
-
-### Recherche
-
-Utilisez la barre de recherche pour trouver un fichier par nom.
-
-### Filtres
-
-- **Type** : CSV, Excel, PDF, etc.
-- **Catégorie** : Import, Document
-- **Période** : Date d'upload
-
-## Actions sur les fichiers
-
-### Télécharger un fichier
-
-1. Localisez le fichier dans la liste
-2. Cliquez sur **Télécharger**
-3. Le fichier est téléchargé sur votre ordinateur
-
-### Supprimer un fichier
-
-1. Sélectionnez le fichier
-2. Cliquez sur **Supprimer**
-3. Confirmez la suppression
-
-::: warning Attention
-La suppression d'un fichier d'import ne supprime pas les commissions importées. Elle supprime uniquement le fichier source.
+::: warning Supprimer un fichier d'import
+Supprimer un fichier source **ne supprime pas** les commissions qu'il a créées ; seule la trace vers le fichier disparaît. Pour retirer les données, utilisez l'[annulation d'import](/features/import/undo).
 :::
 
-## Fichiers d'import
+## Quota
 
-Les fichiers uploadés lors des imports sont automatiquement stockés. Cela permet :
+L'espace dépend du [plan](/company/subscription) : 1 Go en Gratuit, 10 Go en Starter, 50 Go en Standard, 100 Go en Premium, 300 Go en Entreprise. Une jauge dans l'en-tête et dans la gestion d'entreprise suit l'utilisation ; à 100 %, les nouveaux imports sont bloqués jusqu'à libération d'espace ou changement de plan.
 
-- De **retrouver** le fichier source d'un import
-- De **vérifier** les données originales en cas de question
-- De **tracer** l'origine des commissions
+Les fichiers supprimés comptent encore dans le quota pendant **30 jours**.
 
-### Lien avec les commissions
+## Permissions
 
-Depuis une commission, vous pouvez voir de quel fichier d'import elle provient. Inversement, depuis un fichier, vous pouvez voir les commissions qu'il a générées.
-
-## Gestion de l'espace
-
-### Libérer de l'espace
-
-Si votre espace est saturé :
-
-1. Identifiez les fichiers anciens ou volumineux
-2. Téléchargez-les localement si nécessaire
-3. Supprimez-les de Conance
-
-### Fichiers volumineux
-
-::: tip Optimisation
-Les fichiers Excel avec de nombreuses feuilles ou mises en forme sont plus lourds. Si possible, nettoyez vos fichiers avant l'upload.
-:::
-
-## Quotas et limites
-
-### Alerte de quota
-
-Quand votre espace approche de la limite :
-
-- Une alerte s'affiche dans l'interface
-- Vous recevez une notification
-- Les nouveaux uploads peuvent être bloqués à 100%
-
-### Augmenter son espace
-
-Pour augmenter votre espace de stockage, consultez les options d'[abonnement](/company/subscription).
+`storage:view` pour consulter, `storage:download` pour télécharger, `storage:edit` pour renommer, `storage:delete` pour supprimer.
 
 ## Bonnes pratiques
 
-::: tip Nettoyage régulier
-Supprimez régulièrement les fichiers anciens dont vous n'avez plus besoin.
-:::
-
-::: tip Archivage local
-Avant de supprimer un fichier, téléchargez-le et archivez-le localement si vous pensez en avoir besoin plus tard.
-:::
-
-::: tip Organisation
-Utilisez des noms de fichiers explicites lors de vos imports pour les retrouver facilement.
-:::
+- Nommez vos fichiers avant l'import (partenaire, période) : c'est ce nom qui apparaîtra dans les filtres *Fichier d'import*.
+- Archivez localement les gros fichiers anciens avant de les supprimer.

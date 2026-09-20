@@ -1,80 +1,59 @@
-# Pré-analyse et validation
+# Configuration produits et types d'opération
 
-Avant l'import final, Conance analyse vos données et vous permet de configurer les options.
+Troisième étape : Conance a lu le fichier et en a extrait les **produits** et les **types d'opération** qu'il contient. Avant d'importer, il faut dire à quoi ils correspondent.
 
-## Analyse des données
+## Produits détectés
 
-Conance examine votre fichier et identifie :
+Pour chaque produit lu dans la colonne Produit, indiquez :
 
-- Les **nouvelles entités** à créer (conseillers, clients, contrats)
-- Les **entités existantes** qui seront mises à jour
-- Les **erreurs potentielles** ou données manquantes
+| Champ | Description |
+|-------|-------------|
+| Type | OPCVM, SCPI, Assurance-vie, FCPI, FIP, PER, FCPR, EMTN, Autres — ou un [type personnalisé](/settings/custom-products) |
+| Activité | CIF, Courtage — ou une [activité personnalisée](/settings/custom-activities) |
 
-## Configuration des produits
+Les produits déjà connus pour ce partenaire sont pré-remplis. Le compteur en tête (**total / configurés / à configurer**) suit votre avancement.
 
-Si votre fichier contient des produits non encore associés, vous pouvez :
+Outils :
 
-1. **Sélectionner un produit existant** dans la liste
-2. **Créer un nouveau produit** directement depuis cette étape
+- **Recherche** par nom, filtre par partenaire ;
+- **Édition en masse** : sélectionnez plusieurs produits, choisissez type et activité, **Appliquer** ;
+- création d'un type ou d'une activité à la volée si la valeur n'existe pas encore.
 
-::: tip Conseil
-Configurez vos produits à l'avance dans les [paramètres](/settings/custom-products) pour accélérer vos imports.
-:::
+## Types d'opération détectés
 
-## Configuration des types d'opération
-
-Les types d'opération correspondent aux libellés utilisés par vos partenaires pour qualifier les commissions.
-
-### Association aux natures
-
-Chaque type d'opération doit être associé à une nature Conance :
+Pour chaque libellé lu dans la colonne Type d'opération, choisissez la **nature** Conance :
 
 | Nature | Description |
 |--------|-------------|
-| Encours | Commission sur actifs gérés |
-| Droit d'entrée | Commission à la souscription |
+| Encours | Commission récurrente sur l'encours |
+| Droit d'entrée | Commission à la souscription ou au versement |
 | Structurés | Commission sur produits structurés |
-| Avances/Reprises | Avances sur commissions |
-| Honoraires | Rémunération forfaitaire |
+| Avances/Reprises | Avances sur commissions, reprises, régularisations |
+| Honoraires | Rémunération facturée au client |
+| *Personnalisée* | Toute nature créée par le cabinet — voir [Natures d'opération](/settings/operation-natures) |
 
-### Créer un nouveau type d'opération
+Le bouton à côté du sélecteur crée une **nouvelle nature** directement (ex. « Rétrocession apporteur ») puis la sélectionne.
 
-Si un type d'opération de votre fichier n'existe pas :
+Les correspondances libellé → nature sont mémorisées par partenaire : au prochain bordereau, elles seront déjà remplies.
 
-1. Conance vous le signale dans la pré-analyse
-2. Cliquez pour créer le type d'opération
-3. Associez-le à la nature correspondante
-4. Le type sera mémorisé pour les prochains imports
+→ [Types d'opération](/settings/operation-types)
 
-## Créer un nouveau partenaire
+## Scinder les produits multi-activités
 
-Si le partenaire n'existe pas encore :
+Certains partenaires regroupent sous un même nom de produit des lignes CIF et des lignes Courtage. Si vous avez renseigné une **colonne discriminante d'activité** au [mapping](/features/import/mapping#contrats), l'étape **3b** apparaît pour ces produits :
 
-1. Cliquez sur **Créer un partenaire**
-2. Renseignez le nom et les informations
-3. Le partenaire sera créé et utilisé pour l'import
+1. Le produit est présenté avec les **valeurs distinctes** trouvées dans la colonne discriminante
+2. Créez des **buckets** : chacun reçoit une activité, un type, et les valeurs qu'il regroupe
+3. **Valider et lancer l'import**
 
-## Résumé avant import
+Chaque bucket devient un produit distinct. Une scission déjà enregistrée pour ce produit est reprise (**Déjà en base**) et reste modifiable.
 
-Avant de lancer l'import, vous voyez un résumé :
+## Ignorer l'étape
 
-- Nombre de lignes à traiter
-- Nombre de commissions qui seront créées
-- Nombre de contrats qui seront créés
-- Nombre de conseillers/clients qui seront créés
-
-## Validation
-
-Vérifiez les points suivants :
-
-- ✅ Tous les produits sont configurés
-- ✅ Tous les types d'opération sont associés
-- ✅ Aucune erreur bloquante n'est signalée
-
-::: warning Erreurs bloquantes
-Si des erreurs bloquantes sont détectées, vous devez les corriger avant de pouvoir lancer l'import.
-:::
+**Ignorer cette étape** lance l'import sans qualifier produits et types. Les commissions concernées seront importées **sans nature** et les produits sans type ni activité — vous pourrez les corriger ensuite via une [modification en masse](/features/bulk-actions), mais elles n'apparaîtront correctement ni dans les répartitions du tableau de bord ni dans la [FRA](/features/reglementaire) tant que ce n'est pas fait.
 
 ## Prochaine étape
 
-Une fois la pré-analyse validée, lancez l'import et suivez la progression. Si des correspondances ambiguës sont détectées, consultez la [correspondance intelligente](/features/import/smart-matching).
+**Continuer l'import** lance l'étape 4. Si des numéros de contrat ressemblent à des contrats existants sans leur être identiques, l'assistant vous demandera de trancher.
+
+→ [Correspondances de contrats](/features/import/smart-matching)

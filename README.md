@@ -1,6 +1,6 @@
 # Conance Documentation
 
-Documentation officielle de Conance - Gestion de commissions pour cabinets de gestion de patrimoine.
+Documentation officielle de Conance - Pilotage des commissions pour cabinets de gestion de patrimoine.
 
 ## Développement local
 
@@ -47,22 +47,33 @@ npm run docs:preview
 ```
 docs/
 ├── .vitepress/
-│   ├── config.ts          # Configuration VitePress
+│   ├── config.ts          # Configuration VitePress (nav, sidebar)
+│   ├── theme/             # Thème (couleurs Conance)
 │   └── dist/              # Build de production (généré)
-├── public/                # Assets statiques
-│   ├── logo.svg
-│   └── favicon.ico
-├── guide/                 # Section Guide
-├── features/              # Section Fonctionnalités
-│   └── import/            # Sous-section Import
-│   └── contracts/         # Sous-section Contrats
-├── settings/              # Section Paramètres
-├── company/               # Section Entreprise
-├── faq/                   # Section FAQ
+├── public/                # Assets statiques (logo, favicon, CNAME)
+├── guide/                 # Démarrage : compte, entreprise, premiers pas
+├── features/              # Fonctionnalités
+│   ├── pilotage/          # Pilotage, commissions attendues, prévisionnel
+│   ├── import/            # Import (upload, mapping, PDF, historique, annulation…)
+│   └── contracts/         # Contrats et fusion
+├── settings/              # Paramètres (compte, référentiels, IA, données)
+├── company/               # Entreprise (membres, rôles, abonnement, crédits IA, multi-cabinets)
+├── faq/                   # FAQ
 ├── index.md               # Page d'accueil
 ├── package.json
 └── README.md
 ```
+
+## Tenir la documentation à jour
+
+La documentation décrit l'application telle qu'elle est en production. À chaque fonctionnalité livrée dans `frontend`/`backend` :
+
+1. Repérer l'écran ou l'option concernés et la page de doc correspondante (une page par écran, section « Analyse », « Import », « Paramètres »…)
+2. Vérifier les libellés **dans le code** (boutons, colonnes, options) plutôt que de mémoire
+3. Mettre à jour la page, et la FAQ si la question est susceptible de revenir
+4. Ajouter l'entrée dans la sidebar (`.vitepress/config.ts`) pour toute nouvelle page
+
+Ne pas documenter les écrans réservés aux administrateurs Conance (Administration, Sandbox, gestion système des rôles et permissions).
 
 ## Contribuer
 

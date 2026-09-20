@@ -1,67 +1,57 @@
 # Créer ou rejoindre une entreprise
 
-Après avoir vérifié votre email, vous devez associer votre compte à une entreprise pour utiliser Conance.
+Un compte Conance travaille toujours dans une **entreprise** (votre cabinet). Après la vérification de l'email, l'écran **Bienvenue** propose deux options.
 
-## Deux options disponibles
+## Créer une entreprise
 
-Vous avez le choix entre :
+Vous êtes le premier de votre cabinet.
 
-1. **Créer une nouvelle entreprise** - Si vous êtes le premier utilisateur de votre cabinet
-2. **Rejoindre une entreprise existante** - Si un collègue vous a invité
+1. **Créer une entreprise**
+2. Renseignez le **nom** et l'**email** de l'entreprise (obligatoires), puis téléphone, adresse, code postal, ville, pays
+3. **Créer mon entreprise**
 
-## Créer une nouvelle entreprise
-
-### Étapes
-
-1. Après la vérification de votre email, cliquez sur **Créer une entreprise**
-2. Remplissez les informations de votre entreprise :
-   - **Nom de l'entreprise** (obligatoire)
-   - **Email de l'entreprise** (obligatoire)
-   - **Téléphone**
-   - **Adresse**
-   - **Code postal**
-   - **Ville**
-   - **Pays**
-3. Cliquez sur **Créer**
+Si vous avez choisi un plan payant, le paiement Stripe s'ouvre à ce moment ; sinon vous arrivez directement sur le tableau de bord.
 
 ::: info Vous êtes administrateur
-En créant l'entreprise, vous devenez automatiquement administrateur. Vous pourrez inviter d'autres membres et gérer les accès.
+Le créateur de l'entreprise en est administrateur : gestion des membres, des rôles, de l'abonnement, des réglages sensibles. Nommez rapidement un second administrateur.
 :::
 
-### Informations modifiables
+Ces informations se modifient ensuite dans *Gestion entreprise → Paramètres*.
 
-Toutes ces informations peuvent être modifiées ultérieurement dans les [paramètres de l'entreprise](/company/).
+## Rejoindre une entreprise
 
-## Rejoindre une entreprise existante
+Un administrateur vous a invité.
 
-### Via un lien d'invitation
+**Par le lien reçu par email** : cliquez, connectez-vous ou créez votre compte, vous êtes ajouté à l'entreprise avec le rôle prévu.
 
-1. Demandez à un administrateur de votre entreprise de vous envoyer une invitation
-2. Cliquez sur le lien reçu par email
-3. Connectez-vous ou créez votre compte
-4. Vous êtes automatiquement ajouté à l'entreprise
+**Par le code** : sur l'écran Bienvenue, **Rejoindre une entreprise**, collez le lien ou le jeton d'invitation, **Rejoindre l'entreprise**.
 
-### Via un code d'invitation
+::: warning Invitation expirée
+Une invitation est valable **une heure**. Si le lien ne fonctionne plus, demandez à l'administrateur de la **renvoyer** depuis *Gestion entreprise → Membres*.
+:::
 
-1. Sur la page d'accueil après connexion, cliquez sur **Rejoindre une entreprise**
-2. Collez le lien ou code d'invitation reçu
-3. Confirmez pour rejoindre l'entreprise
+## Double authentification obligatoire
 
-## Rôles et permissions
+Si le cabinet impose la 2FA, l'écran **Configuration 2FA requise** apparaît à votre première connexion : configurez une application d'authentification ou une clé d'accès avant d'accéder aux données.
 
-En rejoignant une entreprise, vous recevez un rôle qui définit vos permissions :
+→ [Sécurité](/settings/security)
 
-| Rôle | Description |
-|------|-------------|
-| Administrateur | Accès complet, peut gérer les membres et les paramètres |
-| Utilisateur | Accès aux fonctionnalités selon les permissions attribuées |
+## Ce que vous pouvez faire selon votre rôle
 
-→ En savoir plus sur les [rôles et permissions](/company/roles)
+| Vous êtes | Vous pouvez |
+|-----------|-------------|
+| Administrateur | Tout, y compris gérer l'équipe et l'abonnement |
+| Membre avec un rôle personnalisé | Ce que le rôle autorise |
+| Membre sans rôle (*Utilisateur*) | Consulter les données, créer des commissions, modifier votre profil |
+
+→ [Rôles et permissions](/company/roles)
+
+## Plusieurs cabinets ?
+
+Un compte appartient à une entreprise. Les groupements et prestataires qui gèrent plusieurs cabinets utilisent un plan **Groupe** : un espace parent, des cabinets isolés, et un sélecteur pour basculer.
+
+→ [Multi-cabinets](/company/multi-cabinets)
 
 ## Prochaine étape
 
-Une fois votre entreprise configurée, vous pouvez :
-
-- [Inviter des membres](/company/members) dans votre équipe
-- [Importer vos premières données](/features/import/)
-- [Explorer le tableau de bord](/features/dashboard)
+→ [Premiers pas](/guide/getting-started#_4-premier-import) : votre premier import

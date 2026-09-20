@@ -1,73 +1,66 @@
 # Upload de fichier
 
-La première étape de l'import consiste à charger votre fichier dans Conance.
+Première étape de l'assistant : charger le fichier et vérifier que Conance le lit correctement.
 
-## Comment uploader un fichier
+## Déposer un fichier
 
-### Méthode 1 : Glisser-déposer
+1. Ouvrez **Import**
+2. Glissez-déposez le fichier dans la zone, ou cliquez pour parcourir
+3. Cliquez sur **Analyser le fichier** (ou **Extraire le PDF** pour un PDF)
 
-1. Accédez à la page **Import**
-2. Glissez votre fichier dans la zone d'upload
-3. Le fichier est automatiquement analysé
+Formats acceptés : `.csv`, `.xlsx`, `.xlsm`, `.xls`, `.xlsb`, `.ods`, `.pdf` — 100 Mo maximum.
 
-### Méthode 2 : Sélection
+Vous pouvez aussi lancer un import depuis un fichier déjà présent dans le [Stockage](/features/storage) (action **Importer** sur le fichier) — par exemple le CSV produit par une [extraction PDF](/features/import/pdf).
 
-1. Accédez à la page **Import**
-2. Cliquez sur la zone d'upload
-3. Sélectionnez votre fichier depuis l'explorateur
-4. Le fichier est automatiquement analysé
+## Options selon le format
 
-## Formats acceptés
+### Fichiers Excel et OpenDocument
 
-| Format | Extension | Taille max |
-|--------|-----------|------------|
-| CSV | `.csv` | 10 Mo |
-| Excel | `.xlsx`, `.xls` | 10 Mo |
+Une fenêtre de configuration s'ouvre après l'analyse :
 
-## Options pour les fichiers Excel
+| Option | Usage |
+|--------|-------|
+| **Onglet** | Choisissez la feuille à importer, avec aperçu |
+| **Ligne de départ** | Première ligne utile — utile quand le relevé commence par un cartouche |
+| **Colonne de départ** | Première colonne utile |
+| **En-têtes** | Indiquez si la première ligne retenue contient les noms de colonnes |
 
-Pour les fichiers Excel, des options supplémentaires sont disponibles :
+**Utiliser par défaut** garde la détection automatique ; **Utiliser cette configuration** applique vos réglages. Ils sont mémorisés avec la [configuration sauvegardée](/features/import/saved-configs).
 
-### Sélection de la feuille
+### Fichiers CSV
 
-Si votre fichier contient plusieurs feuilles, sélectionnez celle à importer.
+Le séparateur et l'encodage sont détectés. La fenêtre vous demande seulement si la première ligne contient des en-têtes ; sinon des en-têtes automatiques (Colonne 1, Colonne 2…) sont générés.
 
-### Configuration avancée
+### Fichiers PDF
 
-- **Ligne de départ** : Définissez à partir de quelle ligne commencent les données
-- **Colonne de départ** : Définissez à partir de quelle colonne commencent les données
-- **Ligne d'en-tête** : Indiquez quelle ligne contient les noms de colonnes
+Le PDF est envoyé à l'[outil d'extraction](/features/import/pdf), qui le convertit en tableau éditable puis en CSV importable. Si ce PDF a déjà été extrait, Conance propose de **reprendre** l'extraction existante ou d'**extraire à nouveau**.
 
-::: tip Fichiers avec en-têtes multiples
-Si votre fichier contient plusieurs lignes d'en-tête ou des informations au-dessus des données, utilisez la configuration avancée pour indiquer où commencent réellement vos données.
-:::
+## Aperçu
 
-## Aperçu des données
+Après l'analyse, l'assistant affiche :
 
-Après l'upload, Conance affiche un aperçu de votre fichier :
+- le nombre de **colonnes détectées** et leurs noms ;
+- les **premières lignes** de données ;
+- le nombre total de lignes.
 
-- Liste des colonnes détectées
-- Premières lignes de données
-- Nombre total de lignes
+Vérifiez que les colonnes sont bien découpées et que les en-têtes sont les bons avant de passer au mapping. **Analyser un autre fichier** permet de recommencer.
 
-Cet aperçu vous permet de vérifier que le fichier a été correctement lu avant de passer au mapping.
+## Fichier déjà importé
+
+Si l'empreinte du fichier correspond à un import passé, une fenêtre **Fichier déjà importé** liste les imports concernés (nom d'origine, date). Vous pouvez **Continuer quand même** ou **Annuler**.
+
+Ce contrôle se désactive dans les [paramètres généraux](/settings/general) si vous réimportez volontairement les mêmes fichiers.
 
 ## Résolution des problèmes
 
-### Le fichier n'est pas reconnu
-
-- Vérifiez que l'extension est bien `.csv`, `.xlsx` ou `.xls`
-- Assurez-vous que le fichier n'est pas corrompu
-
-### Les données semblent décalées
-
-- Utilisez la configuration avancée pour ajuster la ligne/colonne de départ
-- Vérifiez que votre fichier Excel ne contient pas de cellules fusionnées
-
-### Caractères spéciaux mal affichés
-
-- Pour les fichiers CSV, essayez de les réenregistrer en UTF-8
+| Symptôme | Piste |
+|----------|-------|
+| Les données semblent décalées | Ajustez ligne et colonne de départ dans la configuration Excel |
+| Les en-têtes sont « Colonne 1, Colonne 2… » | La ligne d'en-tête n'a pas été détectée : indiquez-la, ou utilisez une configuration sauvegardée |
+| Caractères accentués illisibles (CSV) | Réenregistrez le fichier en UTF-8 depuis votre tableur |
+| Cellules fusionnées, sous-totaux | Préférez les [colonnes calculées et filtres de lignes](/features/import/mapping#options-avancees) du mapping à une retouche manuelle |
+| Le fichier est refusé | Vérifiez l'extension et la taille (100 Mo) ; un fichier protégé par mot de passe n'est pas lisible |
 
 ## Prochaine étape
 
-Une fois votre fichier uploadé et analysé, passez au [mapping des colonnes](/features/import/mapping).
+→ [Mapping des données](/features/import/mapping)

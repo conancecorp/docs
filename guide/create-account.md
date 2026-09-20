@@ -1,52 +1,37 @@
 # Créer un compte
 
-Ce guide vous explique comment créer votre compte Conance.
-
 ## Inscription
 
-1. Rendez-vous sur [app.conance.io](https://app.conance.io)
-2. Cliquez sur **Créer un compte**
-3. Remplissez le formulaire d'inscription :
-   - **Email** : Votre adresse email professionnelle
-   - **Prénom** : Votre prénom
-   - **Nom** : Votre nom de famille
-   - **Mot de passe** : Choisissez un mot de passe sécurisé
-4. Acceptez les conditions d'utilisation
-5. Cliquez sur **S'inscrire**
+1. Rendez-vous sur [app.conance.io](https://app.conance.io) et cliquez sur **Créer un compte**
+2. Renseignez votre **email professionnel**, **prénom**, **nom**, un **mot de passe** (8 caractères minimum) et sa confirmation
+3. Acceptez les conditions d'utilisation et la politique de confidentialité
+4. **S'inscrire**
 
-::: warning Mot de passe sécurisé
-Votre mot de passe doit contenir au minimum 8 caractères. Nous vous recommandons d'utiliser une combinaison de lettres, chiffres et caractères spéciaux.
-:::
+L'inscription se déroule en trois étapes affichées en haut de l'écran : *Inscription & Plan*, *Vérification email*, *Entreprise*.
 
-## Vérification de l'email
+## Choisir un plan
 
-Après votre inscription, vous recevrez un email de confirmation :
+Si vous arrivez depuis la page des tarifs, le plan est présélectionné. Sinon, l'écran **Choisissez votre plan** vous laisse choisir ; le plan **Gratuit** permet de découvrir Conance sans paiement. Vous pourrez changer de plan à tout moment depuis la [gestion d'entreprise](/company/subscription).
 
-1. Ouvrez l'email reçu de Conance
-2. Cliquez sur le lien de vérification
-3. Votre email est maintenant vérifié
+## Vérifier votre email
 
-::: tip Email non reçu ?
-Vérifiez votre dossier spam. Si vous ne trouvez toujours pas l'email, vous pouvez demander un nouvel envoi depuis la page de vérification.
-:::
+Un **code à 6 chiffres** est envoyé à votre adresse.
 
-## Connexion
+1. Saisissez le code sur l'écran de vérification
+2. Votre email est confirmé, vous êtes redirigé vers l'étape suivante
 
-Une fois votre email vérifié :
+Code non reçu ? Vérifiez vos indésirables, puis **Renvoyer le code** (disponible après un court délai).
 
-1. Rendez-vous sur [app.conance.io](https://app.conance.io)
-2. Entrez votre email et mot de passe
-3. Cliquez sur **Se connecter**
+## Se connecter
+
+Email et mot de passe. Si votre compte ou votre cabinet exige la [double authentification](/settings/security), un second écran vous demande le code de votre application, votre clé d'accès ou un code par email. Cochez **Faire confiance à cet appareil pendant 30 jours** sur vos appareils personnels.
 
 ## Mot de passe oublié
 
-Si vous avez oublié votre mot de passe :
-
-1. Cliquez sur **Mot de passe oublié** sur la page de connexion
-2. Entrez votre adresse email
-3. Vous recevrez un email avec un lien de réinitialisation
-4. Cliquez sur le lien et définissez un nouveau mot de passe
+1. **Mot de passe oublié** sur l'écran de connexion
+2. Saisissez votre email
+3. Suivez le lien reçu et choisissez un nouveau mot de passe
 
 ## Prochaine étape
 
-Après votre connexion, vous devez [créer ou rejoindre une entreprise](/guide/create-company) pour accéder à toutes les fonctionnalités de Conance.
+→ [Créer ou rejoindre une entreprise](/guide/create-company)

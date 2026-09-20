@@ -1,97 +1,51 @@
 # Tableau de bord
 
-Le tableau de bord est la page d'accueil de Conance. Il vous offre une vue d'ensemble de votre activité.
+Le tableau de bord est la page d'accueil de Conance. Il donne une vue d'ensemble de l'activité du cabinet : volumes, répartitions et derniers mouvements.
 
-## Vue d'ensemble
+## Ce qu'il affiche
 
-Le tableau de bord affiche :
+| Élément | Description |
+|---------|-------------|
+| Statistiques globales | Quatre cartes : conseillers, contrats, commissions (nombre et montant total), dernière mise à jour |
+| Encours & production | Les deux chiffres clés du portefeuille, avec un lien vers la page [Pilotage](/features/pilotage/) |
+| Commissions par mois | Barres mensuelles, filtrables par année et par partenaire |
+| Top 5 conseillers | Répartition des commissions entre les cinq premiers conseillers |
+| Commissions par entité | Affiché uniquement si le cabinet a déclaré plusieurs [entités](/settings/entities) |
+| Commissions par nature | Répartition Encours / Droit d'entrée / Honoraires… avec bascule montants ↔ pourcentages |
+| Commissions par activité | Répartition CIF / Courtage (et activités personnalisées) |
+| Commissions par type de produit | Répartition OPCVM, SCPI, Assurance-vie… |
+| Commissions par partenaire | Répartition par compagnie ou société de gestion |
+| Derniers imports | Les derniers imports terminés et le nombre de commissions créées |
+| Dernières commissions | Les dernières commissions ajoutées |
 
-- **Statistiques clés** : Chiffres importants de votre activité
-- **Graphiques** : Visualisation de vos données
-- **Actions rapides** : Accès aux fonctionnalités principales
+## Filtres et lecture
 
-## Statistiques
+- Les graphiques temporels s'ouvrent par défaut sur **la dernière année qui contient des données**.
+- Un clic sur un mois du graphique « Commissions par mois » ouvre la liste des **fichiers d'import** de ce mois, avec leur détail.
+- Le graphique « Commissions par nature » se lit en montants ou en pourcentages.
 
-Les statistiques principales affichées sont :
+## Personnaliser le tableau de bord
 
-| Statistique | Description |
-|-------------|-------------|
-| Commissions | Total des commissions sur la période |
-| Contrats | Nombre de contrats actifs |
-| Clients | Nombre de clients |
-| Conseillers | Nombre de conseillers |
+Cliquez sur **Personnaliser** (ou rendez-vous dans *Paramètres → Personnalisation du tableau de bord*) pour :
 
-## Graphiques disponibles
+- passer en **mode automatique** (tous les graphiques disponibles) ou en **mode personnalisé** ;
+- choisir les éléments à afficher, un par un ;
+- revenir à la configuration par défaut avec **Tout réinitialiser**.
 
-### Commissions par mois
+Vos préférences sont propres à votre compte et conservées d'une connexion à l'autre.
 
-Un graphique en barres montrant l'évolution de vos commissions mois par mois.
-
-- Visualisez les tendances
-- Comparez les périodes
-- Identifiez les pics d'activité
-
-### Top conseillers
-
-Un graphique circulaire présentant la répartition des commissions par conseiller.
-
-- Identifiez vos meilleurs performeurs
-- Suivez la contribution de chaque conseiller
-
-### Commissions par nature
-
-Répartition des commissions selon leur nature :
-- Encours
-- Droit d'entrée
-- Structurés
-- Avances/Reprises
-- Honoraires
-
-## Personnalisation
-
-Le tableau de bord est personnalisable. Vous pouvez :
-
-### Afficher/Masquer des widgets
-
-1. Cliquez sur **Personnaliser**
-2. Cochez/décochez les widgets à afficher
-3. Enregistrez vos préférences
-
-### Widgets disponibles
-
-- Statistiques globales
-- Graphique des commissions mensuelles
-- Top conseillers
-- Répartition par nature
-- Dernières commissions
-- Actions rapides
-
-::: tip Préférences enregistrées
-Vos préférences de personnalisation sont sauvegardées et s'appliquent à chaque connexion.
-:::
+→ [Personnalisation du tableau de bord](/settings/dashboard)
 
 ## Actions rapides
 
-Depuis le tableau de bord, accédez rapidement à :
+- **Importer des données** : ouvre l'[assistant d'import](/features/import/)
+- **Actualiser** : recharge toutes les données
+- **Personnaliser** : ouvre les préférences d'affichage
 
-- **Importer** : Lancer un nouvel import
-- **Actualiser** : Rafraîchir les données
-- **Personnaliser** : Modifier l'affichage
+## Tutoriel de bienvenue
 
-## Filtrage des données
+À la première connexion, un tutoriel présente les principales fonctionnalités. Il disparaît dès que le cabinet contient des données.
 
-Par défaut, le tableau de bord affiche les données de l'année en cours. Vous pouvez ajuster la période visualisée.
-
-## Tutorial de bienvenue
-
-Lors de votre première connexion, un tutorial vous guide à travers les principales fonctionnalités du tableau de bord.
-
-Vous pouvez relancer ce tutorial depuis les paramètres si nécessaire.
-
-## Performances
-
-Le tableau de bord charge les données en temps réel. En cas de volume important, le chargement peut prendre quelques secondes.
-
-::: tip Astuce
-Pour des données toujours à jour, utilisez le bouton **Actualiser** après avoir effectué des imports ou modifications.
+::: tip Analyse du portefeuille
+Le tableau de bord répond à « combien ai-je encaissé ? ». Pour « combien vais-je encaisser, et qu'est-ce qui manque ? », utilisez la page [Pilotage](/features/pilotage/).
 :::

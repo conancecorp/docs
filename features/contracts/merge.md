@@ -1,102 +1,58 @@
 # Fusion de contrats
 
-La fusion de contrats permet de regrouper plusieurs contrats en un seul, notamment en cas de doublons.
+La fusion regroupe plusieurs contrats en un seul : leurs commissions sont rattachées au contrat conservé, et leurs numéros deviennent ses alias.
 
-## Pourquoi fusionner des contrats ?
+## Quand fusionner
 
-Des doublons de contrats peuvent apparaître pour plusieurs raisons :
+- Le même contrat a été créé deux fois sous des numéros différents (`12345` et `0012345`)
+- Une erreur de saisie a créé un doublon
+- Deux fichiers de partenaires nomment le même contrat différemment
 
-- **Formats de numéros différents** : Un même contrat importé avec des formats différents (ex: "12345" et "0012345")
-- **Erreurs de saisie** : Contrats créés manuellement avec des erreurs
-- **Imports multiples** : Même contrat dans différents fichiers partenaires
+## Procédure
 
-## Comment fusionner des contrats
+1. Sur la page **Contrats**, cliquez sur **Fusionner** (ou sélectionnez des contrats puis Fusionner)
+2. Choisissez le **contrat qui va recevoir les alias** — c'est lui qui est conservé, avec ses informations (client, produit, conseiller…)
+3. Choisissez les **contrats à fusionner** dans lui
+4. Vérifiez l'**aperçu des alias après fusion** : les alias déjà existants sont marqués *Existant*, les nouveaux viennent des contrats fusionnés
+5. **Fusionner**
 
-### Étape 1 : Sélectionner les contrats
+## Ce qui se passe
 
-1. Accédez à la page **Contrats**
-2. Sélectionnez les contrats à fusionner (minimum 2)
-3. Cliquez sur **Fusionner**
+| Élément | Résultat |
+|---------|----------|
+| Commissions des contrats fusionnés | Rattachées au contrat conservé |
+| Numéros des contrats fusionnés (et leurs alias) | Ajoutés comme alias du contrat conservé |
+| Contrats fusionnés | Supprimés |
+| Informations du contrat conservé | Inchangées |
 
-### Étape 2 : Choisir le contrat principal
-
-Conance vous demande de choisir le contrat qui sera conservé :
-
-- Le **contrat principal** sera conservé avec ses informations
-- Les **autres contrats** seront fusionnés dans le principal
-
-::: tip Comment choisir ?
-Choisissez le contrat qui a les informations les plus complètes ou les plus récentes.
-:::
-
-### Étape 3 : Vérifier et confirmer
-
-Avant la fusion, vérifiez le résumé :
-
-| Information | Détail |
-|-------------|--------|
-| Contrat principal | Numéro du contrat conservé |
-| Contrats fusionnés | Liste des contrats qui seront fusionnés |
-| Commissions transférées | Nombre de commissions qui seront rattachées |
-| Numéros alternatifs | Les numéros des contrats fusionnés deviendront des numéros alternatifs |
-
-Cliquez sur **Confirmer** pour lancer la fusion.
-
-## Ce qui se passe lors de la fusion
-
-1. **Commissions** : Toutes les commissions des contrats fusionnés sont rattachées au contrat principal
-2. **Numéros alternatifs** : Les numéros des contrats fusionnés sont ajoutés comme numéros alternatifs du contrat principal
-3. **Suppression** : Les contrats fusionnés sont supprimés
-4. **Historique** : L'opération est enregistrée dans l'historique
-
-## Exemple de fusion
-
-**Avant fusion :**
+**Exemple** — avant :
 
 | Contrat | Numéro | Commissions |
 |---------|--------|-------------|
-| Contrat A | 12345 | 10 |
-| Contrat B | 012345 | 5 |
-| Contrat C | 12345-01 | 3 |
+| A | 12345 | 10 |
+| B | 012345 | 5 |
+| C | 12345-01 | 3 |
 
-**Après fusion (contrat A choisi comme principal) :**
+Après fusion dans A :
 
-| Contrat | Numéro | Numéros alternatifs | Commissions |
-|---------|--------|---------------------|-------------|
-| Contrat A | 12345 | 012345, 12345-01 | 18 |
+| Contrat | Numéro | Alias | Commissions |
+|---------|--------|-------|-------------|
+| A | 12345 | 012345, 12345-01 | 18 |
+
+Au prochain import, `012345` et `12345-01` seront reconnus directement.
 
 ## Points d'attention
 
-::: warning Vérifiez avant de fusionner
-Assurez-vous que les contrats sélectionnés représentent bien le même contrat réel. La fusion est irréversible.
+::: danger Irréversible
+La fusion ne peut pas être défaite : les contrats fusionnés n'existent plus. Vérifiez que les contrats désignent bien la même souscription (même client, même partenaire).
 :::
 
-::: warning Contrats de partenaires différents
-Évitez de fusionner des contrats de partenaires différents, sauf si vous êtes certain qu'il s'agit du même contrat.
+::: warning Partenaires différents
+Fusionner des contrats de partenaires différents n'a de sens que si la base contrats et les bordereaux nomment le même partenaire différemment. Dans ce cas, préférez d'abord renseigner les [noms alternatifs du partenaire](/features/partners#noms-alternatifs).
 :::
 
-## Annulation de fusion
+## Prévenir les doublons
 
-::: danger Action irréversible
-La fusion de contrats ne peut pas être annulée. Une fois fusionnés, les contrats ne peuvent pas être séparés à nouveau.
-:::
-
-Si vous avez fusionné des contrats par erreur, vous devrez :
-1. Recréer manuellement les contrats séparés
-2. Réassocier les commissions aux bons contrats
-
-## Bonnes pratiques
-
-### Avant de fusionner
-
-1. **Vérifiez les informations** de chaque contrat
-2. **Comparez les clients** associés - ils doivent être identiques
-3. **Vérifiez les partenaires** - ils doivent correspondre
-
-### Prévention des doublons
-
-Pour éviter les doublons futurs :
-
-1. **Standardisez les numéros** : Utilisez toujours le même format
-2. **Utilisez les numéros alternatifs** : Ajoutez les variantes comme numéros alternatifs
-3. **Vérifiez avant création** : Recherchez si le contrat existe avant d'en créer un nouveau
+1. Laissez la [détection de correspondances](/features/import/smart-matching) faire son travail à l'import : associer plutôt que créer
+2. Renseignez les alias connus dès la création d'un contrat
+3. Cherchez un contrat (numéro **et** alias sont recherchés) avant d'en créer un

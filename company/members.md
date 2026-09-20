@@ -1,112 +1,59 @@
-# Gestion des membres
+# Membres
 
-Invitez des collaborateurs et gérez les accès à votre entreprise Conance.
+L'onglet **Membres** de la gestion d'entreprise liste les utilisateurs qui ont accès au cabinet et gère les invitations.
 
-## Accès
-
-1. Accédez à **Gestion d'entreprise**
-2. Sélectionnez l'onglet **Membres**
+::: info Membres ≠ conseillers
+Un **membre** est un utilisateur de Conance. Un [conseiller](/features/advisors) est une personne à qui des contrats sont rattachés. Les deux listes sont indépendantes.
+:::
 
 ## Liste des membres
 
-La liste affiche pour chaque membre :
-
-| Information | Description |
-|-------------|-------------|
-| Nom | Prénom et nom |
-| Email | Adresse email |
-| Rôle | Rôle attribué |
-| Statut | Actif, En attente |
-| Dernière connexion | Date de dernière activité |
+Pour chaque membre : email, prénom, nom, rôle (**Administrateur** ou rôle personnalisé, sinon *Utilisateur*), statut. L'en-tête rappelle l'utilisation du **quota d'utilisateurs** du plan.
 
 ## Inviter un membre
 
-### Envoyer une invitation
+1. **Inviter un membre**
+2. **Email** du collaborateur
+3. Choisissez :
+   - **Administrateur** (case à cocher) — accès complet, y compris la gestion d'entreprise ; ou
+   - **Rôle personnalisé** (optionnel) — un des rôles définis dans l'onglet [Rôles](/company/roles). Sans rôle ni case Administrateur, l'invité est *Utilisateur* avec les permissions de base
+4. **Inviter**
 
-1. Cliquez sur **Inviter un membre**
-2. Entrez l'**email** du collaborateur
-3. Sélectionnez le **rôle** à attribuer
-4. Cliquez sur **Envoyer l'invitation**
+L'invité reçoit un email avec un lien. S'il n'a pas de compte, il en crée un ; il rejoint ensuite l'entreprise avec le rôle prévu.
 
-### Processus côté invité
-
-1. Le collaborateur reçoit un email d'invitation
-2. Il clique sur le lien dans l'email
-3. S'il n'a pas de compte, il en crée un
-4. Il est automatiquement ajouté à l'entreprise avec le rôle attribué
-
-### Invitations en attente
-
-Les invitations non acceptées apparaissent avec le statut **En attente**.
-
-Pour une invitation en attente, vous pouvez :
-
-- **Renvoyer** : Envoyer à nouveau l'email
-- **Annuler** : Supprimer l'invitation
-
-::: info Expiration
-Les invitations expirent après 7 jours. Vous pouvez renvoyer une nouvelle invitation si nécessaire.
+::: warning Validité d'une invitation : 1 heure
+Le lien d'invitation expire au bout d'une heure. Passé ce délai, utilisez **Renvoyer** sur l'invitation en attente : un nouveau lien est émis.
 :::
+
+## Invitations en attente
+
+Les invitations non acceptées apparaissent dans un bloc dédié, avec deux actions : **Renvoyer** et **Annuler**.
+
+Les invitations en attente **comptent dans le quota d'utilisateurs** : annulez celles qui n'aboutiront pas.
 
 ## Modifier un membre
 
-### Changer le rôle
-
-1. Cliquez sur le membre
-2. Sélectionnez **Modifier le rôle**
-3. Choisissez le nouveau rôle
-4. Confirmez
-
-::: warning Rôle administrateur
-Assurez-vous de toujours avoir au moins un administrateur dans l'entreprise.
-:::
+**Modifier** ouvre le choix du statut administrateur et du rôle personnalisé. Les changements s'appliquent à la prochaine action du membre.
 
 ## Retirer un membre
 
-1. Sélectionnez le membre
-2. Cliquez sur **Retirer**
-3. Confirmez la suppression
+**Supprimer** retire l'accès immédiatement. Ce que le membre a créé (imports, commissions saisies) reste dans l'entreprise. Il peut être réinvité.
 
-### Conséquences
+## Quotas
 
-Quand un membre est retiré :
+| Plan | Utilisateurs |
+|------|--------------|
+| Gratuit, Starter | 3 |
+| Standard | 10 |
+| Premium | 25 |
+| Entreprise | 100 |
+| Plans Groupe | 3 par cabinet |
 
-- Il perd immédiatement accès à l'entreprise
-- Ses données personnelles (commissions créées, etc.) restent dans l'entreprise
-- Il peut être réinvité ultérieurement
-
-## Limites de membres
-
-Le nombre de membres est limité selon votre abonnement :
-
-| Plan | Limite |
-|------|--------|
-| Gratuit | 3 membres |
-| Premium | Selon l'offre |
-
-::: tip Besoin de plus de membres ?
-Consultez les [options d'abonnement](/company/subscription) pour augmenter votre limite.
-:::
-
-## Rôles disponibles
-
-| Rôle | Description |
-|------|-------------|
-| Administrateur | Accès complet, peut gérer l'entreprise |
-| Utilisateur | Accès selon les permissions du rôle |
-
-→ Pour créer des rôles personnalisés, voir [Rôles et permissions](/company/roles)
+→ [Abonnement](/company/subscription)
 
 ## Bonnes pratiques
 
-::: tip Principe du moindre privilège
-N'attribuez que les permissions nécessaires à chaque collaborateur.
-:::
-
-::: tip Plusieurs administrateurs
-Il est recommandé d'avoir au moins deux administrateurs pour éviter les blocages en cas d'absence.
-:::
-
-::: tip Revue régulière
-Revoyez régulièrement la liste des membres et retirez les accès des collaborateurs qui ont quitté l'entreprise.
-:::
+- **Deux administrateurs minimum**, pour ne jamais être bloqué.
+- **Moindre privilège** : un rôle personnalisé en lecture pour qui n'a pas à modifier.
+- **Revue régulière** : retirez les membres partis, annulez les invitations mortes.
+- **2FA obligatoire** : activez la [politique d'entreprise](/settings/security#politique-d-entreprise).

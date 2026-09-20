@@ -1,161 +1,76 @@
 # Rôles et permissions
 
-Configurez les rôles et définissez précisément les accès de chaque collaborateur.
+Les **permissions** disent ce qu'un membre peut voir et faire. Un **rôle** est un jeu de permissions nommé, réutilisable. L'onglet **Rôles** de la gestion d'entreprise crée et modifie les rôles du cabinet.
 
-## Accès
+## Trois niveaux d'accès
 
-1. Accédez à **Gestion d'entreprise**
-2. Sélectionnez l'onglet **Rôles**
+| Niveau | Comment | Permissions |
+|--------|---------|-------------|
+| **Administrateur** | Case cochée à l'invitation ou dans la fiche membre | Toutes, y compris la gestion d'entreprise |
+| **Rôle personnalisé** | Rôle créé par le cabinet et attribué au membre | Celles du rôle |
+| **Utilisateur** | Aucun rôle attribué | Les permissions de base (ci-dessous) |
 
-## Concept de rôles et permissions
+### Permissions de base (tout utilisateur)
 
-### Rôles
+Voir le tableau de bord, les clients, contrats, conseillers, partenaires, produits, commissions, les types et natures d'opération, les fichiers du stockage (et les télécharger), les informations de l'entreprise ; créer des commissions ; modifier son profil.
 
-Un rôle est un ensemble de permissions attribué à un utilisateur. Par exemple :
+## Créer un rôle
 
-- **Administrateur** : Toutes les permissions
-- **Conseiller** : Accès aux commissions et contrats
-- **Assistant** : Accès en lecture seule
+1. **Nouveau rôle** : nom et description
+2. **Gérer les permissions** : cochez les permissions, groupées par domaine
+3. **Enregistrer**
 
-### Permissions
+Un rôle se modifie à tout moment ; les changements s'appliquent immédiatement à tous les membres qui le portent. Un rôle se supprime s'il n'est attribué à personne.
 
-Les permissions définissent ce qu'un utilisateur peut faire :
+## Permissions disponibles
 
-- Voir les données (lecture)
-- Modifier les données (écriture)
-- Supprimer les données
-- Accéder à certaines fonctionnalités
+### Données
 
-## Rôles par défaut
+| Domaine | Permissions |
+|---------|-------------|
+| Clients | `clients:view`, `clients:create`, `clients:edit`, `clients:delete` |
+| Contrats | `contracts:view`, `contracts:create`, `contracts:edit`, `contracts:delete` |
+| Conseillers | `advisors:view`, `advisors:create`, `advisors:edit`, `advisors:delete` |
+| Partenaires | `partners:view`, `partners:create`, `partners:edit`, `partners:delete` |
+| Produits | `products:view`, `products:create`, `products:edit`, `products:delete` |
+| Commissions | `commissions:view`, `commissions:create`, `commissions:edit`, `commissions:delete`, `commissions:export` |
 
-Conance propose des rôles par défaut :
+### Référentiels
 
-| Rôle | Description |
-|------|-------------|
-| **Administrateur** | Accès complet à toutes les fonctionnalités |
-| **Utilisateur** | Accès standard aux fonctionnalités courantes |
+| Domaine | Permissions |
+|---------|-------------|
+| Types d'opération | `operation_type_mappings:view`, `operation_type_mappings:edit` |
+| Natures d'opération | `operation_natures:view`, `operation_natures:edit` |
 
-## Créer un rôle personnalisé
+### Fonctions
 
-1. Cliquez sur **Nouveau rôle**
-2. Donnez un **nom** au rôle
-3. Sélectionnez les **permissions** à accorder
-4. Enregistrez
+| Domaine | Permissions | Donne accès à |
+|---------|-------------|---------------|
+| Import | `import:data` | Import, Extraction PDF |
+| Stockage | `storage:view`, `storage:download`, `storage:edit`, `storage:delete` | Stockage |
+| Tableau de bord | `dashboard:view` | Tableau de bord |
+| Pilotage, Réglementaire, Export | `commissions:view` (+ `commissions:export` pour télécharger) | Pilotage, Réglementaire, Export |
 
-### Permissions disponibles
+### Entreprise
 
-#### Tableau de bord
-- `dashboard:view` - Voir le tableau de bord
+| Permission | Effet |
+|------------|-------|
+| `company:view` | Voir les informations de l'entreprise |
+| `company:edit` | Modifier les informations de l'entreprise |
+| `company:admin` | Administrer l'entreprise (équivaut à Administrateur) |
+| `members:manage` | Gérer les membres |
+| `roles:manage` | Gérer les rôles |
+| `profile:edit` | Modifier son propre profil |
 
-#### Conseillers
-- `advisors:view` - Voir les conseillers
-- `advisors:create` - Créer des conseillers
-- `advisors:edit` - Modifier des conseillers
-- `advisors:delete` - Supprimer des conseillers
+## Exemples de rôles
 
-#### Clients
-- `clients:view` - Voir les clients
-- `clients:create` - Créer des clients
-- `clients:edit` - Modifier des clients
-- `clients:delete` - Supprimer des clients
+| Rôle | Permissions | Pour qui |
+|------|-------------|----------|
+| **Lecture** | Les permissions de base, sans `commissions:create` | Un associé qui consulte |
+| **Comptable** | Base + `commissions:edit`, `commissions:export`, `operation_type_mappings:edit` | Qui rapproche les bordereaux et exporte vers la compta |
+| **Opérateur import** | Base + `import:data`, `contracts:create`, `contracts:edit`, `clients:create`, `advisors:create`, `storage:*`, `operation_type_mappings:edit`, `products:create`, `products:edit` | Qui importe les relevés et qualifie produits et types |
+| **Gestionnaire** | Tout sauf `company:admin`, `members:manage`, `roles:manage` | Un responsable qui ne gère pas l'abonnement ni l'équipe |
 
-#### Partenaires
-- `partners:view` - Voir les partenaires
-- `partners:create` - Créer des partenaires
-- `partners:edit` - Modifier des partenaires
-- `partners:delete` - Supprimer des partenaires
-
-#### Produits
-- `products:view` - Voir les produits
-- `products:create` - Créer des produits
-- `products:edit` - Modifier des produits
-- `products:delete` - Supprimer des produits
-
-#### Contrats
-- `contracts:view` - Voir les contrats
-- `contracts:create` - Créer des contrats
-- `contracts:edit` - Modifier des contrats
-- `contracts:delete` - Supprimer des contrats
-
-#### Commissions
-- `commissions:view` - Voir les commissions
-- `commissions:create` - Créer des commissions
-- `commissions:edit` - Modifier des commissions
-- `commissions:delete` - Supprimer des commissions
-- `commissions:export` - Exporter des commissions
-
-#### Import
-- `import:data` - Importer des données
-
-#### Stockage
-- `storage:view` - Voir les fichiers
-- `storage:delete` - Supprimer des fichiers
-
-#### Entreprise
-- `company:admin` - Administrer l'entreprise
-
-## Modifier un rôle
-
-1. Sélectionnez le rôle dans la liste
-2. Cliquez sur **Modifier**
-3. Ajoutez ou retirez des permissions
-4. Enregistrez
-
-::: warning Rôle en cours d'utilisation
-Si des utilisateurs ont ce rôle, les changements s'appliquent immédiatement.
-:::
-
-## Supprimer un rôle
-
-1. Sélectionnez le rôle
-2. Cliquez sur **Supprimer**
-3. Réattribuez les utilisateurs à un autre rôle
-4. Confirmez
-
-::: info Rôles par défaut
-Les rôles par défaut ne peuvent pas être supprimés.
-:::
-
-## Exemples de rôles personnalisés
-
-### Rôle "Conseiller"
-
-Pour un conseiller qui doit voir ses données mais ne pas modifier la configuration :
-
-- ✅ `dashboard:view`
-- ✅ `commissions:view`
-- ✅ `contracts:view`
-- ✅ `clients:view`
-- ❌ Import, paramètres, gestion d'entreprise
-
-### Rôle "Comptable"
-
-Pour un comptable qui doit pouvoir exporter les données :
-
-- ✅ `dashboard:view`
-- ✅ `commissions:view`
-- ✅ `commissions:export`
-- ❌ Création, modification, suppression
-
-### Rôle "Opérateur Import"
-
-Pour quelqu'un qui gère uniquement les imports :
-
-- ✅ `import:data`
-- ✅ `commissions:view`
-- ✅ `storage:view`
-- ❌ Modifications manuelles
-
-## Bonnes pratiques
-
-::: tip Granularité
-Créez des rôles précis plutôt qu'un rôle fourre-tout avec trop de permissions.
-:::
-
-::: tip Documentation
-Documentez la raison d'être de chaque rôle personnalisé pour faciliter la gestion future.
-:::
-
-::: tip Audit régulier
-Vérifiez régulièrement que les rôles correspondent toujours aux besoins réels.
+::: tip Import : les permissions qui vont ensemble
+Un import crée des contrats, des clients, des conseillers, des produits et des types d'opération. Un rôle limité à `import:data` seul verra ses imports échouer sur les créations. Donnez les permissions `create`/`edit` correspondantes.
 :::

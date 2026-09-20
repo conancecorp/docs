@@ -1,95 +1,58 @@
 # Configurations sauvegardées
 
-Sauvegardez vos configurations de mapping pour réutiliser les mêmes paramètres lors de vos prochains imports.
+Une configuration mémorise tout le [mapping](/features/import/mapping) d'un format de fichier. Sauvegardez-la une fois par partenaire et par type de relevé ; les bordereaux suivants s'importent sans refaire le travail.
 
-## Pourquoi sauvegarder une configuration ?
+## Ce qui est sauvegardé
 
-Chaque partenaire envoie ses relevés dans un format spécifique. Une fois le mapping configuré, vous pouvez le sauvegarder pour :
+- Les associations colonnes → champs, pour les quatre sections
+- Les modes **Manuel / Colonne** et les valeurs fixes (partenaire, produit, entité, détail partenaire, type d'opération)
+- Le format de date, l'option *commissions sans numéro de contrat*, la période
+- Les **colonnes calculées** et **filtres de lignes**
+- Les réglages Excel (onglet, ligne et colonne de départ, en-têtes) ou CSV
+- Le lien vers un [profil d'extraction PDF](/features/import/pdf#profils-d-extraction), si l'import venait d'un PDF
 
-- **Gagner du temps** : Ne plus refaire le mapping à chaque import
-- **Éviter les erreurs** : Réutiliser une configuration validée
-- **Standardiser** : Assurer la cohérence des imports dans votre équipe
+## Sauvegarder
 
-## Sauvegarder une configuration
+À la fin de l'étape Mapping, **Sauvegarder la configuration** :
 
-### Quand sauvegarder
+1. Donnez un nom explicite (ex. « Generali — Relevé mensuel encours »)
+2. Vérifiez le **résumé** (colonnes mappées, sections activées, partenaire, fichier Excel…)
+3. **Sauvegarder**
 
-Après avoir configuré votre mapping (étape 2 de l'import), avant de lancer la pré-analyse :
+Si vous lancez l'import sans avoir sauvegardé, l'assistant vous le propose une dernière fois.
 
-1. Cliquez sur **Sauvegarder la configuration**
-2. Donnez un nom explicite à la configuration
-3. Confirmez la sauvegarde
+## Charger
 
-::: tip Nommage recommandé
-Utilisez un nom qui identifie clairement le partenaire et le type de fichier.
+À l'étape Mapping, **Charger une configuration** :
 
-**Exemples :**
-- "Generali - Relevé mensuel"
-- "Amundi - Commissions trimestrielles"
-- "Swiss Life - Format 2024"
+- Conance vérifie la **compatibilité** de chaque configuration avec les colonnes du fichier et ne propose que celles qui correspondent
+- Les **modèles Conance** — configurations fournies pour des formats de partenaires connus — apparaissent avec une étiquette dédiée
+- **Commencer sans configuration** revient au mapping vide
+
+Quand un modèle est chargé, le détail du mapping est replié : ouvrez-le seulement pour vérifier ou ajuster.
+
+::: warning Vérifiez malgré tout
+Un partenaire peut changer son format sans prévenir. Après chargement, jetez un œil à l'aperçu des colonnes avant de continuer.
 :::
 
-### Ce qui est sauvegardé
+## Gérer
 
-La configuration mémorise :
+**Import → Configurations** regroupe :
 
-- Les associations colonnes → champs
-- Le partenaire sélectionné (si mode fixe)
-- Les paramètres Excel (feuille, ligne de départ, etc.)
-- Les options de mapping avancées
+| Bloc | Actions |
+|------|---------|
+| Configurations d'import sauvegardées | Rechercher, **renommer**, **supprimer** |
+| Profils d'extraction PDF | Voir [Import depuis un PDF](/features/import/pdf#gerer-les-profils) |
+| Associations de contrats mémorisées | Voir [Correspondances de contrats](/features/import/smart-matching#associations-memorisees) |
 
-## Charger une configuration
+Pour **modifier** une configuration : chargez-la, ajustez le mapping, sauvegardez sous le même nom.
 
-### Lors d'un nouvel import
+## Partage
 
-1. Uploadez votre fichier
-2. Cliquez sur **Charger une configuration**
-3. Sélectionnez la configuration dans la liste
-4. Le mapping est automatiquement appliqué
-
-### Vérification après chargement
-
-::: warning Important
-Même après avoir chargé une configuration, vérifiez que le mapping correspond bien à votre fichier. Les formats peuvent évoluer.
-:::
-
-## Gérer vos configurations
-
-### Modifier une configuration
-
-1. Chargez la configuration
-2. Modifiez le mapping selon vos besoins
-3. Sauvegardez avec le même nom pour la mettre à jour
-
-### Supprimer une configuration
-
-1. Accédez à la gestion des configurations
-2. Sélectionnez la configuration à supprimer
-3. Confirmez la suppression
-
-## Configurations par partenaire
-
-Nous recommandons de créer une configuration par :
-
-- **Partenaire** : Chaque compagnie a son format
-- **Type de relevé** : Un partenaire peut avoir différents formats
-- **Version** : Si le format évolue, créez une nouvelle configuration
-
-## Partage des configurations
-
-Les configurations sont partagées au niveau de l'entreprise :
-
-- Tous les membres de votre entreprise voient les mêmes configurations
-- Un utilisateur peut utiliser une configuration créée par un collègue
-- Les modifications sont visibles par tous
-
-::: tip Travail en équipe
-Convenez d'une convention de nommage avec votre équipe pour retrouver facilement les configurations.
-:::
+Les configurations sont partagées au niveau du cabinet : tout membre autorisé à importer peut utiliser et modifier celles de ses collègues. Convenez d'une convention de nommage (partenaire — type de relevé — variante).
 
 ## Bonnes pratiques
 
-1. **Testez avant de sauvegarder** : Faites un import test pour valider le mapping
-2. **Documentez les spécificités** : Ajoutez des notes dans le nom si nécessaire
-3. **Mettez à jour régulièrement** : Adaptez les configurations quand les formats évoluent
-4. **Supprimez les obsolètes** : Gardez la liste de configurations propre
+1. **Une configuration par format**, pas par fichier
+2. **Testez** sur un premier import avant de sauvegarder
+3. **Supprimez** les configurations obsolètes quand un partenaire change de format

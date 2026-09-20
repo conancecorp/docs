@@ -1,106 +1,58 @@
 # Gestion des partenaires
 
-Les partenaires sont les compagnies d'assurance, sociétés de gestion et autres institutions avec lesquelles vous travaillez.
+Les partenaires sont les compagnies d'assurance, sociétés de gestion, plateformes et autres établissements qui vous versent des commissions. Chaque bordereau importé est rattaché à un partenaire.
 
-## Vue d'ensemble
+## Colonnes
 
-La liste des partenaires affiche :
+Nom, code, noms alternatifs, contact, site web, statut.
 
-- **Nom** : Nom du partenaire
-- **Code** : Identifiant court
-- **Contact** : Personne de contact
-- **Statut** : Actif ou inactif
+## Créer un partenaire
 
-## Ajouter un partenaire
+**Nouveau partenaire** :
 
-1. Cliquez sur **Nouveau partenaire**
-2. Renseignez les informations :
-   - **Nom** (obligatoire)
-   - **Code** : Identifiant court
-   - **Description**
-   - **Site web**
-   - **Logo** (optionnel)
-   - **Contact** : Nom, email, téléphone
-3. Cliquez sur **Enregistrer**
+| Champ | Description |
+|-------|-------------|
+| Nom | Obligatoire |
+| Code | Identifiant court, unique |
+| **Noms alternatifs** | Autres libellés sous lesquels ce partenaire apparaît dans vos fichiers — voir ci-dessous |
+| Site web, Description | Optionnels |
+| Contact | Nom, email, téléphone de votre interlocuteur |
+| Actif | Interrupteur |
 
-::: tip Pourquoi ajouter un partenaire ?
-Créer vos partenaires avant l'import facilite le mapping et garantit une organisation cohérente de vos données.
-:::
+Un partenaire se crée aussi depuis l'assistant d'import, au moment du mapping.
 
-## Modifier un partenaire
+## Noms alternatifs
 
-1. Cliquez sur le partenaire dans la liste
-2. Cliquez sur **Modifier**
-3. Mettez à jour les informations
-4. Enregistrez
+À l'import en mode *Partenaire = colonne*, Conance reconnaît un partenaire par son nom **ou par l'un de ses noms alternatifs**. Renseignez-y les variantes rencontrées dans vos fichiers (« GENERALI VIE », « Generali Patrimoine », « GNL »…) pour éviter la création de doublons.
 
-## Voir les détails
+## Détails partenaire
 
-En cliquant sur un partenaire, vous accédez à :
+Un partenaire peut se décliner en **détails partenaire** : ses entités juridiques ou ses gammes (« Eres Assurances » et « Eres Gestion » sous *Eres*). Le détail se renseigne sur le contrat et se filtre partout où le partenaire se filtre.
 
-- Ses **informations** complètes
-- Ses **produits** associés
-- Ses **commissions** générées
-- Ses **types d'opération** configurés
+→ [Détails partenaire](/settings/partner-details)
 
-## Désactiver un partenaire
+## Actif / inactif
 
-Si vous ne travaillez plus avec un partenaire :
+Un partenaire avec lequel vous ne travaillez plus passe en **inactif** : il disparaît des listes de sélection, son historique reste.
 
-1. Ouvrez la fiche du partenaire
-2. Cliquez sur **Désactiver**
-3. Le partenaire n'apparaît plus dans les listes de sélection
+## Supprimer
 
-::: info Données conservées
-Les données historiques (commissions, contrats) du partenaire sont conservées.
-:::
+Un partenaire sans contrat ni produit est supprimé. S'il en a, Conance le **désactive** à la place et vous l'indique : l'historique reste intact. Confirmation requise ; sélection multiple possible.
 
-## Supprimer un partenaire
+## Fiche du partenaire
 
-1. Sélectionnez le partenaire
-2. Cliquez sur **Supprimer**
-3. Confirmez la suppression
+**Voir** : informations, produits, types d'opération, commissions.
 
-::: warning Attention
-Un partenaire ne peut être supprimé que s'il n'a aucune commission ou contrat associé.
-:::
+## Ce qui dépend du partenaire
 
-## Recherche et filtrage
+| Élément | Lien |
+|---------|------|
+| Produits | Chaque produit appartient à un partenaire — [Produits](/features/products) |
+| Types d'opération | Les libellés du partenaire et leur nature — [Types d'opération](/settings/operation-types) |
+| Correspondances de contrats | La recherche de contrats similaires se fait au sein du même partenaire — [Correspondances](/features/import/smart-matching) |
+| Couverture de l'encours | Mesurée partenaire par partenaire — [Pilotage](/features/pilotage/) |
+| Quota | Le nombre de partenaires est limité par votre [abonnement](/company/subscription) |
 
-### Recherche
-
-Utilisez la barre de recherche pour trouver un partenaire par nom ou code.
-
-### Filtres
-
-- **Statut** : Actif / Inactif
-
-## Produits du partenaire
-
-Chaque partenaire peut avoir plusieurs produits associés. Gérez les produits depuis :
-- La fiche du partenaire
-- La page [Produits](/features/products)
-
-## Types d'opération
-
-Configurez les types d'opération spécifiques à chaque partenaire dans les [Paramètres](/settings/operation-types).
-
-Ces types correspondent aux libellés utilisés dans les fichiers de commissions du partenaire.
-
-## Import et partenaires
-
-Lors d'un import, vous pouvez :
-
-- **Sélectionner un partenaire existant** (mode fixe)
-- **Mapper une colonne** contenant le nom du partenaire
-- **Créer un nouveau partenaire** depuis l'interface d'import
-
-## Bonnes pratiques
-
-::: tip Nommage cohérent
-Utilisez les noms officiels des partenaires pour éviter les confusions et doublons.
-:::
-
-::: tip Informations de contact
-Renseignez les coordonnées de votre interlocuteur chez chaque partenaire pour faciliter le suivi.
+::: tip Nommage
+Utilisez le nom officiel comme nom principal, et mettez toutes les variantes en noms alternatifs. Un seul partenaire par établissement.
 :::

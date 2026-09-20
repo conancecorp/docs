@@ -1,183 +1,156 @@
 # Questions fréquentes
 
-Retrouvez les réponses aux questions les plus courantes sur Conance.
-
 ## Général
 
 ### Qu'est-ce que Conance ?
 
-Conance est une plateforme SaaS de gestion de commissions destinée aux cabinets de gestion de patrimoine. Elle permet d'importer, centraliser et analyser les commissions reçues des différents partenaires.
+Une plateforme SaaS de pilotage des commissions pour les cabinets de gestion de patrimoine : import des bordereaux partenaires, fiabilisation, analyse (encours, prévisionnel, commissions attendues) et préparation de la FRA CIF.
 
-### À qui s'adresse Conance ?
+### Mes données sont-elles sécurisées ?
 
-Conance est conçu pour :
-- Les Conseillers en Gestion de Patrimoine (CGP)
-- Les Conseillers en Investissements Financiers (CIF)
-- Les courtiers en assurance et produits financiers
+Hébergement en France (Scaleway et OVHcloud), échanges chiffrés en HTTPS, mots de passe hachés, secrets 2FA chiffrés, sauvegardes quotidiennes externalisées, limitation des tentatives de connexion, double authentification disponible et imposable au cabinet, sessions révocables. Les fonctionnalités IA sont désactivées par défaut et nécessitent le consentement explicite d'un administrateur. Contact sécurité : [security@conance.io](mailto:security@conance.io).
 
-### Conance est-il sécurisé ?
+### Où sont les tarifs ?
 
-Oui, Conance utilise des protocoles de sécurité modernes pour protéger vos données. Vos informations sont chiffrées et hébergées sur des serveurs sécurisés.
+Sur [conance.io](https://conance.io/#tarifs). Les limites de chaque plan sont détaillées dans [Abonnement](/company/subscription).
 
 ## Compte et connexion
 
-### Comment créer un compte ?
+### Je ne reçois pas le code de vérification
 
-1. Rendez-vous sur [app.conance.io](https://app.conance.io)
-2. Cliquez sur "Créer un compte"
-3. Renseignez vos informations
-4. Vérifiez votre email
+Vérifiez vos indésirables, attendez une minute, puis **Renvoyer le code**. Si rien n'arrive, écrivez à [support@conance.io](mailto:support@conance.io) depuis l'adresse concernée.
 
-→ [Guide complet : Créer un compte](/guide/create-account)
+### Mon lien d'invitation ne fonctionne plus
 
-### J'ai oublié mon mot de passe
+Une invitation est valable une heure. Demandez à un administrateur de la **renvoyer** (*Gestion entreprise → Membres → Invitations en attente*).
 
-1. Sur la page de connexion, cliquez sur "Mot de passe oublié"
-2. Entrez votre email
-3. Cliquez sur le lien reçu par email
-4. Définissez un nouveau mot de passe
+### J'ai perdu mon téléphone (2FA)
 
-### Je ne reçois pas l'email de vérification
+Utilisez une autre méthode configurée (clé d'accès, code par email). Sinon, contactez le support. Gardez toujours deux méthodes → [Sécurité](/settings/security).
 
-- Vérifiez votre dossier spam/indésirables
-- Attendez quelques minutes (les emails peuvent prendre du temps)
-- Demandez un nouvel envoi depuis la page de vérification
-- Contactez le support si le problème persiste
+### Puis-je changer mon adresse email ?
 
-## Import de données
+Pas depuis l'interface : l'email est l'identifiant du compte. Contactez le support.
 
-### Quels formats de fichiers sont acceptés ?
+## Import
 
-Conance accepte les fichiers :
-- **CSV** (.csv)
-- **Excel** (.xlsx, .xls)
+### Quels fichiers puis-je importer ?
 
-### Mon fichier n'est pas reconnu
+`.csv`, `.xlsx`, `.xlsm`, `.xls`, `.xlsb`, `.ods` et `.pdf`, jusqu'à 100 Mo. Les PDF passent par l'[extraction PDF](/features/import/pdf).
 
-- Vérifiez que l'extension est correcte (.csv, .xlsx, .xls)
-- Assurez-vous que le fichier n'est pas corrompu
-- Vérifiez que le fichier ne dépasse pas 10 Mo
+### « Un import est déjà en cours pour votre entreprise »
 
-### Les caractères spéciaux s'affichent mal
+Un seul import tourne à la fois par cabinet. Attendez la fin (suivez-la dans *Import → Historique*) ou vérifiez qu'un collègue n'en a pas lancé un.
 
-Pour les fichiers CSV, essayez de les réenregistrer en UTF-8 depuis votre tableur.
+### Le fichier a déjà été importé, pourtant c'est un nouveau relevé
 
-### Comment sauvegarder une configuration d'import ?
+Le partenaire a peut-être renvoyé un fichier identique. Si vous êtes sûr de vous, **Continuer quand même**. Pour ne plus voir l'alerte, désactivez-la dans les [paramètres généraux](/settings/general).
 
-Après avoir configuré le mapping, cliquez sur "Sauvegarder la configuration" et donnez-lui un nom. Vous pourrez la réutiliser pour vos prochains imports.
+### Les dates sont mal lues
 
-→ [Guide : Configurations sauvegardées](/features/import/saved-configs)
+Choisissez explicitement le **format de date** dans la section Commissions du mapping (`JJ/MM/AAAA`, `MM/AAAA`…). Pour un fichier qui ne donne que le mois, indiquez l'année.
 
-### Qu'est-ce que la correspondance intelligente ?
+### Le relevé a des sous-totaux, des lignes de section…
 
-C'est une fonctionnalité qui détecte automatiquement les données similaires lors de l'import (ex: "Jean DUPONT" et "DUPONT Jean"). Elle vous permet de confirmer ou refuser les correspondances proposées.
+Utilisez les **filtres de lignes** (exclure les lignes contenant « Total ») et les **colonnes calculées** (valeur de section propagée) du [mapping](/features/import/mapping#options-avancees), et sauvegardez la configuration.
 
-→ [Guide : Correspondance intelligente](/features/import/smart-matching)
+### L'encours de Pilotage est « Non disponible » ou la couverture est basse
 
-## Commissions
+La colonne **Base de calcul** (assiette) n'a pas été mappée pour ce partenaire. Rechargez la configuration, mappez-la, réimportez — ou attendez le prochain bordereau. Voir [Couverture](/features/pilotage/#couverture).
 
-### Comment modifier plusieurs commissions à la fois ?
+### Qu'est-ce que la fenêtre « Résolution des correspondances approximatives » ?
 
-1. Sélectionnez les commissions concernées
-2. Cliquez sur "Modifier la sélection"
-3. Choisissez les champs à modifier
-4. Confirmez
+Un numéro de contrat du fichier ressemble à un contrat existant sans lui être identique. Choisissez d'associer (le numéro devient un alias) ou de créer un nouveau contrat → [Correspondances de contrats](/features/import/smart-matching).
 
-→ [Guide : Actions en masse](/features/bulk-actions)
+### J'ai importé le mauvais fichier
 
-### Comment supprimer les commissions d'un import erroné ?
+*Import → Historique → Annuler l'import*. Tout ce que l'import a écrit est retiré, y compris les contrats, clients et conseillers créés → [Annuler un import](/features/import/undo).
 
-1. Dans la page Commissions, filtrez par "Fichier d'import"
-2. Sélectionnez toutes les commissions
-3. Cliquez sur "Supprimer la sélection"
-4. Confirmez
+### L'extraction PDF demande des crédits, c'est normal ?
 
-### Comment exporter mes commissions ?
+Seulement quand la lecture gratuite a échoué (PDF scanné de mauvaise qualité, mise en page inhabituelle) ou quand vous relancez avec des précisions. Le devis s'affiche avant tout débit → [Import depuis un PDF](/features/import/pdf).
 
-1. Appliquez les filtres souhaités
-2. Cliquez sur "Exporter"
-3. Le fichier CSV est téléchargé
+## Commissions et données
 
-→ [Guide : Export de données](/features/export)
+### Comment corriger la nature de commissions déjà importées ?
 
-## Contrats
+Deux façons : changer la nature du **type d'opération** concerné (*Paramètres → Types d'opération*) — toutes ses commissions suivent — ou une **modification en masse** du type d'opération sur les commissions filtrées.
 
-### Comment fusionner des contrats en doublon ?
+### Comment retirer les commissions d'un import ?
 
-1. Sélectionnez les contrats à fusionner
-2. Cliquez sur "Fusionner"
-3. Choisissez le contrat principal
-4. Confirmez
+Préférez l'[annulation d'import](/features/import/undo). Sinon : Commissions, filtre *Fichier d'import*, sélectionner tout, Supprimer.
 
-→ [Guide : Fusion de contrats](/features/contracts/merge)
+### Comment fusionner deux contrats en doublon ?
 
-### À quoi servent les numéros alternatifs ?
+Contrats → **Fusionner** : choisissez le contrat conservé puis ceux à fusionner ; leurs numéros deviennent des alias → [Fusion de contrats](/features/contracts/merge).
 
-Les numéros alternatifs permettent d'associer plusieurs numéros à un même contrat. C'est utile quand un partenaire utilise différents formats de numéros.
+### Pourquoi mes suppressions ne libèrent-elles pas de quota ?
+
+Les lignes supprimées comptent encore **30 jours** dans les quotas → [Quotas et rétention](/company/subscription#quotas-et-retention).
+
+### Différence entre partenaire, détail partenaire et entité ?
+
+- **Partenaire** : la compagnie ou société de gestion qui vous paie
+- **Détail partenaire** : une déclinaison de ce partenaire (Eres Assurances / Eres Gestion)
+- **Entité** : une subdivision de **votre** cabinet (agence, bureau)
+
+## Pilotage
+
+### Encours retenu ≠ encours sous gestion ?
+
+L'encours retenu est la **base sur laquelle chaque partenaire calcule sa commission**, telle qu'elle figure dans ses relevés. Ce n'est pas une valorisation de portefeuille à une date donnée → [Pilotage](/features/pilotage/).
+
+### Un contrat est signalé « attendu » alors qu'il est normal qu'il ne paie qu'une fois par an
+
+Conance signale, il n'exclut pas : un contrat annuel réapparaît quand son échéance passe. S'il est réellement clos, **Marquer résilié**. Voir [Commissions attendues](/features/pilotage/expected-commissions).
+
+### Pourquoi le prévisionnel ne projette-t-il pas tel contrat ?
+
+Un contrat vu une seule fois n'a pas de rythme observable : il est compté dans la réserve « vus une seule fois, non projetés », pas inventé. Déclarez une attente sur ce contrat pour le faire apparaître → [Prévisionnel](/features/pilotage/forecast).
+
+### Faut-il renseigner la périodicité des contrats ?
+
+Non, et il n'y a pas de champ pour cela : le rythme est **observé** sur l'historique de chaque contrat. La *période* d'une commission est le libellé du bordereau, sans rapport avec ce rythme.
+
+## Réglementaire
+
+### La FRA préparée par Conance est-elle la déclaration ?
+
+Non. Conance prépare les chiffres à recopier sur le portail de votre association et signale ce qu'ils ne contiennent pas. Vous déclarez → [Réglementaire](/features/reglementaire).
+
+### Les rubriques ne correspondent pas à celles de mon association
+
+Renommez, ajoutez, supprimez : bouton **Rubriques** de la page Réglementaire.
 
 ## Entreprise et équipe
 
 ### Comment inviter un collaborateur ?
 
-1. Allez dans "Gestion d'entreprise" > "Membres"
-2. Cliquez sur "Inviter un membre"
-3. Entrez l'email et le rôle
-4. Envoyez l'invitation
+*Gestion entreprise → Membres → Inviter un membre* : email, puis Administrateur ou rôle personnalisé → [Membres](/company/members).
 
-→ [Guide : Gestion des membres](/company/members)
+### Comment donner un accès en lecture seule ?
 
-### Comment changer le rôle d'un utilisateur ?
+Créez un rôle sans permission `create`/`edit`/`delete` et attribuez-le → [Rôles et permissions](/company/roles).
 
-1. Allez dans "Gestion d'entreprise" > "Membres"
-2. Cliquez sur l'utilisateur
-3. Modifiez son rôle
-4. Enregistrez
+### Je gère plusieurs cabinets
 
-### Comment créer un rôle personnalisé ?
+Les plans **Groupe** créent un espace parent et des cabinets isolés, avec un sélecteur pour basculer → [Multi-cabinets](/company/multi-cabinets).
 
-1. Allez dans "Gestion d'entreprise" > "Rôles"
-2. Cliquez sur "Nouveau rôle"
-3. Définissez les permissions
-4. Enregistrez
+## IA
 
-→ [Guide : Rôles et permissions](/company/roles)
+### Que fait exactement l'IA dans Conance ?
 
-## Abonnement
+Trois choses, toutes optionnelles : proposer un mapping d'import (gratuit), lire un PDF quand l'extraction locale échoue (crédits), lire un bulletin de souscription pour déclarer une commission attendue (crédits). Rien n'est envoyé au prestataire IA sans le consentement d'un administrateur et, pour les documents, sans confirmation explicite → [Fonctionnalités IA](/settings/ai-features).
 
-### Quelles sont les limites du plan gratuit ?
+### Combien coûte un crédit ?
 
-| Ressource | Limite |
-|-----------|--------|
-| Membres | 3 |
-| Stockage | 100 Mo |
-| Contrats | 100 |
-| Commissions | 100 |
-
-### Comment passer au plan Premium ?
-
-1. Allez dans "Gestion d'entreprise" > "Abonnement"
-2. Cliquez sur "Changer de plan"
-3. Complétez le paiement
-
-### Comment télécharger mes factures ?
-
-1. Allez dans "Gestion d'entreprise" > "Abonnement"
-2. Section "Factures"
-3. Cliquez sur la facture pour la télécharger
+0,10 €. Les crédits n'expirent pas et ne sont débités qu'en cas de succès → [Crédits IA](/company/ai-credits).
 
 ## Support
 
-### Comment contacter le support ?
+- Support : [support@conance.io](mailto:support@conance.io)
+- Facturation : [billing@conance.io](mailto:billing@conance.io)
+- Données personnelles : [privacy@conance.io](mailto:privacy@conance.io)
+- Sécurité : [security@conance.io](mailto:security@conance.io)
 
-- Par email : [support@conance.io](mailto:support@conance.io)
-
-### Où signaler un bug ?
-
-Envoyez un email à [support@conance.io](mailto:support@conance.io) avec :
-- Une description du problème
-- Les étapes pour le reproduire
-- Des captures d'écran si possible
-
-### Où suggérer une amélioration ?
-
-Envoyez vos suggestions à [support@conance.io](mailto:support@conance.io). Nous lisons toutes les suggestions et les prenons en compte pour les évolutions futures.
+Pour signaler un bug : décrivez le problème, les étapes pour le reproduire, et joignez une capture d'écran. Pour un problème d'import, indiquez le nom du fichier et l'heure : l'historique nous permet de retrouver le compte rendu.

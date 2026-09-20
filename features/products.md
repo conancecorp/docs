@@ -1,114 +1,49 @@
 # Gestion des produits
 
-Les produits représentent les produits financiers que vous distribuez pour le compte de vos partenaires.
+Un produit est un support distribué pour le compte d'un partenaire : contrat d'assurance-vie, OPCVM, SCPI, PER… Chaque contrat est rattaché à un produit ; le produit porte le **type** et l'**activité** qui alimentent les répartitions du tableau de bord et la [FRA](/features/reglementaire).
 
-## Vue d'ensemble
+## Colonnes
 
-La liste des produits affiche :
+Nom, code, type, activité, partenaire, statut.
 
-- **Nom** : Nom du produit
-- **Code** : Identifiant du produit
-- **Type** : Catégorie de produit
-- **Partenaire** : Partenaire associé
-- **Activité** : CIF ou Courtage
-- **Statut** : Actif ou inactif
+## Types et activités
 
-## Types de produits
+| | Valeurs livrées | Personnalisable |
+|---|---|---|
+| **Type** | OPCVM, SCPI, Assurance-vie, FCPI, FIP, PER, FCPR, EMTN, Autres | Oui — [Types de produits personnalisés](/settings/custom-products) |
+| **Activité** | CIF (Conseil en Investissements Financiers), Courtage (intermédiation en assurance) | Oui — [Activités personnalisées](/settings/custom-activities) |
 
-Conance gère plusieurs types de produits financiers :
+Dans le formulaire produit, type et activité se **sélectionnent ou se saisissent** : une valeur nouvelle est créée à la volée.
 
-| Type | Description |
-|------|-------------|
-| OPCVM | Organismes de Placement Collectif en Valeurs Mobilières |
-| SCPI | Sociétés Civiles de Placement Immobilier |
-| Assurance-vie | Contrats d'assurance-vie |
-| FCPI | Fonds Communs de Placement dans l'Innovation |
-| FIP | Fonds d'Investissement de Proximité |
-| PER | Plan d'Épargne Retraite |
-| FCPR | Fonds Communs de Placement à Risques |
-| EMTN | Euro Medium Term Notes |
-| Autres | Autres produits |
-
-## Activités
-
-Chaque produit est associé à une activité :
-
-| Activité | Description |
-|----------|-------------|
-| CIF | Conseil en Investissements Financiers |
-| Courtage | Intermédiation en assurance |
-
-## Ajouter un produit
-
-1. Cliquez sur **Nouveau produit**
-2. Renseignez les informations :
-   - **Nom** (obligatoire)
-   - **Code** : Identifiant
-   - **Type** : Catégorie de produit
-   - **Partenaire** : Associer à un partenaire
-   - **Activité** : CIF ou Courtage
-   - **Description**
-3. Cliquez sur **Enregistrer**
-
-## Modifier un produit
-
-1. Cliquez sur le produit dans la liste
-2. Cliquez sur **Modifier**
-3. Mettez à jour les informations
-4. Enregistrez
-
-## Voir les détails
-
-En cliquant sur un produit, vous accédez à :
-
-- Ses **informations** complètes
-- Ses **commissions** associées
-- Ses **contrats** liés
-
-## Désactiver un produit
-
-Si vous ne distribuez plus un produit :
-
-1. Ouvrez la fiche du produit
-2. Cliquez sur **Désactiver**
-3. Le produit n'apparaît plus dans les listes de sélection
-
-## Supprimer un produit
-
-1. Sélectionnez le produit
-2. Cliquez sur **Supprimer**
-3. Confirmez la suppression
-
-::: warning Attention
-Un produit ne peut être supprimé que s'il n'a aucune commission ou contrat associé.
+::: info Pourquoi l'activité compte
+La FRA CIF ventile le chiffre d'affaires entre conseil (CIF) et courtage. Un produit mal qualifié fausse la déclaration ; l'alerte *non rattaché* de la page Réglementaire le signale.
 :::
 
-## Recherche et filtrage
+## Créer un produit
 
-### Filtres disponibles
+**Nouveau produit** : nom (obligatoire), code, type, activité, partenaire (obligatoire), description, actif.
 
-- **Partenaire** : Produits d'un partenaire
-- **Type** : Catégorie de produit
-- **Activité** : CIF ou Courtage
-- **Statut** : Actif / Inactif
-- **Recherche textuelle**
+Un produit se crée aussi depuis l'assistant d'import, à l'étape [Configuration produits](/features/import/pre-analysis).
 
-## Produits personnalisés
+## Produits multi-activités
 
-Vous pouvez créer des produits personnalisés depuis les [Paramètres](/settings/custom-products). Ces produits sont spécifiques à votre entreprise.
+Un même nom de produit chez un partenaire peut recouvrir des lignes CIF et des lignes Courtage. À l'import, une **colonne discriminante d'activité** permet de le scinder en plusieurs produits.
 
-## Import et produits
+→ [Scinder les produits multi-activités](/features/import/pre-analysis#scinder-les-produits-multi-activites)
 
-Lors d'un import, les produits sont associés aux commissions. Si un produit n'existe pas, vous pouvez le créer depuis l'interface de pré-analyse.
+## Actions groupées
 
-→ Voir [Pré-analyse](/features/import/pre-analysis)
+Sélectionnez des produits (ou tout ce qui correspond au filtre), puis :
 
-## Bonnes pratiques
+- **Modifier** : type, activité, partenaire — chaque champ laissé sur *Ne pas modifier* est conservé. Idéal pour requalifier d'un coup tous les produits d'un partenaire
+- **Supprimer**
 
-::: tip Organisation
-Organisez vos produits par partenaire pour une meilleure lisibilité.
-:::
+## Actif / inactif, suppression
 
-::: tip Codes cohérents
-Utilisez les codes ISIN ou les codes officiels des produits pour faciliter les imports.
-:::
+Un produit que vous ne distribuez plus passe en **inactif**. Un produit sans contrat est supprimé ; s'il en a, Conance le **désactive** à la place.
+
+## Filtres
+
+Partenaire, type, activité, statut, recherche textuelle.
+
+→ [Tableaux, filtres et colonnes](/features/tables)

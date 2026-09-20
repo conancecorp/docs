@@ -1,100 +1,47 @@
 # Gestion des clients
 
-Gérez vos clients finaux depuis la page Clients.
+Les clients sont les titulaires des contrats. Ils sont le plus souvent créés automatiquement à l'import, mais se gèrent aussi à la main depuis la page **Clients**.
 
-## Vue d'ensemble
+## Colonnes
 
-La liste des clients affiche :
+Nom, prénom, numéro client, email, téléphone, adresse, nombre de contrats.
 
-- **Nom** : Nom du client
-- **Numéro client** : Identifiant unique
-- **Email** : Adresse email
-- **Téléphone** : Numéro de contact
-- **Contrats actifs** : Nombre de contrats en cours
+## Créer un client
 
-## Ajouter un client
+**Nouveau client** :
 
-1. Cliquez sur **Nouveau client**
-2. Renseignez les informations :
-   - **Nom** (obligatoire)
-   - **Prénom**
-   - **Numéro client** : Identifiant unique
-   - **Email**
-   - **Téléphone**
-   - **Adresse**
-3. Cliquez sur **Enregistrer**
+| Champ | Description |
+|-------|-------------|
+| Numéro de client | Optionnel — **généré automatiquement** si vide. C'est l'identifiant utilisé pour reconnaître le client d'un import à l'autre |
+| Prénom, Nom | Le nom est obligatoire |
+| Email, Téléphone, Adresse | Optionnels |
 
-::: tip Numéro client
-Le numéro client permet d'identifier de manière unique chaque client, notamment lors des imports.
-:::
+Un client se crée aussi **à la volée** depuis le formulaire de contrat, sans quitter la saisie.
 
-## Modifier un client
+## Modifier, voir, supprimer
 
-1. Cliquez sur le client dans la liste
-2. Cliquez sur **Modifier**
-3. Mettez à jour les informations
-4. Enregistrez
+- **Modifier** : depuis la ligne ou la fiche
+- **Voir** : informations, contrats et commissions du client
+- **Supprimer** : possible seulement si le client n'a plus de contrat — réaffectez ou supprimez ses contrats d'abord. Confirmation requise ; la ligne compte encore dans le quota pendant 30 jours
 
-## Voir les détails
+## Recherche et filtres
 
-En cliquant sur un client, vous accédez à :
+Recherche sur nom, prénom, numéro, email. Filtre par conseiller (via les contrats).
 
-- Ses **informations** complètes
-- Ses **contrats** associés
-- Ses **commissions** générées
-- Son **conseiller** référent
+→ [Tableaux, filtres et colonnes](/features/tables)
 
-## Supprimer un client
+## Actions groupées
 
-1. Sélectionnez le client
-2. Cliquez sur **Supprimer**
-3. Confirmez la suppression
+Sélectionnez des clients puis **Supprimer**. La sélection peut couvrir tout ce qui correspond au filtre courant.
 
-::: warning Attention
-La suppression d'un client supprime également ses associations avec les contrats. Les commissions historiques restent conservées mais sans lien vers le client.
-:::
+→ [Actions en masse](/features/bulk-actions)
 
-## Actions en masse
+## Import
 
-Vous pouvez supprimer plusieurs clients simultanément :
-
-1. Sélectionnez les clients concernés
-2. Cliquez sur **Supprimer la sélection**
-3. Confirmez la suppression
-
-→ Voir [Actions en masse](/features/bulk-actions)
-
-## Recherche et filtrage
-
-### Recherche
-
-Utilisez la barre de recherche pour trouver un client par :
-- Nom
-- Prénom
-- Numéro client
-- Email
-
-### Filtres disponibles
-
-- **Conseiller** : Clients d'un conseiller spécifique
-- **Recherche textuelle**
-
-## Import de clients
-
-Les clients peuvent être créés automatiquement lors de l'import de commissions si les informations client sont mappées dans votre fichier.
-
-→ Voir [Import de données](/features/import/)
-
-## Relations conseiller-client
-
-Dans Conance, chaque client peut être associé à un ou plusieurs conseillers via les contrats.
+La section **Clients** du [mapping](/features/import/mapping#clients) crée ou met à jour les clients : numéro (ou génération automatique), nom complet ou prénom + nom, coordonnées. Sans numéro dans le fichier, la reconnaissance se fait sur le nom.
 
 ## Bonnes pratiques
 
-::: tip Informations complètes
-Renseignez un maximum d'informations pour faciliter la recherche et le suivi.
-:::
-
-::: tip Évitez les doublons
-Avant de créer un client, vérifiez qu'il n'existe pas déjà avec une orthographe légèrement différente.
+::: tip Un numéro client stable
+Si vos partenaires fournissent un identifiant client, mappez-le : c'est le moyen le plus sûr d'éviter les doublons d'orthographe (« Jean DUPONT » / « DUPONT Jean »).
 :::

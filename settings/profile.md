@@ -1,132 +1,37 @@
 # Profil utilisateur
 
-Gérez vos informations personnelles et vos préférences.
-
-## Accéder à votre profil
-
-Plusieurs façons d'accéder à votre profil :
-
-1. Cliquez sur votre **nom** dans le menu latéral
-2. Ou allez dans **Paramètres** > **Profil**
+**Mon profil** (menu utilisateur en haut à droite, ou *Paramètres → Profil*) gère vos informations personnelles et votre mot de passe.
 
 ## Informations personnelles
 
-### Modifier vos informations
+- **Prénom** et **nom** : modifiables
+- **Adresse e-mail** : affichée, **non modifiable**. Elle est votre identifiant de connexion et a été vérifiée à l'inscription. Pour changer d'adresse, contactez le support
 
-Vous pouvez modifier :
+## Changer le mot de passe
 
-- **Prénom**
-- **Nom**
-- **Email** (nécessite une re-vérification)
+1. Saisissez votre **mot de passe actuel**
+2. Saisissez le **nouveau mot de passe** (8 caractères minimum) et confirmez-le
+3. **Enregistrer les modifications**
 
-Pour modifier :
-
-1. Cliquez sur **Modifier**
-2. Mettez à jour les informations
-3. Enregistrez
-
-::: info Changement d'email
-Si vous changez votre email, vous devrez le vérifier à nouveau via un lien envoyé à la nouvelle adresse.
+::: tip Renforcez votre compte
+Un mot de passe seul ne suffit plus : activez l'[authentification à deux facteurs](/settings/security). Votre cabinet peut la rendre obligatoire.
 :::
 
-## Mot de passe
+## Sessions et sécurité
 
-### Changer votre mot de passe
+Les sessions ouvertes sur vos appareils et les réglages de double authentification ont leurs propres pages :
 
-1. Dans votre profil, cliquez sur **Changer le mot de passe**
-2. Entrez votre mot de passe actuel
-3. Entrez le nouveau mot de passe
-4. Confirmez le nouveau mot de passe
-5. Validez
+- [Sessions actives](/settings/sessions)
+- [Sécurité](/settings/security)
 
-::: warning Mot de passe sécurisé
-Choisissez un mot de passe d'au moins 8 caractères, avec des lettres, chiffres et caractères spéciaux.
-:::
+## Préférences d'affichage
 
-## Sessions actives
-
-Visualisez toutes vos sessions de connexion actives.
-
-### Informations affichées
-
-Pour chaque session :
-
-- **Appareil** : Type d'appareil (ordinateur, mobile)
-- **Navigateur** : Chrome, Firefox, Safari, etc.
-- **Localisation** : Ville/pays approximatif
-- **Dernière activité** : Date de dernière utilisation
-- **Session actuelle** : Indication de votre session actuelle
-
-### Déconnecter une session
-
-Si vous voyez une session suspecte ou si vous avez oublié de vous déconnecter d'un appareil :
-
-1. Localisez la session
-2. Cliquez sur **Déconnecter**
-3. La session est immédiatement fermée
-
-::: tip Sécurité
-Si vous voyez une session que vous ne reconnaissez pas, déconnectez-la immédiatement et changez votre mot de passe.
-:::
-
-### Déconnecter toutes les sessions
-
-Pour vous déconnecter de tous les appareils sauf l'actuel :
-
-1. Cliquez sur **Déconnecter toutes les autres sessions**
-2. Confirmez
-
-## Préférences
-
-### Thème
-
-Choisissez entre :
-
-- **Clair** : Interface claire
-- **Sombre** : Interface sombre
-- **Système** : Suit les préférences de votre système
-
-### Notifications
-
-Configurez les notifications que vous souhaitez recevoir :
-
-- Alertes de quota
-- Résumés d'import
-- Notifications d'équipe
-
-## Entreprise
-
-Depuis votre profil, vous pouvez voir :
-
-- Le **nom** de votre entreprise
-- Votre **rôle** dans l'entreprise
-- Vos **permissions**
-
-::: info Changer d'entreprise
-Si vous êtes membre de plusieurs entreprises, contactez le support pour gérer vos accès.
-:::
+Tailles de page, colonnes, filtres mémorisés et composition du tableau de bord se règlent dans les [paramètres généraux](/settings/general) et la [personnalisation du tableau de bord](/settings/dashboard).
 
 ## Déconnexion
 
-Pour vous déconnecter :
+Menu utilisateur → **Déconnexion**. Pour fermer les sessions ouvertes ailleurs, passez par [Sessions actives](/settings/sessions).
 
-1. Cliquez sur votre nom dans le menu
-2. Cliquez sur **Déconnexion**
+## Suppression du compte
 
-Ou utilisez le bouton de déconnexion dans la barre supérieure.
-
-## Suppression de compte
-
-::: danger Action irréversible
-La suppression de votre compte est définitive et supprime toutes vos données personnelles.
-:::
-
-Pour supprimer votre compte :
-
-1. Contactez le support à [support@conance.io](mailto:support@conance.io)
-2. Confirmez votre identité
-3. La suppression sera effectuée sous 48h
-
-::: warning Administrateur d'entreprise
-Si vous êtes le seul administrateur de votre entreprise, vous devez d'abord transférer ce rôle à un autre membre avant de pouvoir supprimer votre compte.
-:::
+La suppression d'un compte est définitive. Contactez le support à [support@conance.io](mailto:support@conance.io) ; si vous êtes le seul administrateur de votre entreprise, désignez-en un autre auparavant.
