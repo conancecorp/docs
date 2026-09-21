@@ -13,7 +13,7 @@ Documentation officielle de Conance - Pilotage des commissions pour cabinets de 
 
 ```bash
 # Cloner le repository
-git clone https://github.com/conance/docs.git
+git clone git@github.com:conancecorp/docs.git
 cd docs
 
 # Installer les dépendances
