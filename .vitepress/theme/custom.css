@@ -167,11 +167,44 @@
   background: linear-gradient(180deg, var(--cn-sidebar-top), var(--cn-sidebar-bottom));
 }
 
-/* Le « rideau » collé en haut de la colonne, sous le logo : couleur pleine du haut du dégradé.
-   Un dégradé « fixed » s'y dessinait autrement que dans la colonne (élément transformé) et
-   découpait un rectangle plus clair derrière le logo. */
+/* Le « rideau » collé en haut de la colonne, derrière le logo : exactement le dégradé de la
+   colonne, à la taille de l'écran et depuis le haut (la colonne fait toute la hauteur). Une
+   couleur pleine ou un dégradé « fixed » y découpaient un rectangle d'une autre teinte. */
 .VPSidebar .curtain {
-  background: var(--cn-sidebar-top);
+  background: linear-gradient(180deg, var(--cn-sidebar-top), var(--cn-sidebar-bottom)) 0 0 / 100% 100vh no-repeat;
+}
+
+/* Grand écran : la colonne garde sa largeur, collée à gauche comme la barre latérale de l'app
+   (VitePress l'élargissait jusqu'au contenu centré) ; le contenu se centre dans le reste. */
+@media (min-width: 1440px) {
+  .VPSidebar {
+    padding-left: 32px !important;
+    width: var(--vp-sidebar-width) !important;
+  }
+
+  /* Le bloc du logo seulement, pas le lien .title qu'il contient (il prendrait la marge deux fois) */
+  .VPNavBar.has-sidebar .container > .title {
+    padding-left: 32px !important;
+    width: var(--vp-sidebar-width) !important;
+  }
+
+  .VPNavBar.has-sidebar .content {
+    padding-right: 32px !important;
+    padding-left: var(--vp-sidebar-width) !important;
+  }
+
+  .VPNavBar.has-sidebar .divider {
+    padding-left: var(--vp-sidebar-width) !important;
+  }
+
+  .VPContent.has-sidebar {
+    padding-right: 0 !important;
+    padding-left: var(--vp-sidebar-width) !important;
+  }
+
+  .VPLocalNav.has-sidebar {
+    padding-left: var(--vp-sidebar-width) !important;
+  }
 }
 
 .VPSidebar {
