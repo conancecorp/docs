@@ -1,44 +1,548 @@
+/*
+ * Thème de la documentation aux couleurs de l'app (charte Conance) :
+ * - la colonne de gauche est la barre latérale de l'app, vert profond, logo blanc en haut ;
+ * - le contenu est posé sur le blanc cassé chaud de l'app, les cartes et tableaux en blanc ;
+ * - un seul vert pour le texte et les actions (#1a7d5e, 5,1:1 sur blanc) ; le vert vif de la
+ *   marque (#23b086) ne sert qu'au logo et, en sombre, au bouton principal ;
+ * - police système, comme l'app.
+ * Valeurs reprises des tokens de la charte (frontend/src/assets/styles/theme-settings.css).
+ */
+
 :root {
-  /* Couleur principale Conance */
-  --vp-c-brand-1: #23b086;
-  --vp-c-brand-2: #1e9a75;
-  --vp-c-brand-3: #198564;
-  --vp-c-brand-soft: rgba(35, 176, 134, 0.14);
+  /* Tokens de la charte */
+  --cn-surface-ground: #f9f7f3;
+  --cn-surface-card: #ffffff;
+  --cn-surface-overlay: #ffffff;
+  --cn-surface-sunken: #f6f4f0;
+  --cn-surface-hover: #f2f0eb;
+  --cn-surface-selected: #ddf7eb;
+  --cn-surface-border: #e5e3dd;
+  --cn-field-border: #8c8982;
+  --cn-text: #23211d;
+  --cn-text-secondary: #5d5a55;
+  --cn-text-muted: #6e6b65;
+  --cn-primary-text: #1a7d5e;
+  --cn-primary-fill: #1a7d5e;
+  --cn-primary-fill-hover: #15634a;
+  --cn-on-primary: #ffffff;
+  --cn-sidebar-top: #062924;
+  --cn-sidebar-bottom: #163f34;
+  --cn-sidebar-text: #e0ebe7;
+  --cn-sidebar-muted: #a4beb6;
+  --cn-sidebar-hover: rgba(255, 255, 255, 0.07);
+  --cn-sidebar-active: rgba(255, 255, 255, 0.12);
+  --cn-sidebar-line: rgba(255, 255, 255, 0.1);
+  --cn-sidebar-accent: #52d2a6;
+  --cn-brand-green: #23b086;
+  --cn-success-soft: #dcfce7;
+  --cn-success-on-soft: #166534;
+  --cn-info-soft: #dbeafe;
+  --cn-info-on-soft: #1e40af;
+  --cn-warning-soft: #ffedd5;
+  --cn-warning-on-soft: #9a3412;
+  --cn-danger-soft: #fee2e2;
+  --cn-danger-on-soft: #991b1b;
+  --cn-shadow-card: 0 1px 2px rgba(16, 36, 30, 0.05), 0 2px 8px rgba(16, 36, 30, 0.05);
+  --cn-shadow-raised: 0 2px 4px rgba(16, 36, 30, 0.06), 0 8px 20px rgba(16, 36, 30, 0.08);
+  --cn-shadow-overlay: 0 4px 8px rgba(16, 36, 30, 0.06), 0 16px 36px rgba(16, 36, 30, 0.14);
+  --cn-radius-sm: 6px;
+  --cn-radius-md: 8px;
+  --cn-radius-lg: 10px;
+  --cn-radius-xl: 12px;
 
-  /* Boutons */
+  /* Police système, comme l'app (pas d'Inter à télécharger) */
+  --vp-font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  /* Fonds, texte, séparateurs de VitePress → charte */
+  --vp-c-bg: var(--cn-surface-ground);
+  --vp-c-bg-alt: var(--cn-surface-sunken);
+  --vp-c-bg-soft: var(--cn-surface-hover);
+  --vp-c-bg-elv: var(--cn-surface-overlay);
+  --vp-c-text-1: var(--cn-text);
+  --vp-c-text-2: var(--cn-text-secondary);
+  --vp-c-text-3: var(--cn-text-muted);
+  --vp-c-divider: var(--cn-surface-border);
+  --vp-c-gutter: var(--cn-surface-border);
+  --vp-c-border: var(--cn-field-border);
+  --vp-nav-bg-color: var(--cn-surface-ground);
+  --vp-local-nav-bg-color: var(--cn-surface-ground);
+  --vp-sidebar-bg-color: var(--cn-sidebar-top);
+
+  /* Un seul vert : texte et actions */
+  --vp-c-brand-1: var(--cn-primary-text);
+  --vp-c-brand-2: var(--cn-primary-fill-hover);
+  --vp-c-brand-3: var(--cn-primary-fill);
+  --vp-c-brand-soft: var(--cn-surface-selected);
+
   --vp-button-brand-border: transparent;
-  --vp-button-brand-text: #fff;
-  --vp-button-brand-bg: #23b086;
+  --vp-button-brand-text: var(--cn-on-primary);
+  --vp-button-brand-bg: var(--cn-primary-fill);
   --vp-button-brand-hover-border: transparent;
-  --vp-button-brand-hover-text: #fff;
-  --vp-button-brand-hover-bg: #1e9a75;
+  --vp-button-brand-hover-text: var(--cn-on-primary);
+  --vp-button-brand-hover-bg: var(--cn-primary-fill-hover);
   --vp-button-brand-active-border: transparent;
-  --vp-button-brand-active-text: #fff;
-  --vp-button-brand-active-bg: #198564;
+  --vp-button-brand-active-text: var(--cn-on-primary);
+  --vp-button-brand-active-bg: var(--cn-primary-fill-hover);
 
-  /* Home hero */
-  --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: linear-gradient(135deg, #23b086 0%, #198564 100%);
-  --vp-home-hero-image-background-image: linear-gradient(135deg, rgba(35, 176, 134, 0.3) 0%, rgba(25, 133, 100, 0.3) 100%);
-  --vp-home-hero-image-filter: blur(44px);
+  /* Encadrés : les messages de l'app (fond doux, texte foncé du même ton) */
+  --vp-custom-block-tip-border: transparent;
+  --vp-custom-block-tip-text: var(--cn-success-on-soft);
+  --vp-custom-block-tip-bg: var(--cn-success-soft);
+  --vp-custom-block-tip-code-bg: rgba(22, 101, 52, 0.08);
+  --vp-custom-block-info-border: transparent;
+  --vp-custom-block-info-text: var(--cn-info-on-soft);
+  --vp-custom-block-info-bg: var(--cn-info-soft);
+  --vp-custom-block-info-code-bg: rgba(30, 64, 175, 0.08);
+  --vp-custom-block-note-border: transparent;
+  --vp-custom-block-note-text: var(--cn-text);
+  --vp-custom-block-note-bg: var(--cn-surface-sunken);
+  --vp-custom-block-warning-border: transparent;
+  --vp-custom-block-warning-text: var(--cn-warning-on-soft);
+  --vp-custom-block-warning-bg: var(--cn-warning-soft);
+  --vp-custom-block-warning-code-bg: rgba(154, 52, 18, 0.08);
+  --vp-custom-block-danger-border: transparent;
+  --vp-custom-block-danger-text: var(--cn-danger-on-soft);
+  --vp-custom-block-danger-bg: var(--cn-danger-soft);
+  --vp-custom-block-danger-code-bg: rgba(153, 27, 27, 0.08);
+  --vp-custom-block-details-border: var(--cn-surface-border);
+  --vp-custom-block-details-text: var(--cn-text);
+  --vp-custom-block-details-bg: var(--cn-surface-card);
+
+  /* Code en ligne et blocs de code */
+  --vp-code-color: var(--cn-text);
+  --vp-code-bg: var(--cn-surface-hover);
+  --vp-code-block-bg: var(--cn-surface-sunken);
+  --vp-code-copy-code-bg: var(--cn-surface-card);
+
+  /* Accueil : héros sur le vert de la barre latérale, comme la vitrine */
+  --vp-home-hero-name-color: #ffffff;
+  --vp-home-hero-name-background: none;
+  --vp-home-hero-image-background-image: radial-gradient(circle, rgba(82, 210, 166, 0.28) 0%, rgba(82, 210, 166, 0) 65%);
+  --vp-home-hero-image-filter: blur(24px);
 }
 
 .dark {
-  --vp-c-brand-1: #2dd4a0;
-  --vp-c-brand-2: #23b086;
-  --vp-c-brand-3: #1e9a75;
-  --vp-c-brand-soft: rgba(35, 176, 134, 0.16);
+  --cn-surface-ground: #181715;
+  --cn-surface-card: #211f1c;
+  --cn-surface-overlay: #292724;
+  --cn-surface-sunken: #1c1b18;
+  --cn-surface-hover: #2f2e2a;
+  --cn-surface-selected: #18382b;
+  --cn-surface-border: #3a3834;
+  --cn-field-border: #77746f;
+  --cn-text: #eae8e3;
+  --cn-text-secondary: #b7b4ae;
+  --cn-text-muted: #9e9b95;
+  --cn-primary-text: #52d2a6;
+  --cn-primary-fill: #23b086;
+  --cn-primary-fill-hover: #42c599;
+  --cn-on-primary: #04201b;
+  --cn-sidebar-top: #031c18;
+  --cn-sidebar-bottom: #0d2b23;
+  --cn-sidebar-hover: rgba(255, 255, 255, 0.06);
+  --cn-sidebar-active: rgba(255, 255, 255, 0.1);
+  --cn-sidebar-line: rgba(255, 255, 255, 0.08);
+  --cn-success-soft: #214029;
+  --cn-success-on-soft: #bbf7d0;
+  --cn-info-soft: #263348;
+  --cn-info-on-soft: #bfdbfe;
+  --cn-warning-soft: #4c301b;
+  --cn-warning-on-soft: #fed7aa;
+  --cn-danger-soft: #4a2624;
+  --cn-danger-on-soft: #fecaca;
+  --cn-shadow-card: 0 1px 2px rgba(0, 0, 0, 0.3), 0 2px 8px rgba(0, 0, 0, 0.25);
+  --cn-shadow-raised: 0 2px 4px rgba(0, 0, 0, 0.3), 0 8px 20px rgba(0, 0, 0, 0.35);
+  --cn-shadow-overlay: 0 4px 8px rgba(0, 0, 0, 0.35), 0 16px 36px rgba(0, 0, 0, 0.45);
 
-  --vp-button-brand-bg: #23b086;
-  --vp-button-brand-hover-bg: #2dd4a0;
-  --vp-button-brand-active-bg: #1e9a75;
+  --vp-c-brand-soft: var(--cn-surface-selected);
+  --vp-custom-block-tip-code-bg: rgba(255, 255, 255, 0.08);
+  --vp-custom-block-info-code-bg: rgba(255, 255, 255, 0.08);
+  --vp-custom-block-warning-code-bg: rgba(255, 255, 255, 0.08);
+  --vp-custom-block-danger-code-bg: rgba(255, 255, 255, 0.08);
 }
 
-/* Custom tip boxes */
-.custom-block.tip {
-  border-color: #23b086;
+/* ── Colonne verte : barre latérale (et le haut de la barre de navigation au-dessus d'elle) ── */
+
+.VPSidebar,
+.VPSidebar .curtain {
+  background: linear-gradient(180deg, var(--cn-sidebar-top), var(--cn-sidebar-bottom)) fixed;
 }
 
-.custom-block.tip .custom-block-title {
-  color: #23b086;
+.VPSidebar {
+  --vp-c-text-1: #ffffff;
+  --vp-c-text-2: var(--cn-sidebar-text);
+  --vp-c-text-3: var(--cn-sidebar-muted);
+  --vp-c-brand-1: #ffffff;
+  --vp-c-divider: var(--cn-sidebar-line);
+  color-scheme: dark;
+  scrollbar-color: var(--cn-sidebar-line) transparent;
+}
+
+/* Titres de groupe : petites capitales discrètes, comme les sections du menu de l'app */
+.VPSidebar .VPSidebarItem.level-0 > .item .text {
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cn-sidebar-muted) !important;
+}
+
+/* Entrées : pastille au survol, voile plus marqué et gras pour la page affichée */
+.VPSidebar .VPSidebarItem.level-1 > .item,
+.VPSidebar .VPSidebarItem.level-2 > .item {
+  margin-left: -12px;
+  padding-left: 12px;
+  border-radius: var(--cn-radius-md);
+  transition: background-color 0.15s ease;
+}
+
+.VPSidebar .VPSidebarItem.level-1.is-link > .item:hover,
+.VPSidebar .VPSidebarItem.level-2.is-link > .item:hover {
+  background: var(--cn-sidebar-hover);
+}
+
+.VPSidebar .VPSidebarItem.is-active > .item {
+  background: var(--cn-sidebar-active);
+}
+
+.VPSidebar .VPSidebarItem.is-active > .item .text {
+  font-weight: 600 !important;
+}
+
+.VPSidebar .VPSidebarItem .items {
+  border-left-color: var(--cn-sidebar-line) !important;
+}
+
+.VPSidebar :focus-visible {
+  outline: 2px solid var(--cn-sidebar-accent);
+  outline-offset: -2px;
+  border-radius: var(--cn-radius-md);
+}
+
+/* Sur ordinateur, le logo blanc se pose sur le vert de la colonne (le titre est transparent,
+   la colonne passe dessous) ; son liseré du bas en voile clair */
+@media (min-width: 960px) {
+  .VPNavBar.has-sidebar .title {
+    --vp-c-divider: var(--cn-sidebar-line);
+  }
+}
+
+/* Téléphone et tablette : barre du haut verte (comme l'app), le reste en blanc cassé */
+@media (max-width: 959px) {
+  .VPNavBar,
+  .VPNavBar.screen-open {
+    --vp-nav-bg-color: var(--cn-sidebar-top);
+    --vp-c-text-1: #ffffff;
+    --vp-c-text-2: var(--cn-sidebar-text);
+    --vp-c-divider: var(--cn-sidebar-line);
+    background-color: var(--cn-sidebar-top) !important;
+  }
+
+  .VPNavBar .divider-line {
+    background-color: var(--cn-sidebar-line) !important;
+  }
+
+  /* Recherche sur le vert : voile clair, icône claire (blanc sur blanc sinon) */
+  .VPNavBar .VPNavBarSearch .DocSearch-Button,
+  .VPNavBar .VPNavBarSearch .VPNavBarSearchButton {
+    border-color: var(--cn-sidebar-line) !important;
+    background: var(--cn-sidebar-hover) !important;
+    color: var(--cn-sidebar-text) !important;
+  }
+}
+
+/* Logo : la version blanche de l'app partout où il est sur le vert */
+.VPNavBarTitle .logo {
+  height: 26px;
+}
+
+/* ── Barre de navigation, côté contenu ── */
+
+.VPNavBarMenuLink {
+  font-weight: 500 !important;
+}
+
+/* « Accéder à Conance » : le bouton qui ouvre l'app */
+.VPNavBarMenuLink[href^="https://app.conance.io"] {
+  align-self: center;
+  margin-left: 8px;
+  padding: 0 14px !important;
+  height: 34px;
+  line-height: 34px !important;
+  border-radius: var(--cn-radius-lg);
+  background: var(--cn-primary-fill);
+  color: var(--cn-on-primary) !important;
+  transition: background-color 0.2s ease;
+}
+
+.VPNavBarMenuLink[href^="https://app.conance.io"]:hover {
+  background: var(--cn-primary-fill-hover);
+  color: var(--cn-on-primary) !important;
+}
+
+.VPNavBarMenuLink[href^="https://app.conance.io"]::after {
+  display: none !important;
+}
+
+/* Recherche : le champ de recherche de l'app */
+.VPNavBarSearch .DocSearch-Button,
+.VPNavBarSearch .VPNavBarSearchButton {
+  border: 1px solid var(--cn-field-border) !important;
+  border-radius: var(--cn-radius-lg) !important;
+  background: var(--cn-surface-card) !important;
+}
+
+.VPNavBarSearch .DocSearch-Button:hover,
+.VPNavBarSearch .VPNavBarSearchButton:hover {
+  border-color: var(--cn-primary-text) !important;
+}
+
+/* ── Contenu ── */
+
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3 {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+.vp-doc a {
+  text-underline-offset: 3px;
+}
+
+/* Tableaux : ceux de l'app (cadre arrondi, en-tête en petites capitales sur fond en retrait,
+   lignes séparées par un liseré, pas de quadrillage ni de lignes zébrées) */
+.vp-doc table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--cn-surface-border);
+  border-radius: var(--cn-radius-xl);
+  background: var(--cn-surface-card);
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .vp-doc table {
+    display: table;
+    width: 100%;
+  }
+}
+
+.vp-doc tr,
+.vp-doc tr:nth-child(2n) {
+  background: transparent;
+  border: 0;
+}
+
+.vp-doc th,
+.vp-doc td {
+  border: 0;
+  border-top: 1px solid var(--cn-surface-border);
+  padding: 10px 16px;
+  vertical-align: top;
+}
+
+.vp-doc thead th {
+  border-top: 0;
+  background: var(--cn-surface-sunken);
+  color: var(--cn-text-secondary);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.vp-doc thead th:first-child {
+  border-top-left-radius: var(--cn-radius-xl);
+}
+
+.vp-doc thead th:last-child {
+  border-top-right-radius: var(--cn-radius-xl);
+}
+
+.vp-doc tbody tr:hover td {
+  background: var(--cn-surface-hover);
+}
+
+.vp-doc tbody tr:last-child td:first-child {
+  border-bottom-left-radius: var(--cn-radius-xl);
+}
+
+.vp-doc tbody tr:last-child td:last-child {
+  border-bottom-right-radius: var(--cn-radius-xl);
+}
+
+/* Encadrés : les messages de l'app */
+.vp-doc .custom-block {
+  border-radius: var(--cn-radius-lg);
+  padding: 12px 16px;
+}
+
+.vp-doc .custom-block.details {
+  box-shadow: var(--cn-shadow-card);
+}
+
+.vp-doc .custom-block .custom-block-title {
+  font-weight: 600;
+}
+
+.vp-doc .custom-block a {
+  color: inherit;
+  font-weight: 600;
+}
+
+/* Code */
+.vp-doc :not(pre) > code {
+  border: 1px solid var(--cn-surface-border);
+  border-radius: var(--cn-radius-sm);
+  padding: 2px 5px;
+  font-size: 0.875em;
+}
+
+.vp-doc div[class*="language-"] {
+  border: 1px solid var(--cn-surface-border);
+  border-radius: var(--cn-radius-xl) !important;
+}
+
+/* Bas de page : précédent / suivant en cartes cliquables */
+.VPDocFooter .pager-link {
+  border-color: var(--cn-surface-border) !important;
+  border-radius: var(--cn-radius-xl) !important;
+  background: var(--cn-surface-card);
+  box-shadow: var(--cn-shadow-card);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.VPDocFooter .pager-link:hover {
+  border-color: var(--cn-primary-text) !important;
+  box-shadow: var(--cn-shadow-raised);
+}
+
+/* Sommaire de la page : le trait de l'élément actif dans le vert du texte */
+.VPDocAsideOutline .outline-marker {
+  background-color: var(--cn-primary-text);
+}
+
+/* ── Accueil ── */
+
+/* Barre de navigation et héros sur le vert profond, comme la vitrine */
+.VPNavBar.home,
+.VPNavBar.home.top {
+  --vp-c-text-1: #ffffff;
+  --vp-c-text-2: var(--cn-sidebar-text);
+  --vp-c-divider: var(--cn-sidebar-line);
+  background: var(--cn-sidebar-top) !important;
+}
+
+.VPNavBar.home .content-body {
+  background: transparent !important;
+}
+
+.VPNavBar.home .divider-line {
+  background: var(--cn-sidebar-line) !important;
+}
+
+.VPNavBar.home .VPNavBarSearch .DocSearch-Button,
+.VPNavBar.home .VPNavBarSearch .VPNavBarSearchButton {
+  border-color: var(--cn-sidebar-line) !important;
+  background: var(--cn-sidebar-hover) !important;
+  color: var(--cn-sidebar-text) !important;
+}
+
+.VPNavBar.home .VPNavBarMenuLink[href^="https://app.conance.io"] {
+  background: var(--cn-brand-green);
+  color: #04201b !important;
+}
+
+.VPNavBar.home .VPNavBarMenuLink[href^="https://app.conance.io"]:hover {
+  background: #42c599;
+  color: #04201b !important;
+}
+
+.VPHome .VPHero {
+  background: linear-gradient(180deg, var(--cn-sidebar-top) 0%, var(--cn-sidebar-bottom) 100%);
+  padding-bottom: 72px !important;
+}
+
+.VPHome .VPHero .name,
+.VPHome .VPHero .text {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.VPHome .VPHero .text {
+  color: var(--cn-sidebar-accent);
+}
+
+.VPHome .VPHero .tagline {
+  color: var(--cn-sidebar-text);
+}
+
+/* Boutons du héros : principal en vert de marque (encre vert profond, 6,2:1), secondaire en
+   contour clair */
+.VPHome .VPHero .VPButton.brand {
+  background: var(--cn-brand-green);
+  color: #04201b;
+}
+
+.VPHome .VPHero .VPButton.brand:hover {
+  background: #42c599;
+  color: #04201b;
+}
+
+.VPHome .VPHero .VPButton.alt {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: transparent;
+  color: #ffffff;
+}
+
+.VPHome .VPHero .VPButton.alt:hover {
+  border-color: #ffffff;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.VPHome .VPButton {
+  border-radius: var(--cn-radius-lg) !important;
+}
+
+/* Cartes des fonctionnalités : cartes de l'app, icône dans une tuile douce */
+.VPHome .VPFeatures {
+  padding-top: 48px !important;
+}
+
+.VPHome .VPFeatures .VPFeature {
+  border: 1px solid var(--cn-surface-border);
+  border-radius: var(--cn-radius-xl);
+  background: var(--cn-surface-card);
+  box-shadow: var(--cn-shadow-card);
+}
+
+.VPHome .VPFeatures .VPFeature .icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--cn-radius-lg);
+  background: var(--cn-surface-selected);
+  color: var(--cn-primary-text);
+}
+
+.VPHome .VPFeatures .VPFeature .icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.VPHome .VPFeatures .VPFeature .title {
+  font-weight: 600;
+}
+
+/* Le reste de l'accueil (« Par où commencer ? ») */
+.VPHome .vp-doc {
+  padding-bottom: 48px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0s !important;
+  }
 }

@@ -10,14 +10,15 @@ export default defineConfig({
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['link', { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' }],
-    ['meta', { name: 'theme-color', content: '#23b086' }],
+    ['meta', { name: 'theme-color', content: '#062924' }],
     ['meta', { name: 'og:type', content: 'website' }],
     ['meta', { name: 'og:site_name', content: 'Conance Documentation' }],
   ],
 
   themeConfig: {
-    logo: '/logo.svg',
-    siteTitle: 'Conance',
+    // Logo blanc (mot compris) : il est toujours posé sur le vert de la colonne ou de la barre
+    logo: { src: '/logo-white.svg', alt: 'Conance' },
+    siteTitle: false,
 
     nav: [
       { text: 'Guide', link: '/guide/' },
