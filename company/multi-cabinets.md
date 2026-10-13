@@ -45,7 +45,7 @@ Menu **Cabinets** (administrateurs de l'espace parent) :
 
 ## Basculer entre cabinets
 
-Le **sélecteur de cabinet**, sous le logo en haut de la barre latérale, change d'espace sans se déconnecter. Pour revenir au groupe, choisissez *Mon espace (parent)* dans ce sélecteur, ou le bouton **Retour espace parent** de la page **Cabinets**.
+Le **sélecteur de cabinet**, sous le logo en haut de la barre latérale (sur téléphone et tablette : en haut du panneau **Menu**), change d'espace sans se déconnecter. Pour revenir au groupe, choisissez *Mon espace (parent)* dans ce sélecteur, ou le bouton **Retour espace parent** de la page **Cabinets**.
 
 Tout ce que vous voyez et faites — tableau de bord, imports, exports, pilotage — concerne le cabinet **courant**.
 

@@ -2,6 +2,8 @@
 
 **Mon profil** gère vos informations personnelles et votre mot de passe. On l'ouvre depuis le **menu du profil** : cliquez sur votre nom, en bas de la barre latérale.
 
+Sur téléphone et tablette, le profil, le thème et la déconnexion sont dans le panneau **Menu**, bloc *Compte* → [Sur téléphone et tablette](/guide/#sur-telephone-et-tablette).
+
 ## Informations personnelles
 
 - **Prénom** et **nom** : modifiables
