@@ -48,6 +48,15 @@ Réservé aux administrateurs : **Exiger l'authentification à deux facteurs pou
 Activez la politique d'entreprise dès que le cabinet manipule des données clients — c'est-à-dire dès le premier import.
 :::
 
+### Accès du support Conance
+
+Toujours dans **Politique d'entreprise** : **Autoriser le support Conance à accéder aux comptes**, activé par défaut.
+
+- Pour vous aider, le support peut ouvrir le compte d'un membre et agir à sa place : corriger un import, régler un tableau de bord, créer un contrat…
+- La sécurité du compte (mot de passe, email, 2FA, sessions), le paiement, la suppression du compte ou des données et l'activation de l'IA restent réservés au titulaire (le support peut en revanche la désactiver).
+- Chaque accès apparaît dans les [sessions actives](/settings/sessions) avec l'étiquette **Support Conance** ; révoquer cette session retire l'accès.
+- Désactiver l'option ferme immédiatement les accès en cours.
+
 ## Se connecter avec la 2FA
 
 1. Email et mot de passe

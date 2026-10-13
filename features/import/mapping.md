@@ -20,6 +20,7 @@ Ou, mieux : **Charger une configuration** déjà sauvegardée pour ce partenaire
 | Champ | Description |
 |-------|-------------|
 | **Partenaire** | Le partenaire du bordereau. **Manuel** (un seul partenaire pour tout le fichier) ou **Colonne** (le partenaire varie ligne par ligne). Un bouton permet de créer le partenaire à la volée |
+| **Numéro de contrat** | Contrat unique pour tout le fichier, si le format n'a pas de numéro de contrat (voir [Contrats](#contrats)) |
 | **Période** | Le libellé du bordereau (Mensuel, Bimensuel, Trimestriel, Semestriel, Annuel + valeur), fixé pour le fichier ou lu dans une colonne |
 | **Date des commissions** | Date unique appliquée à tout le fichier, si le fichier n'en contient pas |
 | **Type d'opération** | Type unique appliqué à tout le fichier, si le fichier n'en contient pas |
@@ -42,11 +43,20 @@ Chaque section s'active par un interrupteur. Une section désactivée n'écrit r
 
 | Champ | Description |
 |-------|-------------|
-| Numéro de contrat | Identifiant du contrat chez le partenaire |
+| Numéro de contrat | **Colonne** : l'identifiant du contrat chez le partenaire, lu ligne par ligne. **Manuel** : un seul contrat pour tout le fichier, pour un bordereau sans numéro de contrat (ex. relevé PDF d'un seul client) — voir ci-dessous |
 | Partenaire | Manuel ou colonne (voir en-tête) |
 | Produit | **Manuel** ou **Colonne**. En mode colonne, une **colonne discriminante d'activité** optionnelle permet de scinder un produit selon la valeur observée (cas des produits multi-activités CIF / Courtage) — voir [Configuration produits](/features/import/pre-analysis#scinder-les-produits-multi-activites) |
 | Détail partenaire | Manuel ou colonne |
 | Entité / Cabinet | Manuel ou colonne |
+
+#### Bordereau sans numéro de contrat
+
+En mode **Manuel**, choisissez le contrat qui recevra toutes les lignes du fichier :
+
+- **un contrat existant**, dans la liste avec recherche (numéro, client, conseiller…). Si le partenaire est en mode manuel, seuls ses contrats sont proposés ; sinon, le partenaire s'affiche sous chaque numéro ;
+- **un nouveau contrat** : bouton **+**, puis saisissez son numéro. Il est créé à l'import, chez le partenaire du fichier, sans passer par la résolution des numéros inconnus.
+
+Le contrat choisi n'est jamais enregistré dans une [configuration](/features/import/saved-configs) : seul le mode l'est, et le contrat est redemandé à chaque bordereau.
 
 ### Commissions
 
@@ -61,7 +71,7 @@ Chaque section s'active par un interrupteur. Une section désactivée n'écrit r
 | Code ISIN | Colonne |
 | Code apporteur | Colonne |
 | Période | Colonne ou valeur unique (voir en-tête) |
-| **Commissions sans numéro de contrat** | **Créer un contrat générique** (`SANS_CONTRAT`) ou **Mettre ces commissions en erreur** |
+| **Commissions sans numéro de contrat** | **Créer un contrat générique** (`SANS_CONTRAT`) ou **Mettre ces commissions en erreur**. Sans objet quand le numéro de contrat est en mode manuel |
 
 ### Conseillers
 

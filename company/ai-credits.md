@@ -1,6 +1,6 @@
 # Crédits IA
 
-Les fonctionnalités IA payantes de Conance — [extraction PDF avec IA](/features/import/pdf), [lecture de bulletins](/features/pilotage/expected-commissions#declarer-depuis-un-bulletin-de-souscription) — se règlent en **crédits**. L'onglet **Intelligence Artificielle** de la gestion d'entreprise gère le solde, la consommation et la recharge.
+Les fonctionnalités IA payantes de Conance — [extraction PDF avec IA](/features/import/pdf), [lecture de bulletins](/features/pilotage/expected-commissions#declarer-depuis-un-bulletin-de-souscription) — se règlent en **crédits**. L'onglet **IA** de la gestion d'entreprise gère le solde, la consommation et la recharge.
 
 ## Prérequis
 

@@ -1,6 +1,6 @@
 # Abonnement et facturation
 
-L'onglet **Abonnement** de la gestion d'entreprise affiche votre plan, son utilisation, et donne accès au changement de plan et aux factures.
+L'onglet **Abonnement** de la gestion d'entreprise affiche votre formule, son utilisation, et donne accès au changement de formule et aux factures.
 
 ## Plans Cabinet
 
@@ -19,9 +19,8 @@ Les tarifs (mensuel ou annuel, deux mois offerts à l'année) sont sur [conance.
 
 La page affiche :
 
-- le **plan** et son **statut** (actif, en attente de paiement, annulé)
-- les dates de début, de fin ou d'annulation
-- **Limites et utilisation** : jauges stockage, utilisateurs, contrats, commissions, partenaires
+- la **formule** et son **statut** (actif, en attente de paiement, annulé), avec son prix et ses dates de début, de fin ou d'annulation ; à droite, **Gérer l'abonnement** et **Changer de formule**
+- **Utilisation** : une jauge par limite (utilisateurs, partenaires, stockage, contrats, commissions), qui passe à l'orange au-delà de 70 % et au rouge au-delà de 90 %
 
 Les limites affichées sont les **limites effectives** : celles du plan, ou celles négociées pour votre cabinet si Conance vous a accordé une extension.
 
@@ -37,7 +36,7 @@ Quand un import ferait dépasser une limite, il est refusé **avant** d'écrire 
 
 ## Changer de plan
 
-1. **Changer de plan**
+1. **Changer de formule**
 2. Choisissez le plan et la périodicité (mensuelle ou annuelle)
 3. Paiement sécurisé par Stripe
 4. Le plan est actif immédiatement

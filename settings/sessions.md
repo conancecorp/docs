@@ -4,7 +4,7 @@
 
 ## Informations affichées
 
-Pour chaque session : type d'appareil, navigateur et système, adresse IP, date de connexion et de dernière activité, et l'étiquette **Session actuelle** pour celle que vous utilisez.
+Pour chaque session : type d'appareil, navigateur et système, adresse IP, date de connexion et de dernière activité, et l'étiquette **Session actuelle** pour celle que vous utilisez. L'étiquette **Support Conance** signale une session ouverte par le support pour vous aider (voir [Accès du support](/settings/security#acces-du-support-conance)).
 
 ## Révoquer une session
 

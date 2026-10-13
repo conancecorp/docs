@@ -78,4 +78,4 @@ L'extraction décrite ici rend des **tableaux**. Pour lire un **bulletin de sous
 
 - Le **PDF** et le **CSV** produits restent dans [Fichiers](/features/storage) tant que vous ne les supprimez pas.
 - Les données intermédiaires de l'extraction (tableau éditable, versions) sont purgées 30 jours après import du CSV, ou 90 jours si le CSV n'a jamais été importé.
-- L'historique de facturation est conservé dans l'onglet [Intelligence Artificielle](/company/ai-credits#suivre-la-consommation) de la gestion d'entreprise.
+- L'historique de facturation est conservé dans l'onglet [IA](/company/ai-credits#suivre-la-consommation) de la gestion d'entreprise.

@@ -1,14 +1,14 @@
 # Gestion d'entreprise
 
-Le menu **Gestion entreprise** est réservé aux administrateurs de l'entreprise. Il regroupe cinq onglets.
+Le menu **Gestion entreprise** est réservé aux administrateurs de l'entreprise. En tête de page : le logo et le nom du cabinet, avec sa formule. La page regroupe cinq onglets.
 
 | Onglet | Contenu | Guide |
 |--------|---------|-------|
-| **Abonnement** | Plan actuel, limites et utilisation, changement de plan, factures | [Abonnement et facturation](/company/subscription) |
+| **Informations** | Logo et coordonnées du cabinet | Ci-dessous |
 | **Membres** | Utilisateurs de l'entreprise, invitations | [Membres](/company/members) |
 | **Rôles** | Rôles personnalisés et leurs permissions | [Rôles et permissions](/company/roles) |
-| **Paramètres** | Informations de l'entreprise | Ci-dessous |
-| **Intelligence Artificielle** | Solde de crédits, consommation, recharge automatique | [Crédits IA](/company/ai-credits) |
+| **Abonnement** | Formule actuelle, utilisation, changement de formule, factures | [Abonnement et facturation](/company/subscription) |
+| **IA** | Solde de crédits, consommation, recharge automatique | [Crédits IA](/company/ai-credits) |
 
 Les cabinets sous plan **Groupe** disposent en plus du menu **Cabinets** → [Multi-cabinets](/company/multi-cabinets).
 
@@ -19,19 +19,29 @@ Les cabinets sous plan **Groupe** disposent en plus du menu **Cabinets** → [Mu
 
 Un administrateur peut nommer d'autres administrateurs. Gardez-en au moins deux.
 
-## Paramètres de l'entreprise
+## Informations du cabinet
 
-L'onglet **Paramètres** modifie :
+L'onglet **Informations** (le premier, ouvert par défaut) modifie :
 
 | Champ | |
 |-------|--|
-| Nom | Affiché dans l'interface et sur les factures |
-| Email | Contact principal |
-| Téléphone | |
-| Adresse | |
+| Nom du cabinet | Affiché dans l'interface et sur les factures |
 | Site web | |
+| E-mail | Contact principal |
+| Téléphone | |
+| Adresse, code postal, ville, pays | |
 
-**Enregistrer** applique ; **Annuler les modifications** rétablit les valeurs en cours.
+**Enregistrer** applique ; **Annuler les modifications** rétablit les valeurs en cours. Tant qu'une modification n'est pas enregistrée, l'onglet l'indique.
+
+### Logo du cabinet
+
+**Ajouter un logo** (ou **Changer le logo**) ouvre une fenêtre de recadrage :
+
+1. Choisissez une image **PNG, JPEG ou WebP** (un logo sur fond transparent garde sa transparence)
+2. Au départ, le logo entier tient dans le cadre carré ; zoomez et faites-le glisser pour ne garder, par exemple, que l'emblème d'un logo très large. L'aperçu montre le rendu aux tailles réelles
+3. **Enregistrer le logo** : il s'applique aussitôt, sans attendre le bouton Enregistrer du formulaire
+
+Le logo apparaît en tête de la gestion d'entreprise et sur la page Profil des membres. Il n'est visible que des membres du cabinet (et de son groupe), jamais par un lien public, et ne compte pas dans le stockage de l'abonnement. **Retirer** le supprime ; les initiales du cabinet le remplacent.
 
 ## Sécurité du cabinet
 

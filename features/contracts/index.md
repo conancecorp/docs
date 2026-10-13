@@ -4,14 +4,14 @@ Un contrat est la souscription d'un client à un produit d'un partenaire, suivie
 
 ## Colonnes et filtres
 
-Colonnes : numéro, client, conseiller, partenaire, détail partenaire, produit, entité, statut, date de création.
+Colonnes : numéro, client, conseiller, partenaire, détail partenaire, produit, entité, statut, date d'ajout.
 
 | Filtre | Description |
 |--------|-------------|
 | Statut | Actif, En attente, Résilié |
 | Partenaire, Détail partenaire, Entité | Par référentiel |
 | Produit, Conseiller, Client | Par référentiel |
-| Période | Date de création |
+| Date d'ajout | Jour où le contrat est entré dans Conance (import ou saisie), dernier jour compris. Ce n'est pas une date de souscription : Conance n'en enregistre pas |
 
 → [Tableaux, filtres et colonnes](/features/tables)
 
