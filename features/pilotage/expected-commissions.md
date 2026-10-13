@@ -13,7 +13,7 @@ Le badge en tête de bloc donne le nombre de contrats concernés ; le montant à
 
 Un contrat est signalé quand une commission de **nature récurrente** (Encours par défaut) ne revient plus au rythme qu'il avait montré jusque-là.
 
-- Le **rythme** est observé sur l'historique du contrat : intervalle médian entre deux commissions récurrentes. Il n'est jamais saisi.
+- Le **rythme** est observé sur l'historique du contrat : intervalle médian entre deux commissions récurrentes. Il n'est jamais demandé ; s'il est faux, [corrigez-le depuis le prévisionnel](/features/pilotage/forecast#corriger-le-rythme) — la correction vaut aussi ici.
 - Le **retard** est mesuré depuis la dernière commission reçue, par rapport à ce rythme.
 - Le **manque** est estimé au dernier montant réellement encaissé — jamais reconstitué depuis assiette × taux.
 

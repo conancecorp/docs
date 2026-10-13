@@ -33,7 +33,7 @@ Sur ordinateur, tout part de la barre latérale, à gauche. Ses entrées sont ra
 | **Réglages** | Gestion entreprise, Cabinets (plan Groupe), Paramètres |
 
 - **Plan Groupe** : le sélecteur de cabinet est sous le logo → [Multi-cabinets](/company/multi-cabinets).
-- **En bas de la barre** : le solde de [crédits IA](/company/ai-credits) (administrateurs, quand le cabinet en a), puis votre nom, qui ouvre le **menu du profil** : *Mon profil*, *Paramètres*, *Thème* (clair, sombre ou comme le système) et *Déconnexion* → [Profil utilisateur](/settings/profile).
+- **En bas de la barre** : le solde de [crédits IA](/company/ai-credits) (administrateurs, quand le cabinet en a), le lien **Documentation** (cette documentation, dans un nouvel onglet), puis votre nom, qui ouvre le **menu du profil** : *Mon profil*, *Paramètres*, *Thème* (clair, sombre ou comme le système) et *Déconnexion* → [Profil utilisateur](/settings/profile).
 - **Réduire le menu** ne garde que les icônes ; le même bouton rouvre la barre.
 
 ### Sur téléphone et tablette
@@ -43,7 +43,7 @@ Sur un écran de moins de 992 pixels de large (téléphone, tablette tenue en po
 - en haut, une barre fine avec le logo, qui ramène au tableau de bord ;
 - en bas, une barre d'onglets flottante, en icônes seules : *Tableau de bord*, *Pilotage*, *Commissions*, *Contrats* et **Menu**.
 
-**Menu** ouvre un panneau qui couvre l'écran. On y trouve, en haut, le sélecteur de cabinet et le solde de crédits IA, aux mêmes conditions que sur ordinateur ; puis les autres entrées, rangées par section (*Référentiel*, *Données*, *Réglages*) ; enfin un bloc *Compte* : votre profil, le thème et la déconnexion. Choisir une entrée referme le panneau, tout comme un nouvel appui sur **Menu**.
+**Menu** ouvre un panneau qui couvre l'écran. On y trouve, en haut, le sélecteur de cabinet et le solde de crédits IA, aux mêmes conditions que sur ordinateur ; puis les autres entrées, rangées par section (*Référentiel*, *Données*, *Réglages*) ; enfin un bloc *Compte* : votre profil, le thème, la documentation et la déconnexion. Choisir une entrée referme le panneau, tout comme un nouvel appui sur **Menu**.
 
 ## Comment lire cette documentation
 

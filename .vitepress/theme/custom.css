@@ -163,9 +163,15 @@
 
 /* ── Colonne verte : barre latérale (et le haut de la barre de navigation au-dessus d'elle) ── */
 
-.VPSidebar,
+.VPSidebar {
+  background: linear-gradient(180deg, var(--cn-sidebar-top), var(--cn-sidebar-bottom));
+}
+
+/* Le « rideau » collé en haut de la colonne, sous le logo : couleur pleine du haut du dégradé.
+   Un dégradé « fixed » s'y dessinait autrement que dans la colonne (élément transformé) et
+   découpait un rectangle plus clair derrière le logo. */
 .VPSidebar .curtain {
-  background: linear-gradient(180deg, var(--cn-sidebar-top), var(--cn-sidebar-bottom)) fixed;
+  background: var(--cn-sidebar-top);
 }
 
 .VPSidebar {
@@ -437,6 +443,12 @@
 }
 
 .VPNavBar.home .content-body {
+  background: transparent !important;
+}
+
+/* Séparateur du bas : VitePress le peint en liseré clair une fois la page défilée (un trait
+   blanc sur le vert) */
+.VPNavBar.home .divider {
   background: transparent !important;
 }
 

@@ -8,7 +8,9 @@ Un **membre** est un utilisateur de Conance. Un [conseiller](/features/advisors)
 
 ## Liste des membres
 
-Pour chaque membre : email, prénom, nom, rôle (**Administrateur** ou rôle personnalisé, sinon *Utilisateur*), statut. L'en-tête rappelle l'utilisation du **quota d'utilisateurs** du plan.
+Pour chaque membre : nom et e-mail, rôle (**Administrateur** ou rôle personnalisé, sinon *Utilisateur*), statut. La recherche trouve un membre par son nom, son e-mail ou son rôle, mot par mot et sans accents.
+
+Quand le **quota d'utilisateurs** du plan est atteint (invitations en attente comprises), un message le signale au-dessus de la liste et **Inviter un membre** est désactivé.
 
 ## Inviter un membre
 
