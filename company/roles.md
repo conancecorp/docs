@@ -12,7 +12,7 @@ Les **permissions** disent ce qu'un membre peut voir et faire. Un **rôle** est 
 
 ### Permissions de base (tout utilisateur)
 
-Voir le tableau de bord, les clients, contrats, conseillers, partenaires, produits, commissions, les types et natures d'opération, les fichiers du stockage (et les télécharger), les informations de l'entreprise ; créer des commissions ; modifier son profil.
+Voir le tableau de bord, les clients, contrats, conseillers, partenaires, produits, commissions, les types et natures d'opération, les fichiers de la page **Fichiers** (et les télécharger), les informations de l'entreprise ; créer des commissions ; modifier son profil.
 
 ## Créer un rôle
 
@@ -47,9 +47,9 @@ Un rôle se modifie à tout moment ; les changements s'appliquent immédiatement
 | Domaine | Permissions | Donne accès à |
 |---------|-------------|---------------|
 | Import | `import:data` | Import, Extraction PDF |
-| Stockage | `storage:view`, `storage:download`, `storage:edit`, `storage:delete` | Stockage |
+| Fichiers | `storage:view`, `storage:download`, `storage:edit`, `storage:delete` | Fichiers |
 | Tableau de bord | `dashboard:view` | Tableau de bord |
-| Pilotage, Réglementaire, Export | `commissions:view` (+ `commissions:export` pour télécharger) | Pilotage, Réglementaire, Export |
+| Pilotage, Export | `commissions:view` (+ `commissions:export` pour télécharger) | Pilotage (onglets *Vue d'ensemble* et *Réglementaire*), Export |
 
 ### Entreprise
 

@@ -1,6 +1,6 @@
 # Profil utilisateur
 
-**Mon profil** (menu utilisateur en haut à droite, ou *Paramètres → Profil*) gère vos informations personnelles et votre mot de passe.
+**Mon profil** gère vos informations personnelles et votre mot de passe. On l'ouvre depuis le **menu du profil** : cliquez sur votre nom, en bas de la barre latérale.
 
 ## Informations personnelles
 
@@ -24,13 +24,17 @@ Les sessions ouvertes sur vos appareils et les réglages de double authentificat
 - [Sessions actives](/settings/sessions)
 - [Sécurité](/settings/security)
 
+## Thème
+
+Le menu du profil propose trois thèmes : *Thème clair*, *Thème sombre* et *Comme le système*, qui suit le réglage clair ou sombre de votre appareil. Le changement est immédiat et mémorisé dans ce navigateur ; par défaut, le thème est clair.
+
 ## Préférences d'affichage
 
 Tailles de page, colonnes, filtres mémorisés et composition du tableau de bord se règlent dans les [paramètres généraux](/settings/general) et la [personnalisation du tableau de bord](/settings/dashboard).
 
 ## Déconnexion
 
-Menu utilisateur → **Déconnexion**. Pour fermer les sessions ouvertes ailleurs, passez par [Sessions actives](/settings/sessions).
+Menu du profil → **Déconnexion**. Pour fermer les sessions ouvertes ailleurs, passez par [Sessions actives](/settings/sessions).
 
 ## Suppression du compte
 

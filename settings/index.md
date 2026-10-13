@@ -6,7 +6,8 @@ Le menu **Paramètres** regroupe vos préférences personnelles, les référenti
 
 | Section | Contenu | Guide |
 |---------|---------|-------|
-| Profil | Prénom, nom, mot de passe | [Profil utilisateur](/settings/profile) |
+| Profil *(menu du profil → Mon profil)* | Prénom, nom, mot de passe | [Profil utilisateur](/settings/profile) |
+| Thème *(menu du profil)* | Clair, sombre ou comme le système | [Profil utilisateur](/settings/profile#theme) |
 | Sécurité | Authentification à deux facteurs (application, clés d'accès, code par email), appareils de confiance, politique d'entreprise | [Sécurité](/settings/security) |
 | Sessions actives | Appareils connectés, révocation | [Sessions actives](/settings/sessions) |
 | Paramètres généraux | Tailles de page, colonnes visibles, mémorisation des filtres, détection des fichiers déjà importés | [Paramètres généraux](/settings/general) |

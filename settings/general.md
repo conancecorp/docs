@@ -2,6 +2,8 @@
 
 *Paramètres → Paramètres généraux* rassemble vos préférences d'affichage. Elles sont propres à votre compte.
 
+Le thème clair ou sombre se choisit ailleurs, dans le menu du profil → [Thème](/settings/profile#theme).
+
 ## Pagination
 
 Chaque tableau mémorise la **taille de page** que vous choisissez (10, 25, 50, 100). La section liste les tailles en vigueur par vue ; **Réinitialiser les tailles de page** revient à 10 partout.

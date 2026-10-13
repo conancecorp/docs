@@ -2,11 +2,16 @@
 
 La page **Pilotage** répond aux questions que le tableau de bord ne pose pas : quel est l'encours réellement retenu par vos partenaires, combien allez-vous encaisser cette année, et quelles commissions auraient dû arriver et n'arrivent pas.
 
-Elle est accessible depuis le menu **Pilotage** (permission `commissions:view`).
+Elle est accessible depuis le menu **Pilotage** (permission `commissions:view`) et compte deux onglets :
+
+| Onglet | Contenu |
+|--------|---------|
+| **Vue d'ensemble** | Les blocs décrits ci-dessous |
+| **Réglementaire** | La préparation de la FRA CIF → [Réglementaire](/features/reglementaire) |
 
 ## Filtres de la page
 
-Deux filtres s'appliquent à **tous** les blocs de la page, pour que les chiffres se comparent entre eux :
+Deux filtres, à droite du titre, s'appliquent à **tous** les blocs de la vue d'ensemble, pour que les chiffres se comparent entre eux :
 
 | Filtre | Effet |
 |--------|-------|

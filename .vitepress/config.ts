@@ -90,7 +90,7 @@ export default defineConfig({
           items: [
             { text: 'Actions en masse', link: '/features/bulk-actions' },
             { text: 'Export de données', link: '/features/export' },
-            { text: 'Stockage', link: '/features/storage' }
+            { text: 'Fichiers', link: '/features/storage' }
           ]
         }
       ],

@@ -1,6 +1,6 @@
 # Tableaux, filtres et colonnes
 
-Toutes les pages de liste (Commissions, Contrats, Clients, Conseillers, Partenaires, Produits, Stockage, historiques…) partagent le même tableau et les mêmes outils.
+Toutes les pages de liste (Commissions, Contrats, Clients, Conseillers, Partenaires, Produits, Fichiers, historiques…) partagent le même tableau et les mêmes outils.
 
 ## Recherche
 

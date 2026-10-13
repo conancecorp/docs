@@ -120,7 +120,7 @@ Non. Conance prépare les chiffres à recopier sur le portail de votre associati
 
 ### Les rubriques ne correspondent pas à celles de mon association
 
-Renommez, ajoutez, supprimez : bouton **Rubriques** de la page Réglementaire.
+Renommez, ajoutez, supprimez : bouton **Rubriques** de l'onglet [Réglementaire](/features/reglementaire) (menu **Pilotage**).
 
 ## Entreprise et équipe
 

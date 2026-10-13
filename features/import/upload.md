@@ -10,7 +10,7 @@ Première étape de l'assistant : charger le fichier et vérifier que Conance le
 
 Formats acceptés : `.csv`, `.xlsx`, `.xlsm`, `.xls`, `.xlsb`, `.ods`, `.pdf` — 100 Mo maximum.
 
-Vous pouvez aussi lancer un import depuis un fichier déjà présent dans le [Stockage](/features/storage) (action **Importer** sur le fichier) — par exemple le CSV produit par une [extraction PDF](/features/import/pdf).
+Vous pouvez aussi lancer un import depuis un fichier déjà présent dans [Fichiers](/features/storage) (action **Importer** sur le fichier) — par exemple le CSV produit par une [extraction PDF](/features/import/pdf).
 
 ## Options selon le format
 

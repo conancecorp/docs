@@ -16,7 +16,7 @@ Nom, code, type, activité, partenaire, statut.
 Dans le formulaire produit, type et activité se **sélectionnent ou se saisissent** : une valeur nouvelle est créée à la volée.
 
 ::: info Pourquoi l'activité compte
-La FRA CIF ventile le chiffre d'affaires entre conseil (CIF) et courtage. Un produit mal qualifié fausse la déclaration ; l'alerte *non rattaché* de la page Réglementaire le signale.
+La FRA CIF ventile le chiffre d'affaires entre conseil (CIF) et courtage. Un produit mal qualifié fausse la déclaration ; l'alerte *non rattaché* de l'onglet [Réglementaire](/features/reglementaire) le signale.
 :::
 
 ## Créer un produit

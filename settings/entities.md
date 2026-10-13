@@ -23,7 +23,7 @@ Une **entité** est une subdivision interne de votre entreprise : agence, bureau
 
 - **Sur les contrats** : champ *Entité* du formulaire, ou modification en masse
 - **À l'import** : champ *Entité / Cabinet* du [mapping](/features/import/mapping), en valeur fixe pour tout le fichier ou lu dans une colonne. Une entité inconnue peut être créée à la volée
-- **Dans les analyses** : filtre *Entité* sur Commissions et Contrats ; graphique *Commissions par entité* du tableau de bord (affiché dès qu'il existe plusieurs entités) ; filtre *Entité* de la page [Réglementaire](/features/reglementaire) pour préparer une FRA par entité
+- **Dans les analyses** : filtre *Entité* sur Commissions et Contrats ; graphique *Commissions par entité* du tableau de bord (affiché dès qu'il existe plusieurs entités) ; filtre *Entité* de l'onglet [Réglementaire](/features/reglementaire) du Pilotage pour préparer une FRA par entité
 
 ## Modifier, supprimer
 

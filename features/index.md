@@ -42,7 +42,7 @@ Conance couvre toute la chaîne des commissions d'un cabinet : les faire entrer,
 | Fonctionnalité | Guide |
 |----------------|-------|
 | Tableaux : recherche, filtres, colonnes, sélection | [Tableaux, filtres et colonnes](/features/tables) |
-| Stockage des fichiers | [Stockage](/features/storage) |
+| Fichiers du cabinet (imports, exports, extractions) | [Fichiers](/features/storage) |
 | Équipe, rôles, abonnement, multi-cabinets | [Gestion d'entreprise](/company/) |
 | Sécurité du compte (2FA, sessions) | [Paramètres](/settings/security) |
 | Fonctionnalités IA et crédits | [Fonctionnalités IA](/settings/ai-features) · [Crédits IA](/company/ai-credits) |

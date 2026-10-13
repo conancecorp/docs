@@ -18,4 +18,4 @@ Une session que vous ne reconnaissez pas ? Déconnectez-la, changez votre [mot d
 
 ## Durée des sessions
 
-Une session expire d'elle-même après une période d'inactivité. Se déconnecter (menu utilisateur → **Déconnexion**) la ferme tout de suite.
+Une session expire d'elle-même après une période d'inactivité. Se déconnecter (menu du profil → **Déconnexion**) la ferme tout de suite.

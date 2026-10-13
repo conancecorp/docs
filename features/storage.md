@@ -1,6 +1,6 @@
-# Stockage
+# Fichiers
 
-La page **Stockage** regroupe tous les fichiers du cabinet : ceux que vous avez importés, ceux que Conance a produits (exports, extractions PDF, fichiers d'erreurs).
+La page **Fichiers** (menu *Données*) regroupe tous les fichiers du cabinet : ceux que vous avez importés, ceux que Conance a produits (exports, extractions PDF, fichiers d'erreurs).
 
 ## En-tête
 
@@ -10,7 +10,9 @@ Trois indicateurs : nombre de fichiers, espace **utilisé** sur le quota du plan
 
 | Catégorie | Contenu |
 |-----------|---------|
-| **Imports** | Les fichiers sources des imports (CSV, Excel, PDF) et les fichiers d'erreurs |
+| **Imports** | Les fichiers sources des imports (CSV, Excel, PDF) |
+| **Erreurs** | Les lignes refusées par un import, avec leur motif |
+| **En attente** | Les lignes d'un import en attente de [résolution des correspondances](/features/import/smart-matching) |
 | **Exports** | Les CSV produits par la page [Export](/features/export) |
 | **Extractions** | Les PDF et les CSV produits par l'[extraction PDF](/features/import/pdf) |
 

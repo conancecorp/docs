@@ -28,7 +28,7 @@ Limite : 50 pages par PDF.
 2. **Extraire les données** : la progression s'affiche, page par page
 3. **Vérifiez et corrigez le tableau** dans l'éditeur : cellules modifiables, ajout / suppression de lignes et de colonnes, renommage des colonnes. Les modifications sont enregistrées automatiquement
 4. Choisissez la sortie :
-   - **Enregistrer le CSV** : le fichier est déposé dans le [Stockage](/features/storage), catégorie *Extractions*
+   - **Enregistrer le CSV** : le fichier est déposé dans [Fichiers](/features/storage), catégorie *Extractions*
    - **Utiliser pour un import** : le CSV est envoyé à l'assistant d'import, étape Mapping
 
 **Visualiser le PDF** affiche le document source à côté du tableau pour comparer.
@@ -76,6 +76,6 @@ L'extraction décrite ici rend des **tableaux**. Pour lire un **bulletin de sous
 
 ## Conservation
 
-- Le **PDF** et le **CSV** produits restent dans le Stockage tant que vous ne les supprimez pas.
+- Le **PDF** et le **CSV** produits restent dans [Fichiers](/features/storage) tant que vous ne les supprimez pas.
 - Les données intermédiaires de l'extraction (tableau éditable, versions) sont purgées 30 jours après import du CSV, ou 90 jours si le CSV n'a jamais été importé.
 - L'historique de facturation est conservé dans l'onglet [Intelligence Artificielle](/company/ai-credits#suivre-la-consommation) de la gestion d'entreprise.

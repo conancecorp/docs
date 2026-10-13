@@ -45,7 +45,7 @@ Lignes = *Facture / Partenaire*, colonnes = *Nature*, valeur = *Montant cumulé*
 
 ## Historique des exports
 
-L'onglet **Historique** liste les exports réalisés : date, utilisateur, nombre d'enregistrements, filtres appliqués. Chaque export se **re-télécharge** ; le fichier est aussi visible dans le [Stockage](/features/storage), catégorie *Exports*.
+L'onglet **Historique** liste les exports réalisés : date, utilisateur, nombre d'enregistrements, filtres appliqués. Chaque export se **re-télécharge** ; le fichier est aussi visible dans [Fichiers](/features/storage), catégorie *Exports*.
 
 **Gérer l'historique** nettoie les exports antérieurs à une période choisie.
 

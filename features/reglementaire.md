@@ -1,19 +1,21 @@
 # Réglementaire — FRA CIF
 
-La page **Réglementaire** prépare les chiffres de la **Fiche de Renseignements Annuels (FRA)** que tout CIF remet à son association professionnelle, à partir des commissions importées dans Conance.
+L'onglet **Réglementaire** du [Pilotage](/features/pilotage/) prépare les chiffres de la **Fiche de Renseignements Annuels (FRA)** que tout CIF remet à son association professionnelle, à partir des commissions importées dans Conance.
 
 ::: info Conance prépare, vous déclarez
-Cette page n'est pas la déclaration. Elle prépare les chiffres à recopier sur le portail de votre association, et vous dit ce qu'ils ne contiennent pas. C'est le cabinet qui signe.
+Cet onglet n'est pas la déclaration. Il prépare les chiffres à recopier sur le portail de votre association, et vous dit ce qu'ils ne contiennent pas. C'est le cabinet qui signe.
 :::
 
-Accès : menu **Réglementaire** (permission `commissions:view`).
+Accès : menu **Pilotage**, onglet **Réglementaire** (permission `commissions:view`). L'ancienne adresse `/reglementaire` y redirige.
 
 ## Filtres
+
+Les filtres et les boutons **Rubriques** et **Exporter** se placent à droite du titre *Pilotage*.
 
 | Filtre | Défaut |
 |--------|--------|
 | Exercice | L'année précédente — c'est en général celle que l'on déclare |
-| Entité | Tout le cabinet. Utile si vous avez déclaré plusieurs [entités](/settings/entities) et déclarez séparément |
+| Entité | Tout le cabinet. Affiché seulement si vous avez déclaré des [entités](/settings/entities) : utile pour déclarer séparément |
 
 ## L'état
 
@@ -34,7 +36,7 @@ Les rubriques **manuelles** se saisissent directement dans l'état, dans la colo
 
 ## Les alertes
 
-Avant les chiffres, la page affiche ce que l'état **ne contient pas**. Un chiffre partiel pris pour complet est un risque pour le cabinet ; le module refuse de le laisser passer.
+Avant les chiffres, l'onglet affiche ce que l'état **ne contient pas**. Un chiffre partiel pris pour complet est un risque pour le cabinet ; le module refuse de le laisser passer.
 
 | Alerte | Sens | Que faire |
 |--------|------|-----------|
@@ -68,7 +70,7 @@ Une rubrique **Calcul** ne se saisit pas : écraser un chiffre calculé ferait d
 
 Le bouton **Exporter** télécharge un classeur Excel (`fra-cif-AAAA.xlsx`) contenant l'état, section par section, et les alertes.
 
-## Ce que la page ne fait pas (volontairement)
+## Ce que l'onglet ne fait pas (volontairement)
 
 - Pas de document opposable, pas de PDF horodaté ni d'archivage : la déclaration se fait sur le portail de l'association.
 - Pas d'exercice comptable décalé : l'exercice est l'année civile.

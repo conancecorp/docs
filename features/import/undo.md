@@ -41,7 +41,7 @@ Pour tout défaire, annulez les imports **du plus récent au plus ancien**. Pour
 
 ## Ce que l'annulation ne fait pas
 
-- Elle ne touche pas au **fichier source** dans le [Stockage](/features/storage).
+- Elle ne touche pas au **fichier source**, qui reste dans [Fichiers](/features/storage).
 - Elle ne recrée pas ce qu'un import annulé plus tôt avait supprimé.
 - Elle n'est pas une suppression utilisateur : les lignes retirées ne passent pas par la rétention de 30 jours des [quotas](/company/subscription#quotas-et-retention).
 

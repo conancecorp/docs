@@ -14,6 +14,8 @@ Créez l'entreprise si vous êtes le premier de votre cabinet — vous en devene
 
 → [Créer ou rejoindre une entreprise](/guide/create-company)
 
+Une fois dans l'application, le menu est présenté dans [Se repérer dans l'application](/guide/#se-reperer-dans-l-application).
+
 ## 3. Sécuriser
 
 Activez la [double authentification](/settings/security) ; en tant qu'administrateur, rendez-la obligatoire pour le cabinet. Cela prend deux minutes et vaut pour toute la vie du compte.
@@ -53,7 +55,7 @@ Une fois deux ou trois bordereaux importés par partenaire :
 
 - [Tableau de bord](/features/dashboard) — volumes et répartitions
 - [Pilotage](/features/pilotage/) — encours retenu, prévisionnel, commissions attendues
-- [Réglementaire](/features/reglementaire) — préparation de la FRA
+- [Réglementaire](/features/reglementaire), onglet du Pilotage — préparation de la FRA
 
 ## 8. Inviter l'équipe
 

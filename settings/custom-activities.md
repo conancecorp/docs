@@ -25,7 +25,7 @@ Une activité personnalisée se renomme. Elle se supprime si aucun produit ne l'
 
 ## Activités et FRA
 
-Les rubriques de la page Réglementaire agrègent les commissions par activité **et** par nature. Si vous créez une activité, vérifiez qu'une rubrique la prend en compte — sinon l'alerte *non rattaché* vous le signalera.
+Les rubriques de l'onglet Réglementaire (menu Pilotage) agrègent les commissions par activité **et** par nature. Si vous créez une activité, vérifiez qu'une rubrique la prend en compte — sinon l'alerte *non rattaché* vous le signalera.
 
 → [Configurer les rubriques](/features/reglementaire#configurer-les-rubriques)
 

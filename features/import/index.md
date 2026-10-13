@@ -67,7 +67,7 @@ Un fichier peut ne créer que des contrats (liste de portefeuille) ou que des co
 ## Après l'import
 
 - Les commissions gardent la référence de leur **fichier d'import** : filtrez-les par fichier depuis la page [Commissions](/features/commissions).
-- Le fichier source est conservé dans le [Stockage](/features/storage).
+- Le fichier source est conservé dans [Fichiers](/features/storage).
 - Les [commissions attendues](/features/pilotage/expected-commissions) sont rapprochées automatiquement.
 
 ## Bonnes pratiques
