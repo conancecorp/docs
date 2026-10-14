@@ -36,12 +36,12 @@ Pour tout défaire, annulez les imports **du plus récent au plus ancien**. Pour
 | Cas | Comportement |
 |-----|--------------|
 | Import antérieur au journal | Seules ses **commissions** peuvent être retirées. Contrats, clients, conseillers qu'il a créés ou modifiés ne sont pas touchés. Le dialogue vous en avertit |
-| Import archivé via *Gérer l'historique* | Plus annulable : le journal a été purgé |
-| Journal expiré | Le journal est conservé une durée limitée (un an par défaut). Au-delà, l'import redevient annulable en « commissions seules » |
+| Fichier d'origine retiré du stockage | Toujours annulable : l'annulation rejoue le journal gardé en base, elle n'a pas besoin du fichier |
+| Journal expiré | Le journal est gardé le temps choisi dans la [conservation des imports](/settings/import-retention) (un an par défaut). Au-delà, l'import reste annulable en « commissions seules » |
 
 ## Ce que l'annulation ne fait pas
 
-- Elle ne touche pas au **fichier source**, qui reste dans [Fichiers](/features/storage).
+- Elle ne touche pas au **fichier source**, qui reste dans [Fichiers](/features/storage) tant que la [conservation](/settings/import-retention) le garde.
 - Elle ne recrée pas ce qu'un import annulé plus tôt avait supprimé.
 - Elle n'est pas une suppression utilisateur : les lignes retirées ne passent pas par la rétention de 30 jours des [quotas](/company/subscription#quotas-et-retention).
 

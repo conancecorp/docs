@@ -34,6 +34,7 @@ Réservé aux administrateurs de l'entreprise.
 |---------|---------|-------|
 | Fonctionnalités IA | Consentement du cabinet au traitement par IA | [Fonctionnalités IA](/settings/ai-features) |
 | Gestion des données | Volumes par catégorie, suppression, remise à zéro | [Gestion des données](/settings/data-management) |
+| Conservation des imports | Durées des brouillons, des fichiers d'origine et de l'annulation complète (permission `import:retention`, que l'administrateur a d'office) | [Conservation des imports](/settings/import-retention) |
 
 ## Et l'entreprise ?
 

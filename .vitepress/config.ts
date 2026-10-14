@@ -122,7 +122,8 @@ export default defineConfig({
           text: 'Administration du cabinet',
           items: [
             { text: 'Fonctionnalités IA', link: '/settings/ai-features' },
-            { text: 'Gestion des données', link: '/settings/data-management' }
+            { text: 'Gestion des données', link: '/settings/data-management' },
+            { text: 'Conservation des imports', link: '/settings/import-retention' }
           ]
         }
       ],

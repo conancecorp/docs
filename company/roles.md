@@ -47,6 +47,7 @@ Un rôle se modifie à tout moment ; les changements s'appliquent immédiatement
 | Domaine | Permissions | Donne accès à |
 |---------|-------------|---------------|
 | Import | `import:data` | Import, Extraction PDF |
+| Conservation des imports | `import:retention` | [Conservation des imports](/settings/import-retention) : durées des brouillons, des fichiers d'origine et de l'annulation complète |
 | Fichiers | `storage:view`, `storage:download`, `storage:edit`, `storage:delete` | Fichiers |
 | Tableau de bord | `dashboard:view` | Tableau de bord |
 | Pilotage, Export | `commissions:view` (+ `commissions:export` pour télécharger) | Pilotage (onglets *Vue d'ensemble* et *Réglementaire*), Export |

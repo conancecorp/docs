@@ -40,7 +40,7 @@ La page **Import** comporte trois onglets :
 | 1 | Déposez le fichier, choisissez l'onglet Excel ou les options CSV si besoin | [Upload de fichier](/features/import/upload) |
 | 2 | Associez les colonnes du fichier aux champs Conance, ou chargez une configuration | [Mapping des données](/features/import/mapping) |
 | 3 | Qualifiez les produits (type, activité) et les types d'opération (nature) détectés dans le fichier | [Configuration produits et types](/features/import/pre-analysis) |
-| 4 | Suivez la progression ; résolvez les correspondances de contrats si nécessaire | [Correspondances de contrats](/features/import/smart-matching) |
+| 4 | Suivez la progression, ou **continuez en arrière-plan** : l'historique suit l'import ; résolvez les correspondances de contrats si nécessaire | [Historique](/features/import/history), [Correspondances de contrats](/features/import/smart-matching) |
 
 L'état de l'assistant est conservé : si vous quittez la page en cours de route, vous reprenez où vous en étiez.
 
