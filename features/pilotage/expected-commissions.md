@@ -95,6 +95,19 @@ Une commission ne solde qu'une attente. Si plusieurs commissions sont candidates
 Une attente enregistrée sur la mauvaise nature réclame dans le vide : le bordereau arrive, mais sous une autre nature. Corrigez la nature plutôt que d'annuler et recréer — le rapprochement est rejoué sur-le-champ.
 :::
 
+## Exporter
+
+Le bouton d'export, à côté de **Depuis un document**, propose :
+
+| Format | Contenu |
+|--------|---------|
+| CSV, Excel | La liste entière : origine (observé ou déclaré), contrat, client, partenaire, conseiller, quand, détail, montant, et si ce montant est estimé |
+| **PDF de relance par partenaire** | Une archive zip, un PDF par partenaire au nom du cabinet (« Commissions attendues Cardif.pdf ») : ce qu'on attend de lui, à vérifier puis à transmettre |
+
+::: warning Vérifiez avant d'envoyer
+Le montant d'un contrat observé est une **estimation** (le dernier versement × les versements manqués) : la colonne *Montant estimé* le signale. Une relance fondée sur une estimation fausse réclamerait au partenaire ce qu'il ne doit pas.
+:::
+
 ## Ce que l'état vide signifie
 
 « Rien ne manque : tous les contrats suivent leur rythme, et les attentes sont soldées » — c'est le résultat recherché.

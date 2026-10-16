@@ -90,6 +90,10 @@ Corriger le rythme ou masquer un contrat demande la permission de **modifier les
 Le rythme observé suit les bordereaux. Un contrat payé une fois par an mais qui apparaît dans chaque relevé trimestriel (avec des lignes à zéro, par exemple) serait vu comme trimestriel : passez-le en **Annuel**. Un contrat qui ne paiera plus (transfert, rachat total non encore saisi) : **Ne plus prévoir**.
 :::
 
+## Exporter l'échéancier
+
+Le bouton d'export, à droite des vues de la liste, télécharge l'**échéancier** : les contrats à venir, une colonne par mois jusqu'à décembre, avec le rythme, l'état et le total attendu par contrat, puis le récapitulatif mois par mois (encaissé, attendu au rythme observé, attendu déclaré). En CSV (l'échéancier seul), en Excel ou en PDF au nom du cabinet ; il suit l'année et le partenaire de la page, et rejoint l'[historique des exports](/features/export#historique-des-exports). Les montants restent des estimations, et le fichier le dit.
+
 ## Les réserves
 
 Sous le graphique, une ligne apparaît **seulement quand elle s'applique** :

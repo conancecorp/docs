@@ -53,7 +53,7 @@ Courbe mensuelle de l'encours retenu et de la production sur l'année sélection
 
 ### Répartition de l'encours
 
-Tableau de l'encours et de la production répartis par **client**, **partenaire** ou **conseiller** (sélecteur en tête de bloc), avec le nombre de contrats. Le bouton d'export télécharge la répartition complète en CSV.
+Tableau de l'encours et de la production répartis par **client**, **partenaire** ou **conseiller** (sélecteur en tête de bloc), avec le nombre de contrats. Le bouton d'export télécharge la répartition **complète** (l'écran n'en montre que le début) en CSV, Excel ou PDF, avec la part de chaque ligne dans l'encours ; le fichier rejoint l'[historique des exports](/features/export#historique-des-exports).
 
 ### Couverture
 

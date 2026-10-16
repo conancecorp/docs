@@ -51,4 +51,23 @@ Pour retirer un **import** précis, préférez l'[annulation d'import](/features
 
 ## Export et portabilité
 
-Pour un export complet de vos données (portabilité, fin de contrat), contactez [privacy@conance.io](mailto:privacy@conance.io).
+La carte **Exporter toutes les données** prépare une archive de toutes les données du cabinet : portabilité, fin de contrat, sauvegarde de votre côté. Réservée aux **administrateurs du cabinet**.
+
+1. **Préparer l'archive** : la préparation se fait en tâche de fond, vous pouvez quitter la page.
+2. Un **e-mail** et une notification vous préviennent quand elle est prête.
+3. **Télécharger** depuis la carte, ou depuis l'[historique des exports](/features/export#historique-des-exports) (type *Export complet*). Le lien de l'e-mail ramène dans Conance : aucune donnée n'est jointe au message.
+
+Une seule préparation à la fois par cabinet. Les **autres administrateurs** reçoivent une notification et un e-mail (« Camille Durand a exporté toutes les données du cabinet ») : un export complet ne passe jamais inaperçu.
+
+### Contenu de l'archive
+
+| Fichier | Contenu |
+|---------|---------|
+| `LISEZMOI.txt` | Ce que contient chaque fichier, et le nombre de lignes |
+| Un CSV par table | Clients, Conseillers, Partenaires, Détails partenaires, Produits, Entités, Contrats, Commissions (montants exacts), Commissions attendues, Types d'opération, Rubriques FRA |
+| `Fichiers.csv` | La **liste** des fichiers stockés (nom, catégorie, format, taille, date) : les fichiers eux-mêmes se téléchargent depuis [Fichiers](/features/storage) |
+| `Export complet.xlsx` | Les mêmes tables, une par onglet ; absent si une table dépasse la limite d'Excel (1 048 576 lignes), les CSV restant complets |
+
+Les CSV sont au format habituel de Conance : point-virgule, UTF-8, virgule décimale. Les colonnes **Identifiant** relient les tables entre elles (le contrat d'une commission, le client d'un contrat). Les éléments supprimés n'y figurent pas.
+
+Pour toute autre demande liée à vos données personnelles, écrivez à [privacy@conance.io](mailto:privacy@conance.io).

@@ -44,7 +44,7 @@ Avant les chiffres, l'onglet affiche ce que l'état **ne contient pas**. Un chif
 | **Double compte** | Des commissions tombent dans plusieurs rubriques : le total les compterait deux fois | Rendre les rubriques disjointes |
 | **Sans honoraires** | Aucun Honoraire saisi alors qu'il y a du chiffre d'affaires | Si vous facturez des honoraires à vos clients, enregistrez-les sous la nature « Honoraires » — sinon la FRA sera partielle |
 
-Les alertes figurent aussi dans l'export Excel.
+Les alertes figurent aussi dans l'export, en Excel comme en PDF.
 
 ::: warning Commissions sans nature
 Les commissions importées sans type d'opération (donc sans nature) **comptent** dans le total et finissent en « non rattaché ». Corrigez-les via les [types d'opération](/settings/operation-types) ou une [modification en masse](/features/bulk-actions).
@@ -68,9 +68,14 @@ Une rubrique **Calcul** ne se saisit pas : écraser un chiffre calculé ferait d
 
 ## Exporter
 
-Le bouton **Exporter** télécharge un classeur Excel (`fra-cif-AAAA.xlsx`) contenant l'état, section par section, et les alertes.
+Le bouton **Exporter** propose deux formats, avec l'état section par section et les alertes :
+
+| Format | Pour quoi faire |
+|--------|-----------------|
+| **Excel (à recopier)** | `fra-cif-AAAA.xlsx`, le classeur depuis lequel recopier les chiffres sur le portail de l'association |
+| **PDF (à archiver)** | `fra-cif-AAAA.pdf`, au nom et au logo du cabinet, à garder dans le dossier de conformité ; les alertes viennent en tête |
 
 ## Ce que l'onglet ne fait pas (volontairement)
 
-- Pas de document opposable, pas de PDF horodaté ni d'archivage : la déclaration se fait sur le portail de l'association.
+- Pas de document opposable : le PDF est une copie de travail au nom du cabinet, il le dit en tête ; la déclaration se fait sur le portail de l'association.
 - Pas d'exercice comptable décalé : l'exercice est l'année civile.

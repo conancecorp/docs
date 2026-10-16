@@ -29,7 +29,7 @@ Conance couvre toute la chaîne des commissions d'un cabinet : les faire entrer,
 | Pilotage | Encours retenu par les partenaires, production, couverture | [Pilotage](/features/pilotage/) |
 | Commissions attendues | Contrats dont la commission n'est pas venue, attentes déclarées, écarts | [Commissions attendues](/features/pilotage/expected-commissions) |
 | Prévisionnel | Combien cette année, et quand — total annuel et échéances par contrat | [Prévisionnel](/features/pilotage/forecast) |
-| Export et tableau croisé | CSV filtré, tableau croisé dynamique avec détail par cellule | [Export de données](/features/export) |
+| Export et tableau croisé | Commissions, tableau croisé, portefeuille de contrats, synthèse et relevés des conseillers, en CSV, Excel ou PDF au nom du cabinet | [Export de données](/features/export) |
 
 ## Déclarer
 
