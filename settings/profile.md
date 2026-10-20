@@ -1,6 +1,6 @@
 # Profil utilisateur
 
-**Mon profil** gère votre photo, vos informations personnelles et votre mot de passe. On l'ouvre depuis le **menu du profil** : cliquez sur votre nom, en bas de la barre latérale.
+**Mon profil** gère votre photo, vos informations personnelles et votre mot de passe. Votre carte (photo, nom, rôle, cabinet) est à gauche ; à droite, vos informations s'affichent comme du texte et se modifient sur place : cliquez une ligne, ou **Modifier**, puis **Entrée** ou **Enregistrer** ; **Échap** ou **Annuler** abandonne. Une ligne se modifie à la fois. On l'ouvre depuis le **menu du profil** : cliquez sur votre nom, en bas de la barre latérale.
 
 Sur téléphone et tablette, le profil, le thème et la déconnexion sont dans le panneau **Menu**, bloc *Compte* → [Sur téléphone et tablette](/guide/#sur-telephone-et-tablette).
 
@@ -15,14 +15,16 @@ Votre photo apparaît dans la barre latérale et dans la liste des membres. Seul
 
 ## Informations personnelles
 
-- **Prénom** et **nom** : modifiables, puis **Enregistrer**
-- **Adresse e-mail** : affichée, **non modifiable**. Elle est votre identifiant de connexion et a été vérifiée à l'inscription. Pour changer d'adresse, contactez le support
+- **Nom** : le prénom et le nom se modifient ensemble, sur la même ligne
+- **Adresse e-mail** : affichée avec un cadenas, **non modifiable**. Elle est votre identifiant de connexion et a été vérifiée à l'inscription. Pour changer d'adresse, contactez le support
 
 ## Changer le mot de passe
 
+Dans la carte *Connexion et sécurité*, ligne **Mot de passe** → **Changer** :
+
 1. Saisissez votre **mot de passe actuel**
 2. Saisissez le **nouveau mot de passe** (8 caractères minimum) et confirmez-le
-3. **Modifier le mot de passe** (le mot de passe s'enregistre à part du nom et du prénom)
+3. **Enregistrer** : « Mot de passe modifié » s'affiche sur la ligne
 
 ::: tip Renforcez votre compte
 Un mot de passe seul ne suffit plus : activez l'[authentification à deux facteurs](/settings/security). Votre cabinet peut la rendre obligatoire.
@@ -30,7 +32,7 @@ Un mot de passe seul ne suffit plus : activez l'[authentification à deux facteu
 
 ## Sessions et sécurité
 
-Une carte rappelle en bas de la page si la **double authentification** est activée ; **Gérer la sécurité** ouvre ses réglages. Les sessions ouvertes sur vos appareils et la double authentification ont leurs propres pages :
+La ligne **Double authentification** dit si elle est activée ; **Gérer** ouvre ses réglages. Les sessions ouvertes sur vos appareils et la double authentification ont leurs propres pages :
 
 - [Sessions actives](/settings/sessions)
 - [Sécurité](/settings/security)

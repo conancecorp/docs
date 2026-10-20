@@ -21,17 +21,19 @@ Un administrateur peut nommer d'autres administrateurs. Gardez-en au moins deux.
 
 ## Informations du cabinet
 
-L'onglet **Informations** (le premier, ouvert par défaut) modifie :
+L'onglet **Informations** (le premier, ouvert par défaut) montre le logo à gauche et, à droite, les informations du cabinet en deux cartes, *Identité* et *Coordonnées* :
 
-| Champ | |
+| Information | |
 |-------|--|
 | Nom du cabinet | Affiché dans l'interface et sur les factures |
-| Site web | |
+| Site web | Vous pouvez l'écrire sans « https:// », Conance l'ajoute |
 | E-mail | Contact principal |
 | Téléphone | |
-| Adresse, code postal, ville, pays | |
+| Adresse | Numéro et voie, code postal, ville et pays, modifiés ensemble |
 
-**Enregistrer** applique ; **Annuler les modifications** rétablit les valeurs en cours. Tant qu'une modification n'est pas enregistrée, l'onglet l'indique.
+Chaque information s'affiche comme du texte (« Non renseigné » si elle est vide) et se modifie sur place : cliquez sa ligne, ou **Modifier** (**Ajouter** si elle est vide). **Entrée** ou **Enregistrer** enregistre cette ligne seule ; **Échap** ou **Annuler** abandonne. « Enregistré » s'affiche un instant sur la ligne.
+
+Une ligne se modifie à la fois : tant qu'elle a des changements non enregistrés, les autres attendent, et fermer l'onglet du navigateur demande confirmation.
 
 ### Logo du cabinet
 
@@ -39,7 +41,7 @@ L'onglet **Informations** (le premier, ouvert par défaut) modifie :
 
 1. Choisissez une image **PNG, JPEG ou WebP** (un logo sur fond transparent garde sa transparence)
 2. Au départ, le logo entier tient dans le cadre carré ; zoomez et faites-le glisser pour ne garder, par exemple, que l'emblème d'un logo très large. L'aperçu montre le rendu aux tailles réelles
-3. **Enregistrer le logo** : il s'applique aussitôt, sans attendre le bouton Enregistrer du formulaire
+3. **Enregistrer le logo** : il s'applique aussitôt
 
 Le logo apparaît en tête de la gestion d'entreprise et sur la page Profil des membres. Il n'est visible que des membres du cabinet (et de son groupe), jamais par un lien public, et ne compte pas dans le stockage de l'abonnement. **Retirer** le supprime ; les initiales du cabinet le remplacent.
 
