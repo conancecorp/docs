@@ -46,7 +46,8 @@ export default defineConfig({
           text: 'Fonctionnalités',
           items: [
             { text: 'Vue d\'ensemble', link: '/features/' },
-            { text: 'Tableaux, filtres et colonnes', link: '/features/tables' }
+            { text: 'Tableaux, filtres et colonnes', link: '/features/tables' },
+            { text: 'Recherche globale', link: '/features/search' }
           ]
         },
         {

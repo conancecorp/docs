@@ -20,6 +20,8 @@ Deux filtres, à droite du titre, s'appliquent à **tous** les blocs de la vue d
 
 Le bouton **Actualiser** recharge l'ensemble de la page.
 
+Les filtres sont gardés dans l'adresse de la page : un rechargement les conserve, et un lien copié ouvre le Pilotage sur la même année et le même partenaire. La [recherche globale](/features/search) s'en sert : « encours Nortia de 2025 » ouvre le Pilotage filtré sur Nortia et 2025.
+
 ## Les blocs
 
 ### Encours retenu par les partenaires et production

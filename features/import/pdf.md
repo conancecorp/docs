@@ -17,7 +17,7 @@ L'extraction procède par étapes, de la moins coûteuse à la plus coûteuse, e
 Si l'extraction automatique n'a pas suffi, une carte **L'extraction automatique n'a pas suffi** affiche la raison et le **devis en crédits**. Rien n'est débité tant que vous n'avez pas cliqué sur **Extraire avec l'IA**. Le débit n'a lieu qu'en cas de succès.
 
 ::: info Fonctionnalités IA
-L'étape 3 nécessite que les [fonctionnalités IA](/settings/ai-features) soient activées pour le cabinet et qu'il dispose de [crédits](/company/ai-credits). Le bouton reste visible sinon : il explique comment activer, au lieu d'échouer.
+Les étapes 1 et 2 sont locales : elles ne demandent ni l'activation de l'IA, ni crédits, ni droit particulier au-delà de l'import. L'étape 3 nécessite que les [fonctionnalités IA](/settings/ai-features) soient activées pour le cabinet, qu'il dispose de [crédits](/company/ai-credits), et que votre rôle comprenne la permission **Utiliser l'IA payante** ([Rôles et permissions](/company/roles#fonctions)). Sans activation, le bouton explique comment activer ; sans la permission, la carte l'indique au lieu de proposer l'IA.
 :::
 
 Limite : 50 pages par PDF.

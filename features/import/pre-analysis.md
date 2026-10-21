@@ -11,7 +11,7 @@ Pour chaque produit lu dans la colonne Produit, indiquez :
 | Type | OPCVM, SCPI, Assurance-vie, FCPI, FIP, PER, FCPR, EMTN, Autres — ou un [type personnalisé](/settings/custom-products) |
 | Activité | CIF, Courtage — ou une [activité personnalisée](/settings/custom-activities) |
 
-Les produits déjà connus pour ce partenaire sont pré-remplis. Le compteur en tête (**total / configurés / à configurer**) suit votre avancement.
+Les produits déjà connus pour ce partenaire sont pré-remplis (et, avec l'IA, les nouveaux produits aussi : voir [Propositions de l'IA](#propositions-de-l-ia)). Le compteur en tête (**total / configurés / à configurer**) suit votre avancement.
 
 Outils :
 
@@ -37,6 +37,18 @@ Le bouton à côté du sélecteur crée une **nouvelle nature** directement (ex.
 Les correspondances libellé → nature sont mémorisées par partenaire : au prochain bordereau, elles seront déjà remplies.
 
 → [Types d'opération](/settings/operation-types)
+
+## Propositions de l'IA
+
+Si votre cabinet a activé les [fonctionnalités IA](/settings/ai-features), Conance propose ce que la base ne connaît pas encore :
+
+- la **nature** d'un libellé jamais rencontré ;
+- le **type** et l'**activité** d'un nouveau produit ;
+- le **partenaire** déjà enregistré qui correspond à un nom écrit autrement dans le fichier (« NORTIA VIE » pour Nortia).
+
+Une valeur proposée par l'IA est **encadrée du dégradé IA**, ce qui la distingue d'une valeur reprise de la base. Elle reste modifiable : dès que vous la changez, le cadre disparaît. Seules les propositions dont l'IA est sûre sont affichées ; les autres champs restent à remplir.
+
+Un partenaire proposé se refuse avec la **croix** : le nom du fichier devient alors un nouveau partenaire, comme avant. Gardé, ce nom est enregistré comme **alias** du partenaire, et les bordereaux suivants le reconnaîtront directement.
 
 ## Scinder les produits multi-activités
 

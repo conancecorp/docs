@@ -20,8 +20,8 @@ Une fenêtre de configuration s'ouvre après l'analyse :
 
 | Option | Usage |
 |--------|-------|
-| **Onglet** | Choisissez la feuille à importer, avec aperçu |
-| **Ligne de départ** | Première ligne utile — utile quand le relevé commence par un cartouche |
+| **Onglet** | Choisissez la feuille à importer, avec aperçu. Avec les [fonctionnalités IA](/settings/ai-features), dans un classeur de plusieurs onglets (un récapitulatif, le détail, des notes), l'onglet des commissions est repéré automatiquement : le champ est alors encadré du dégradé IA |
+| **Ligne de départ** | Première ligne utile — utile quand le relevé commence par un cartouche. Avec les [fonctionnalités IA](/settings/ai-features), la ligne des en-têtes est repérée automatiquement : le champ est alors encadré du dégradé IA, vérifiez-la dans l'aperçu |
 | **Colonne de départ** | Première colonne utile |
 | **En-têtes** | Indiquez si la première ligne retenue contient les noms de colonnes |
 

@@ -1,6 +1,6 @@
 # Gestion d'entreprise
 
-Le menu **Gestion entreprise** est réservé aux administrateurs de l'entreprise. En tête de page : le logo et le nom du cabinet, avec sa formule. La page regroupe cinq onglets.
+Le menu **Gestion entreprise** est ouvert aux administrateurs de l'entreprise, et aux membres dont le rôle donne l'un de ses onglets : chacun n'y voit que les onglets de ses permissions (→ [Rôles et permissions](/company/roles#entreprise)). En tête de page : le logo et le nom du cabinet, avec sa formule. La page regroupe cinq onglets.
 
 | Onglet | Contenu | Guide |
 |--------|---------|-------|
@@ -15,9 +15,9 @@ Les cabinets sous plan **Groupe** disposent en plus du menu **Cabinets** → [Mu
 ## Qui est administrateur ?
 
 - La personne qui **crée** l'entreprise
-- Tout membre invité avec la case **Administrateur** cochée, ou dont le rôle porte la permission `company:admin`
+- Tout membre invité avec la case **Administrateur** cochée
 
-Un administrateur peut nommer d'autres administrateurs. Gardez-en au moins deux.
+Un administrateur peut nommer d'autres administrateurs. Gardez-en au moins deux. Un rôle portant *Administration de l'entreprise* donne les réglages de l'administrateur, mais pas celui de nommer ou de retirer des administrateurs.
 
 ## Informations du cabinet
 

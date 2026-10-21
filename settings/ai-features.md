@@ -9,10 +9,12 @@ Certaines fonctionnalités de Conance reposent sur de l'intelligence artificiell
 | Fonctionnalité | Données transmises | Coût |
 |----------------|--------------------|------|
 | [Complétion IA du mapping d'import](/features/import/mapping#commencer-vite) | Les en-têtes de colonnes et au plus trois lignes d'exemple (valeurs tronquées) | Gratuit |
+| [Propositions de l'IA à l'import](/features/import/pre-analysis#propositions-de-l-ia), automatiques | Les libellés d'opérations et les noms de partenaires et de produits du fichier, avec les noms et natures déjà enregistrés par le cabinet ; pour un fichier Excel, les huit premières lignes remplies de chaque onglet pour repérer l'onglet des commissions, puis les quinze premières de cet onglet pour repérer la ligne d'en-tête (valeurs tronquées) | Gratuit |
+| [Recherche en langage naturel](/features/search#ecrire-une-phrase) | La phrase tapée, une fois remplacés par des marqueurs les noms de clients, partenaires, produits, conseillers et les numéros de contrat enregistrés dans Conance ; la liste des pages de l'application | Gratuit |
 | [Extraction PDF avec IA](/features/import/pdf) | Le contenu du document — texte ou pages en image — **uniquement après confirmation explicite** de l'utilisateur, quand l'extraction locale gratuite a échoué ou pour une relance avec précisions | Crédits IA |
 | [Lecture d'un bulletin de souscription](/features/pilotage/expected-commissions#declarer-depuis-un-bulletin-de-souscription) | Le contenu du document | Crédits IA |
 
-Ces données servent uniquement au traitement : elles sont supprimées de la plateforme du prestataire au bout d'une heure et ne sont pas utilisées pour entraîner des modèles. Le détail figure dans la [politique de confidentialité](https://conance.io/politique-confidentialite).
+Ces données sont transmises à deux prestataires situés aux États-Unis : Anthropic (modèles Claude) pour les documents, et TypeSafe (modèle Jev) pour le mapping, les propositions à l'import et la recherche en langage naturel (Anthropic reprend les colonnes que Jev ne reconnaît pas avec assez de certitude). Elles servent uniquement au traitement et ne sont pas utilisées pour entraîner des modèles. Anthropic les conserve au plus 30 jours, puis les supprime ; TypeSafe les conserve le temps nécessaire au traitement, sans durée maximale fixée. Le détail figure dans la [politique de confidentialité](https://conance.io/politique-confidentialite).
 
 ## Activer
 

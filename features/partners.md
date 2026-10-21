@@ -23,7 +23,7 @@ Un partenaire se crée aussi depuis l'assistant d'import, au moment du mapping.
 
 ## Noms alternatifs
 
-À l'import en mode *Partenaire = colonne*, Conance reconnaît un partenaire par son nom **ou par l'un de ses noms alternatifs**. Renseignez-y les variantes rencontrées dans vos fichiers (« GENERALI VIE », « Generali Patrimoine », « GNL »…) pour éviter la création de doublons.
+À l'import en mode *Partenaire = colonne*, Conance reconnaît un partenaire par son nom **ou par l'un de ses noms alternatifs**, sans tenir compte des majuscules, des accents, des espaces ni de la ponctuation : « AXA_VIE », « Axa Vie » et « AXA-VIE » désignent le même partenaire, tant qu'un seul de vos partenaires s'écrit ainsi. Renseignez dans les noms alternatifs les variantes qui diffèrent par les lettres (« Generali Patrimoine », « GNL »…) pour éviter la création de doublons.
 
 ## Détails partenaire
 

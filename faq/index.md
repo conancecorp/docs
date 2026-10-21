@@ -28,6 +28,10 @@ Une invitation est valable une heure. Demandez à un administrateur de la **renv
 
 Utilisez une autre méthode configurée (clé d'accès, code par email). Sinon, contactez le support. Gardez toujours deux méthodes → [Sécurité](/settings/security).
 
+### « Trop de tentatives : réessayez dans quelques minutes »
+
+Après plusieurs mots de passe ou codes erronés d'affilée, le compte refuse la connexion pendant 15 minutes, d'où que viennent les essais. Patientez, puis réessayez ; si vous avez oublié votre mot de passe, utilisez **Mot de passe oublié**.
+
 ### Puis-je changer mon adresse email ?
 
 Pas depuis l'interface : l'email est l'identifiant du compte. Contactez le support.
@@ -140,7 +144,7 @@ Les plans **Groupe** créent un espace parent et des cabinets isolés, avec un s
 
 ### Que fait exactement l'IA dans Conance ?
 
-Trois choses, toutes optionnelles : proposer un mapping d'import (gratuit), lire un PDF quand l'extraction locale échoue (crédits), lire un bulletin de souscription pour déclarer une commission attendue (crédits). Rien n'est envoyé au prestataire IA sans le consentement d'un administrateur et, pour les documents, sans confirmation explicite → [Fonctionnalités IA](/settings/ai-features).
+Cinq choses, toutes optionnelles : proposer un mapping d'import (gratuit), pré-remplir la configuration d'un import (natures, partenaires, produits, ligne d'en-tête ; gratuit), comprendre une recherche écrite comme une phrase (gratuit), lire un PDF quand l'extraction locale échoue (crédits), lire un bulletin de souscription pour déclarer une commission attendue (crédits). Rien n'est envoyé aux prestataires IA (Anthropic et TypeSafe) sans le consentement d'un administrateur et, pour les documents, sans confirmation explicite → [Fonctionnalités IA](/settings/ai-features).
 
 ### Combien coûte un crédit ?
 

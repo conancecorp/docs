@@ -21,7 +21,7 @@ Quand le **quota d'utilisateurs** du plan est atteint (invitations en attente co
    - **Rôle personnalisé** (optionnel) — un des rôles définis dans l'onglet [Rôles](/company/roles). Sans rôle ni case Administrateur, l'invité est *Utilisateur* avec les permissions de base
 4. **Inviter**
 
-L'invité reçoit un email avec un lien. S'il n'a pas de compte, il en crée un ; il rejoint ensuite l'entreprise avec le rôle prévu.
+L'invité reçoit un email avec un lien. S'il n'a pas de compte, il en crée un ; il rejoint ensuite l'entreprise avec le rôle prévu. Une invitation annulée ou renvoyée ne fonctionne plus : seul le lien du dernier envoi est valable.
 
 ::: warning Validité d'une invitation : 1 heure
 Le lien d'invitation expire au bout d'une heure. Passé ce délai, utilisez **Renvoyer** sur l'invitation en attente : un nouveau lien est émis.
@@ -35,7 +35,9 @@ Les invitations en attente **comptent dans le quota d'utilisateurs** : annulez c
 
 ## Modifier un membre
 
-**Modifier** ouvre le choix du statut administrateur et du rôle personnalisé. Les changements s'appliquent à la prochaine action du membre.
+**Modifier** ouvre le choix du statut administrateur et du rôle personnalisé. Les changements s'appliquent aussitôt : les menus et les boutons du membre suivent, sans qu'il ait à se reconnecter.
+
+Un membre qui gère l'équipe grâce à un rôle (*Gérer les membres*), sans être administrateur, ne voit ni la case **Administrateur** ni les actions sur les administrateurs et sur lui-même, et ne peut attribuer qu'un rôle dont il a toutes les permissions.
 
 ## Retirer un membre
 

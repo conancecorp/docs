@@ -22,8 +22,10 @@ Pour désactiver : **Désactiver**, puis confirmez avec votre mot de passe.
 Une clé d'accès s'appuie sur l'authentification de votre appareil : Touch ID, Face ID, Windows Hello, clé physique (YubiKey…). Elle remplace le code à saisir.
 
 1. **Ajouter une clé d'accès**
-2. Donnez un **nom** à l'appareil (« PC bureau », « iPhone »…)
+2. Donnez un **nom** à l'appareil (« PC bureau », « iPhone »…) et confirmez avec votre **mot de passe**
 3. **Continuer**, puis validez avec votre appareil
+
+Un email vous prévient à chaque clé ajoutée : si ce n'est pas vous, supprimez-la et changez votre mot de passe.
 
 La liste indique la dernière utilisation de chaque clé. Une clé se supprime individuellement (irréversible — recréez-en une si besoin).
 

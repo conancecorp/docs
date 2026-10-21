@@ -23,7 +23,7 @@ Votre photo apparaît dans la barre latérale et dans la liste des membres. Seul
 Dans la carte *Connexion et sécurité*, ligne **Mot de passe** → **Changer** :
 
 1. Saisissez votre **mot de passe actuel**
-2. Saisissez le **nouveau mot de passe** (8 caractères minimum) et confirmez-le
+2. Saisissez le **nouveau mot de passe** (10 caractères minimum, pas un mot de passe courant) et confirmez-le
 3. **Enregistrer** : « Mot de passe modifié » s'affiche sur la ligne
 
 ::: tip Renforcez votre compte

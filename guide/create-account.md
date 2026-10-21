@@ -3,7 +3,7 @@
 ## Inscription
 
 1. Rendez-vous sur [app.conance.io](https://app.conance.io) et cliquez sur **Créer un compte**
-2. Renseignez votre **email professionnel**, **prénom**, **nom**, un **mot de passe** (8 caractères minimum) et sa confirmation
+2. Renseignez votre **email professionnel**, **prénom**, **nom**, un **mot de passe** (10 caractères minimum, pas un mot de passe courant) et sa confirmation
 3. Acceptez les conditions d'utilisation et la politique de confidentialité
 4. **S'inscrire**
 

@@ -53,7 +53,7 @@ Le montant, qui diffère par contrat, est ce qui rend la détection d'écart pos
 
 ### Déclarer depuis un bulletin de souscription
 
-Le bouton **Depuis un document** (en tête du bloc) lit un bulletin de souscription PDF et propose une attente pré-remplie.
+Le bouton **Depuis un document** (en tête du bloc) lit un bulletin de souscription PDF et propose une attente pré-remplie. La lecture est payante en crédits IA : le bouton n'apparaît qu'avec la permission **Utiliser l'IA payante** ([Rôles et permissions](/company/roles#fonctions)).
 
 1. Déposez le PDF
 2. Conance lit le document (quelques secondes) et propose : contrat, nature, montant, mois approximatif

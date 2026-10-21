@@ -34,6 +34,8 @@ Chaque quota se mesure sur les éléments **existants et récemment supprimés**
 
 Quand un import ferait dépasser une limite, il est refusé **avant** d'écrire quoi que ce soit, avec un lien vers les abonnements.
 
+Pour le stockage, le contrôle a lieu dès l'envoi : un bordereau ou un PDF à extraire qui ferait dépasser l'espace du plan est refusé avant d'être enregistré. La photo de profil et le logo du cabinet n'y comptent pas.
+
 ## Changer de plan
 
 1. **Changer de formule**
