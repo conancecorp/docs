@@ -94,7 +94,7 @@ Mappez ensuite le **Type d'opération** sur cette colonne calculée. Autres exem
 
 ### Condition (si… alors… sinon)
 
-**Si** une colonne *contient*, *ne contient pas*, *est égal à*, *est différent de*, *commence par* ou *ne commence pas par* une valeur, **alors** la colonne prend la valeur d'une autre colonne ou une valeur fixe, **sinon** celle d'une autre colonne ou une valeur fixe (vide par défaut). La comparaison ne tient pas compte des majuscules.
+**Si** une colonne *contient*, *ne contient pas*, *est égal à*, *est différent de*, *commence par* ou *ne commence pas par* une valeur, ou bien *est vide* ou *n'est pas vide* (sans valeur à saisir), **alors** la colonne prend la valeur d'une autre colonne ou une valeur fixe, **sinon** celle d'une autre colonne ou une valeur fixe (vide par défaut). La comparaison ne tient pas compte des majuscules.
 
 **Exemple : une date seulement pour certaines lignes.** Si *Type* contient « chiffre d'affaires », alors la colonne *Date effet*, sinon rien :
 
@@ -104,6 +104,8 @@ Mappez ensuite le **Type d'opération** sur cette colonne calculée. Autres exem
 | Commission sur chiffre d'affaires | 20/01/2026 | 20/01/2026 |
 
 **Exemple : déduire une valeur fixe.** Si *Type* contient « encours », alors « Gestion », sinon « Acquisition ».
+
+**Exemple : une colonne parfois vide.** Si *Prénom* est vide, alors la colonne *Nom*, sinon la colonne *Nom complet*.
 
 ### Valeur de section
 
@@ -117,7 +119,7 @@ Pour les bordereaux présentés par blocs, où une ligne d'en-tête (« PRODUIT 
 | PRODUIT : ODYSSEE | ODYSSEE |
 | C 2001 LEROY Anne | ODYSSEE |
 
-Les lignes situées avant la première ligne d'en-tête restent vides.
+Les lignes situées avant la première ligne d'en-tête restent vides. Quand seules les lignes d'en-tête ont quelque chose dans la colonne, la condition *n'est pas vide* suffit.
 
 ## Partir d'une colonne calculée
 
@@ -144,8 +146,8 @@ Une colonne calculée peut aussi servir de colonne à un **filtre de lignes** (v
 Cliquez sur **Ajouter un filtre**, puis choisissez :
 
 - la **colonne** (du fichier ou calculée) ;
-- la **condition** : *contient*, *ne contient pas*, *est égal à*, *est différent de*, *commence par*, *ne commence pas par* (sans tenir compte des majuscules) ;
-- la **valeur** ;
+- la **condition** : *contient*, *ne contient pas*, *est égal à*, *est différent de*, *commence par*, *ne commence pas par* (sans tenir compte des majuscules), *est vide*, *n'est pas vide* ;
+- la **valeur**, sauf pour *est vide* et *n'est pas vide* ;
 - l'**action** : **Exclure la ligne**, ou **Arrêter la lecture à cette ligne** (cette ligne et toutes les suivantes sont ignorées).
 
 | Besoin | Filtre |
@@ -153,8 +155,13 @@ Cliquez sur **Ajouter un filtre**, puis choisissez :
 | Des lignes de sous-total au milieu du relevé | *Libellé* contient « Total » → Exclure la ligne |
 | Un bloc récapitulatif en fin de relevé | *Libellé* est égal à « TOTAL » → Arrêter la lecture à cette ligne |
 | Ne garder que les lignes de détail | *Désignation* ne commence pas par « C␣ » → Exclure la ligne |
+| Écarter les lignes sans numéro de contrat | *N° contrat* est vide → Exclure la ligne |
 
-Les lignes entièrement vides sont retirées d'office : pas besoin de filtre pour elles.
+Les lignes entièrement vides sont retirées d'office : pas besoin de filtre pour elles. Une cellule qui ne contient que des espaces compte comme vide.
+
+::: warning Un texte qui ne « marche » pas : vérifiez sa colonne
+Dans certains relevés, les lignes de regroupement (souvent en couleur) ne sont pas dans la même colonne que les lignes de détail : la ligne « PRODUIT : … » est par exemple dans la deuxième colonne, sans titre, alors qu'elle semble alignée sous *Désignation* parce que les cellules voisines sont fusionnées. Un filtre ou une condition sur *Désignation* ne la voit pas : sa *Désignation* est vide. La couleur du texte, elle, ne change rien. Cliquez sur **Prévisualiser le résultat** pour voir dans quelle colonne se trouve chaque texte, et visez cette colonne (ici « Colonne 2 »).
+:::
 
 ## Dans quel ordre tout s'applique
 
