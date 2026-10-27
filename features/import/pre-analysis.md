@@ -52,13 +52,23 @@ Un partenaire proposé se refuse avec la **croix** : le nom du fichier devient a
 
 ## Scinder les produits multi-activités
 
-Certains partenaires regroupent sous un même nom de produit des lignes CIF et des lignes Courtage. Si vous avez renseigné une **colonne discriminante d'activité** au [mapping](/features/import/mapping#contrats), l'étape **3b** apparaît pour ces produits :
+Certains partenaires regroupent sous un même nom de produit des lignes CIF et des lignes Courtage. Si vous avez renseigné une **colonne discriminante d'activité** au [mapping](/features/import/mapping#contrats), Conance compte, pour chaque produit, les valeurs différentes de cette colonne **dans le fichier importé** :
+
+- **une seule valeur** : le produit se configure comme les autres, dans le tableau (type et activité) ;
+- **deux valeurs ou plus** : il est marqué **À scinder**, et l'étape **3b** apparaît après le tableau.
+
+Ce compte est refait à chaque import. Un produit configuré normalement, parce que le fichier ne contenait qu'une valeur, sera proposé à la scission le jour où un fichier en contiendra plusieurs.
+
+À l'étape 3b :
 
 1. Le produit est présenté avec les **valeurs distinctes** trouvées dans la colonne discriminante
 2. Créez des **buckets** : chacun reçoit une activité, un type, et les valeurs qu'il regroupe
 3. **Valider et lancer l'import**
 
-Chaque bucket devient un produit distinct. Une scission déjà enregistrée pour ce produit est reprise (**Déjà en base**) et reste modifiable.
+Chaque bucket devient un produit distinct, et Conance retient les valeurs qui lui reviennent pour les imports suivants. Les buckets marqués **Déjà en base** reprennent un produit existant :
+
+- **une scission déjà enregistrée** : elle reste modifiable. Si toutes les valeurs du fichier y sont déjà rangées, le produit est marqué **Déjà scindé** dans le tableau et il suffit de valider ;
+- **le produit tel qu'il existe, pas encore scindé** (importé jusque-là avec une seule valeur) : il arrive avec son activité et son type. Cochez les valeurs qui lui reviennent : il garde son historique, et seuls les autres buckets créent de nouveaux produits. Laissé sans valeur, il reste à part et un nouveau produit est créé à côté.
 
 ## Ignorer l'étape
 
