@@ -7,7 +7,7 @@ Une configuration mémorise tout le [mapping](/features/import/mapping) d'un for
 - Les associations colonnes → champs, pour les quatre sections
 - Les modes **Manuel / Colonne** et les valeurs fixes (partenaire, produit, entité, détail partenaire, type d'opération) — sauf le contrat choisi pour un bordereau sans numéro, propre à chaque fichier : seul le mode est gardé
 - Le format de date, l'option *commissions sans numéro de contrat*, la période
-- Les **colonnes calculées** et **filtres de lignes**
+- Les [colonnes calculées et filtres de lignes](/features/import/computed-columns)
 - Les réglages Excel (onglet, ligne et colonne de départ, en-têtes) ou CSV
 - Le lien vers un [profil d'extraction PDF](/features/import/pdf#profils-d-extraction), si l'import venait d'un PDF
 

@@ -58,7 +58,7 @@ Ce contrôle se désactive dans les [paramètres généraux](/settings/general) 
 | Les données semblent décalées | Ajustez ligne et colonne de départ dans la configuration Excel |
 | Les en-têtes sont « Colonne 1, Colonne 2… » | La ligne d'en-tête n'a pas été détectée : indiquez-la, ou utilisez une configuration sauvegardée |
 | Caractères accentués illisibles (CSV) | Réenregistrez le fichier en UTF-8 depuis votre tableur |
-| Cellules fusionnées, sous-totaux | Préférez les [colonnes calculées et filtres de lignes](/features/import/mapping#options-avancees) du mapping à une retouche manuelle |
+| Cellules fusionnées, sous-totaux | Préférez les [colonnes calculées et filtres de lignes](/features/import/computed-columns) du mapping à une retouche manuelle |
 | Le fichier est refusé | Vérifiez l'extension et la taille (100 Mo) ; un fichier protégé par mot de passe n'est pas lisible |
 
 ## Prochaine étape

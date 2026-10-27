@@ -56,7 +56,7 @@ Choisissez explicitement le **format de date** dans la section Commissions du ma
 
 ### Le relevé a des sous-totaux, des lignes de section…
 
-Utilisez les **filtres de lignes** (exclure les lignes contenant « Total ») et les **colonnes calculées** (valeur de section propagée) du [mapping](/features/import/mapping#options-avancees), et sauvegardez la configuration.
+Utilisez les **filtres de lignes** (exclure les lignes contenant « Total ») et les **colonnes calculées** (valeur de section propagée) du mapping (voir [Colonnes calculées et filtres de lignes](/features/import/computed-columns)), et sauvegardez la configuration.
 
 ### L'encours de Pilotage est « Non disponible » ou la couverture est basse
 

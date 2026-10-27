@@ -95,26 +95,13 @@ Repliées par défaut, elles évitent de retoucher le fichier avant l'import. Le
 
 ### Colonnes calculées
 
-Créez une colonne virtuelle à partir des colonnes du fichier (et des colonnes calculées définies avant elle — elles s'enchaînent) :
-
-| Opération | Exemple |
-|-----------|---------|
-| Somme, moyenne, produit de colonnes | Montant = HT + TVA |
-| Concaténation (avec séparateur) | Nom complet = Prénom + Nom |
-| Texte avant / après un séparateur | Numéro = texte avant « - » dans « 12345 - DUPONT » |
-| Premier mot | Code = premier mot du libellé |
-| Retirer un texte (`#` = n'importe quel chiffre) | Type d'opération = « Frais de gestion T1 2026 » sans « T# #### » : « Frais de gestion », le même à chaque trimestre |
-| Condition (si… alors… sinon) | Activité = si Colonne contient « ASSURANCE » alors Courtage sinon CIF |
-| Valeur de section (propagée jusqu'à la section suivante) | Le nom du produit figure sur une ligne d'en-tête au-dessus de ses lignes : propagez-le sur chacune d'elles |
-
-La colonne calculée s'utilise ensuite comme n'importe quelle colonne dans le mapping.
+Créez une colonne à partir de celles du fichier : somme, concaténation, texte avant ou après un séparateur, texte retiré (« T1 2026 »), condition, valeur de section… Une colonne calculée peut partir d'une autre colonne calculée, et s'utilise ensuite dans le mapping comme une colonne du fichier.
 
 ### Filtres de lignes
 
-Excluez des lignes ou arrêtez la lecture à une ligne donnée, d'après le contenu d'une colonne :
+Excluez des lignes (sous-totaux, lignes de regroupement) ou arrêtez la lecture à une ligne donnée (bloc « Total » en fin de relevé), d'après le contenu d'une colonne du fichier ou calculée.
 
-- Opérateurs : *contient*, *ne contient pas*, *est égal à*, *est différent de*, *commence par*, *ne commence pas par*
-- Actions : **Exclure la ligne** (sous-totaux, lignes de commentaire) ou **Arrêter la lecture à cette ligne** (bloc « Total » en fin de relevé)
+→ [Colonnes calculées et filtres de lignes](/features/import/computed-columns) : chaque calcul avec ses exemples, l'enchaînement des colonnes calculées et un exemple complet.
 
 ## Valider
 

@@ -81,5 +81,5 @@ Créez le partenaire, et si possible ses produits et ses types d'opération. Vou
 :::
 
 ::: warning Lignes parasites
-Totaux, sous-totaux, lignes vides ou d'en-tête intermédiaires faussent l'import. Utilisez les [filtres de lignes](/features/import/mapping#filtres-de-lignes) du mapping plutôt que de retoucher le fichier à la main.
+Totaux, sous-totaux, lignes vides ou d'en-tête intermédiaires faussent l'import. Utilisez les [filtres de lignes](/features/import/computed-columns#filtres-de-lignes) du mapping plutôt que de retoucher le fichier à la main.
 :::

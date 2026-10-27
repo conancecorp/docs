@@ -67,6 +67,7 @@ export default defineConfig({
             { text: 'Vue d\'ensemble', link: '/features/import/' },
             { text: 'Upload de fichier', link: '/features/import/upload' },
             { text: 'Mapping des données', link: '/features/import/mapping' },
+            { text: 'Colonnes calculées et filtres', link: '/features/import/computed-columns' },
             { text: 'Configuration produits et types', link: '/features/import/pre-analysis' },
             { text: 'Correspondances de contrats', link: '/features/import/smart-matching' },
             { text: 'Import depuis un PDF', link: '/features/import/pdf' },
