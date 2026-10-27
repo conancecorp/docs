@@ -103,6 +103,7 @@ Créez une colonne virtuelle à partir des colonnes du fichier (et des colonnes 
 | Concaténation (avec séparateur) | Nom complet = Prénom + Nom |
 | Texte avant / après un séparateur | Numéro = texte avant « - » dans « 12345 - DUPONT » |
 | Premier mot | Code = premier mot du libellé |
+| Retirer un texte (`#` = n'importe quel chiffre) | Type d'opération = « Frais de gestion T1 2026 » sans « T# #### » : « Frais de gestion », le même à chaque trimestre |
 | Condition (si… alors… sinon) | Activité = si Colonne contient « ASSURANCE » alors Courtage sinon CIF |
 | Valeur de section (propagée jusqu'à la section suivante) | Le nom du produit figure sur une ligne d'en-tête au-dessus de ses lignes : propagez-le sur chacune d'elles |
 
