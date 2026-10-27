@@ -75,7 +75,12 @@ Le premier mot de la **colonne source**.
 
 ### Retirer un texte
 
-Choisissez la **colonne source** et le **texte à retirer**. Dans ce texte, **`#` remplace n'importe quel chiffre**. Le texte est retiré partout où il apparaît, sans tenir compte des majuscules, et les espaces laissés autour sont fusionnés.
+Choisissez la **colonne source** et le **texte à retirer**. Dans ce texte, deux jokers remplacent chacun **un seul** caractère :
+
+- **`#`** : n'importe quel chiffre (`T# ####` retire « T1 2026 », mais pas « TA 2026 ») ;
+- **`?`** : n'importe quel caractère, lettre, chiffre ou espace (`Lot ?` retire « Lot A » et « Lot 7 »). Un `?` vaut un seul caractère : sur « Lot AB », `Lot ?` retire « Lot A » et laisse « B » ; écrivez `Lot ??` pour deux caractères.
+
+Tous les autres caractères sont cherchés tels quels. Le texte est retiré partout où il apparaît, sans tenir compte des majuscules, et les espaces laissés autour sont fusionnés.
 
 **Exemple : garder le même type d'opération d'un trimestre à l'autre.** Le libellé d'opération contient la période : à chaque bordereau, un nouveau type d'opération apparaîtrait à l'étape [Configuration produits et types](/features/import/pre-analysis). En retirant `T# ####` de la colonne *Opération* :
 
@@ -85,7 +90,7 @@ Choisissez la **colonne source** et le **texte à retirer**. Dans ce texte, **`#
 | Frais de gestion conseillé T2 2026 - Blocage KYC KO | Frais de gestion conseillé - Blocage KYC KO |
 | Frais de tenue de compte T4 2025 | Frais de tenue de compte |
 
-Mappez ensuite le **Type d'opération** sur cette colonne calculée. Autre exemple : `##/####` retire un mois comme « 03/2026 ».
+Mappez ensuite le **Type d'opération** sur cette colonne calculée. Autres exemples : `##/####` retire un mois comme « 03/2026 » ; `T? ####` retire aussi bien « T1 2026 » que « TA 2026 ».
 
 ### Condition (si… alors… sinon)
 
