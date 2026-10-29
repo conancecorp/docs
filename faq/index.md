@@ -144,7 +144,7 @@ Les plans **Groupe** créent un espace parent et des cabinets isolés, avec un s
 
 ### Que fait exactement l'IA dans Conance ?
 
-Cinq choses, toutes optionnelles : proposer un mapping d'import (gratuit), pré-remplir la configuration d'un import (natures, partenaires, produits, ligne d'en-tête ; gratuit), comprendre une recherche écrite comme une phrase (gratuit), lire un PDF quand l'extraction locale échoue (crédits), lire un bulletin de souscription pour déclarer une commission attendue (crédits). Rien n'est envoyé aux prestataires IA (Anthropic et TypeSafe) sans le consentement d'un administrateur et, pour les documents, sans confirmation explicite → [Fonctionnalités IA](/settings/ai-features).
+Six choses, toutes optionnelles : proposer un mapping d'import (gratuit), pré-remplir la configuration d'un import (natures, partenaires, produits, ligne d'en-tête ; gratuit), comprendre une recherche écrite comme une phrase (gratuit), aider l'extraction PDF gratuite à garder le bon tableau, sans qu'aucune donnée du document ne parte (gratuit), lire un PDF quand l'extraction locale échoue (crédits), lire un bulletin de souscription pour déclarer une commission attendue (crédits). Rien n'est envoyé aux prestataires IA (Anthropic et TypeSafe) sans le consentement d'un administrateur et, pour les documents, sans confirmation explicite → [Fonctionnalités IA](/settings/ai-features).
 
 ### Combien coûte un crédit ?
 

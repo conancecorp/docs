@@ -20,6 +20,8 @@ Si l'extraction automatique n'a pas suffi, une carte **L'extraction automatique 
 Les étapes 1 et 2 sont locales : elles ne demandent ni l'activation de l'IA, ni crédits, ni droit particulier au-delà de l'import. L'étape 3 nécessite que les [fonctionnalités IA](/settings/ai-features) soient activées pour le cabinet, qu'il dispose de [crédits](/company/ai-credits), et que votre rôle comprenne la permission **Utiliser l'IA payante** ([Rôles et permissions](/company/roles#fonctions)). Sans activation, le bouton explique comment activer ; sans la permission, la carte l'indique au lieu de proposer l'IA.
 :::
 
+Quand les fonctionnalités IA sont activées, les étapes 1 et 2 demandent l'avis de Jev (TypeSafe) là où elles hésitent : quel tableau garder quand le PDF en contient plusieurs (un bloc d'adresse, un récapitulatif et le détail), quelle ligne porte les titres des colonnes, et si un titre est collé devant chaque nom de colonne (« Détails des souscriptions.Client » devient « Client »). C'est gratuit, et **aucune donnée du document n'est envoyée** : chaque valeur est remplacée par son type (`[AMOUNT]`, `[DATE]`, `[CODE]`, `[TEXT]`…), et seuls des mots d'en-têtes génériques choisis par Conance (« Client », « Montant », « Date »…) restent lisibles.
+
 Limite : 50 pages par PDF.
 
 ## Déroulement
