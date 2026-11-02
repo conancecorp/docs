@@ -85,6 +85,7 @@ export default defineConfig({
             { text: 'Commissions', link: '/features/commissions' },
             { text: 'Contrats', link: '/features/contracts/' },
             { text: 'Fusion de contrats', link: '/features/contracts/merge' },
+            { text: 'Historique du conseiller', link: '/features/contracts/advisor-history' },
             { text: 'Clients', link: '/features/clients' },
             { text: 'Conseillers', link: '/features/advisors' },
             { text: 'Partenaires', link: '/features/partners' },

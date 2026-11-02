@@ -30,8 +30,8 @@ Colonnes : numéro, client, conseiller, partenaire, détail partenaire, produit,
 | Entité | Optionnel |
 | Numéros alternatifs (alias) | Tapez un numéro puis **Entrée** |
 
-::: info Un contrat = un conseiller
-Plusieurs lignes d'encours pour un même contrat dans un bordereau sont plusieurs **supports**, jamais une répartition entre conseillers.
+::: info Un contrat = un conseiller à la fois
+Plusieurs lignes d'encours pour un même contrat dans un bordereau sont plusieurs **supports**, jamais une répartition entre conseillers. Le conseiller peut changer dans le temps : chaque commission reste à celui qui suivait le contrat à sa période → [Historique du conseiller](/features/contracts/advisor-history).
 :::
 
 ## Numéros alternatifs (alias)
@@ -58,7 +58,7 @@ Le passage en *Résilié* se fait depuis la fiche du contrat, ou en un clic (**M
 
 ## Fiche du contrat
 
-Le bouton **Voir** ouvre la fiche : informations générales, alias, partenaire et produit (type, activité), client et conseiller. Depuis la fiche :
+Le bouton **Voir** ouvre la fiche : informations générales, alias, partenaire et produit (type, activité), client et conseiller, avec l'[historique du conseiller](/features/contracts/advisor-history) en frise ou en tableau. Depuis la fiche :
 
 - **Modifier** le contrat
 - **Attendre une commission** : déclarer une [commission attendue](/features/pilotage/expected-commissions#declarer-depuis-la-fiche-du-contrat) sur ce contrat
@@ -67,11 +67,11 @@ Le bouton **Voir** ouvre la fiche : informations générales, alias, partenaire 
 
 Sélectionnez des contrats, puis :
 
-- **Modifier** : conseiller, partenaire, produit, détail partenaire, client, entité — chaque champ laissé sur *Ne pas modifier* est conservé
+- **Modifier** : conseiller (*À partir du* une date, ou *Corriger tout l'historique*), partenaire, produit, détail partenaire, client, entité — chaque champ laissé sur *Ne pas modifier* est conservé
 - **Supprimer**
 - **Fusionner** (bouton dédié en tête de page)
 
-→ [Actions en masse](/features/bulk-actions) · [Fusion de contrats](/features/contracts/merge)
+→ [Actions en masse](/features/bulk-actions) · [Fusion de contrats](/features/contracts/merge) · [Historique du conseiller](/features/contracts/advisor-history)
 
 ## Supprimer un contrat
 

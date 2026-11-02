@@ -1,6 +1,6 @@
 # Annuler un import
 
-Un mauvais fichier, une mauvaise configuration, un bordereau importé deux fois : **Annuler l'import** retire — ou rétablit — **tout** ce que cet import a écrit. Pas seulement les commissions : les contrats, clients, conseillers, produits, natures et attentes qu'il a créés ou modifiés.
+Un mauvais fichier, une mauvaise configuration, un bordereau importé deux fois : **Annuler l'import** retire — ou rétablit — **tout** ce que cet import a écrit. Pas seulement les commissions : les contrats, clients, conseillers, produits, natures et attentes qu'il a créés ou modifiés, et les changements de conseiller des contrats (leurs commissions retrouvent le conseiller d'avant).
 
 Accès : **Import → Historique**, action **Annuler l'import** sur la ligne concernée. Elle demande la permission **Annuler un import**, en plus de *Importer des données* (les administrateurs l'ont d'office) → [Rôles et permissions](/company/roles#fonctions).
 

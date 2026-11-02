@@ -27,7 +27,7 @@ Préférez la désactivation à la suppression pour conserver l'historique.
 
 ## Supprimer
 
-Un conseiller ne peut être supprimé que si **aucune commission** n'est rattachée à ses contrats — sinon, désactivez-le. Confirmation requise ; la ligne compte encore dans le quota pendant 30 jours. Sélection multiple possible.
+Un conseiller ne peut être supprimé que s'il n'a touché **aucune commission**, y compris sur des contrats qu'il ne suit plus — sinon, désactivez-le. Confirmation requise ; la ligne compte encore dans le quota pendant 30 jours. Sélection multiple possible.
 
 ## Fiche du conseiller
 
@@ -37,8 +37,8 @@ Un conseiller ne peut être supprimé que si **aucune commission** n'est rattach
 
 La section **Conseillers** du [mapping](/features/import/mapping#conseillers) crée les conseillers à partir du code et du nom (une colonne « Prénom Nom » ou deux colonnes).
 
-::: tip Un contrat = un conseiller
-Dans Conance, un contrat est suivi par un seul conseiller. Pour réaffecter un portefeuille (départ, réorganisation), utilisez la [modification en masse](/features/bulk-actions) des contrats : filtrez par conseiller, sélectionnez tout, changez le conseiller.
+::: tip Un contrat = un conseiller à la fois
+Dans Conance, un contrat est suivi par un seul conseiller à la fois, et garde l'historique de ses conseillers : chaque commission reste à celui qui suivait le contrat à sa période. Pour réaffecter un portefeuille (départ, réorganisation), utilisez la [modification en masse](/features/bulk-actions) des contrats : filtrez par conseiller, sélectionnez tout, changez le conseiller *À partir du* la date voulue → [Historique du conseiller](/features/contracts/advisor-history).
 :::
 
 ## Analyse

@@ -10,7 +10,7 @@ La page **Commissions** liste toutes les lignes de commission du cabinet, import
 | Date modif. | Dernière modification |
 | N° Contrat | Numéro du contrat rattaché |
 | Client | Titulaire du contrat |
-| Conseiller | Conseiller du contrat |
+| Conseiller | Conseiller qui a touché la commission : celui qui suivait le contrat à sa période, ou celui à qui elle a été attribuée à la main (icône) → [Historique du conseiller](/features/contracts/advisor-history) |
 | Partenaire | Compagnie ou société de gestion |
 | Détail part. | [Détail partenaire](/settings/partner-details) |
 | Entité | [Entité](/settings/entities) du contrat |
@@ -58,7 +58,7 @@ Les listes de valeurs s'ajustent aux autres filtres actifs. Les filtres sont mé
 | Action | Détail |
 |--------|--------|
 | **Voir** | Toutes les informations : contrat, client, conseiller, source d'import, dates |
-| **Modifier** | Montant, date, contrat, type d'opération (qui détermine la nature), taux, base de calcul, ISIN, code apporteur, n° de facture, période |
+| **Modifier** | Montant, date, contrat, conseiller (vide = celui du contrat, voir [Historique du conseiller](/features/contracts/advisor-history#attribuer-des-commissions-a-un-autre-conseiller)), type d'opération (qui détermine la nature), taux, base de calcul, ISIN, code apporteur, n° de facture, période |
 | **Supprimer** | Confirmation requise. La ligne compte encore dans le quota pendant 30 jours ([rétention](/company/subscription#quotas-et-retention)) |
 
 ## Créer une commission manuellement
@@ -69,7 +69,7 @@ Les listes de valeurs s'ajustent aux autres filtres actifs. Les filtres sont mé
 
 Sélectionnez des lignes (ou tout ce qui correspond au filtre) puis :
 
-- **Modifier** : type d'opération, code ISIN, n° de facture, code apporteur, période — un champ laissé sur *Ne pas modifier* est conservé. Si la sélection couvre plusieurs partenaires, le dialogue l'indique et présente la répartition
+- **Modifier** : type d'opération, code ISIN, n° de facture, code apporteur, période, conseiller (*Attribuer à un conseiller* ou *Revenir au conseiller du contrat*) — un champ laissé sur *Ne pas modifier* est conservé. Si la sélection couvre plusieurs partenaires, le dialogue l'indique et présente la répartition
 - **Supprimer**
 
 → [Actions en masse](/features/bulk-actions)

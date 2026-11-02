@@ -6,7 +6,7 @@ Les actions en masse s'appliquent à une sélection de lignes — ou à **tout c
 
 | Page | Modifier en masse | Supprimer en masse | Autre |
 |------|-------------------|--------------------|-------|
-| Commissions | Type d'opération, code ISIN, n° facture, code apporteur, période | Oui | — |
+| Commissions | Type d'opération, code ISIN, n° facture, code apporteur, période, conseiller | Oui | — |
 | Contrats | Conseiller, partenaire, produit, détail partenaire, client, entité | Oui | Fusionner |
 | Produits | Type, activité, partenaire | Oui | — |
 | Clients | — | Oui | — |
@@ -48,7 +48,7 @@ Le type d'opération a été mal choisi : filtrez par *Fichier d'import* et par 
 
 ### Réaffecter un portefeuille
 
-Un conseiller quitte le cabinet : sur **Contrats**, filtrez par ce conseiller, sélectionnez tout, **Modifier** → nouveau conseiller. Les commissions futures suivront le contrat. Passez ensuite l'ancien conseiller en inactif.
+Un conseiller quitte le cabinet : sur **Contrats**, filtrez par ce conseiller, sélectionnez tout, **Modifier** → nouveau conseiller, *À partir du* la date de son départ. Ses commissions passées lui restent, les suivantes vont au nouveau → [Historique du conseiller](/features/contracts/advisor-history). Passez ensuite l'ancien conseiller en inactif.
 
 ### Qualifier les produits d'un partenaire
 
