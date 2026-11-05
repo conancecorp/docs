@@ -52,7 +52,7 @@ Actions groupées :
 
 ## Reprendre plus tard
 
-Vous pouvez fermer la fenêtre : l'import reste au statut **En attente** dans l'[historique](/features/import/history). L'action **Reprendre l'import** rouvre la résolution. Depuis l'étape 4, **Résoudre les correspondances** et **Importer les commissions restantes** font la même chose.
+Vous pouvez fermer la fenêtre : l'import reste au statut **En attente** dans l'[historique](/features/import/history). L'action **Reprendre l'import** rouvre la résolution. Depuis l'étape 4, **Résoudre les correspondances** et **Importer les commissions restantes** font la même chose. La notification **Import à compléter** et, dans [Fichiers](/features/storage), l'action **Reprendre** sur les lignes en attente rouvrent aussi cette étape, depuis n'importe quel poste.
 
 ## Associations mémorisées
 

@@ -13,6 +13,8 @@ Chaque import tient un **journal** de ses écritures. L'annulation le rejoue à 
 | créé une ligne (contrat, client, commission…) | la supprime |
 | modifié une valeur (nom de client, produit d'un contrat…) | rétablit la valeur d'avant |
 | déclenché des imports « en attente » rejoués ensuite | les annule avec |
+| [scindé un produit](/features/import/pre-analysis#scinder-les-produits-multi-activites) déjà en base | lui retire les valeurs ajoutées : le produit et son historique restent, et il redevient à scinder au prochain import |
+| changé à l'[étape 3](/features/import/pre-analysis) le type ou l'activité d'un produit existant, ou la nature d'un libellé d'opération déjà connu | rétablit la valeur d'avant. Les répartitions du tableau de bord et la [FRA](/features/reglementaire) lisent ces valeurs en direct : elles reviennent aussi |
 
 Avant d'agir, le dialogue calcule et affiche **exactement** ce qui sera retiré ou rétabli, catégorie par catégorie. Vous confirmez ensuite. Si l'import n'a rien écrit, le dialogue le dit.
 

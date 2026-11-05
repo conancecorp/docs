@@ -44,6 +44,7 @@ Si votre cabinet a activé les [fonctionnalités IA](/settings/ai-features), Con
 
 - la **nature** d'un libellé jamais rencontré ;
 - le **type** et l'**activité** d'un nouveau produit ;
+- pour un produit à [scinder](#scinder-les-produits-multi-activites), l'**activité** de chaque valeur, et son **type** si la valeur en nomme un ;
 - le **partenaire** déjà enregistré qui correspond à un nom écrit autrement dans le fichier (« NORTIA VIE » pour Nortia).
 
 Une valeur proposée par l'IA est **encadrée du dégradé IA**, ce qui la distingue d'une valeur reprise de la base. Elle reste modifiable : dès que vous la changez, le cadre disparaît. Seules les propositions dont l'IA est sûre sont affichées ; les autres champs restent à remplir.
@@ -69,6 +70,8 @@ Chaque bucket devient un produit distinct, et Conance retient les valeurs qui lu
 
 - **une scission déjà enregistrée** : elle reste modifiable. Si toutes les valeurs du fichier y sont déjà rangées, le produit est marqué **Déjà scindé** dans le tableau et il suffit de valider ;
 - **le produit tel qu'il existe, pas encore scindé** (importé jusque-là avec une seule valeur) : il arrive avec son activité et son type. Cochez les valeurs qui lui reviennent : il garde son historique, et seuls les autres buckets créent de nouveaux produits. Laissé sans valeur, il reste à part et un nouveau produit est créé à côté.
+
+Si votre cabinet a activé les [fonctionnalités IA](/settings/ai-features), les valeurs dont le libellé parle de lui-même (« Courtage », « Assurance-vie », « SCPI Primovie ») arrivent déjà cochées dans le bucket de leur activité, **encadrées du dégradé IA**. Vérifiez-les : tout reste modifiable, et la marque disparaît dès que vous changez la valeur. L'IA ne lit que les mots du vocabulaire métier (CIF, assurance, SCPI…), jamais le reste : une valeur qui n'en contient aucun, comme un code ou un nom de support, reste à ranger vous-même.
 
 ## Ignorer l'étape
 

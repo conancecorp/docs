@@ -52,7 +52,7 @@ Le détail affiche l'utilisateur, la date de fin, le nombre de fichiers, puis le
 - Lignes en erreur, avec la raison pour chacune
 - La liste des **fichiers importés**, que vous retrouvez aussi dans [Fichiers](/features/storage). Un fichier d'origine retiré par la [conservation](/settings/import-retention) y apparaît comme *Retiré du stockage* : l'import, lui, reste dans l'historique
 
-Quand des erreurs ont été détectées, l'étape 4 de l'assistant propose **Voir les fichiers d'erreurs** : les lignes refusées, avec leur motif, sont déposées dans [Fichiers](/features/storage), catégorie *Erreurs*, pour que vous puissiez les corriger puis réimporter uniquement ces lignes.
+Quand des erreurs ont été détectées, l'étape 4 de l'assistant propose **Voir les fichiers d'erreurs** : les lignes refusées, avec leur motif, sont rangées dans [Fichiers](/features/storage) sous le fichier de l'import (le bouton les ouvre avec le filtre *Erreurs*), pour que vous puissiez les corriger puis réimporter uniquement ces lignes.
 
 ## Traçabilité des commissions
 

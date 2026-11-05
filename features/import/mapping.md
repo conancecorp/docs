@@ -43,7 +43,7 @@ Chaque section s'active par un interrupteur. Une section désactivée n'écrit r
 
 | Champ | Description |
 |-------|-------------|
-| Numéro de contrat | **Colonne** : l'identifiant du contrat chez le partenaire, lu ligne par ligne. **Manuel** : un seul contrat pour tout le fichier, pour un bordereau sans numéro de contrat (ex. relevé PDF d'un seul client) — voir ci-dessous |
+| Numéro de contrat | **Colonne** : l'identifiant du contrat chez le partenaire, lu ligne par ligne. **Par le client** : le bordereau n'a pas de numéro, le contrat est retrouvé à partir du nom du client. **Manuel** : un seul contrat pour tout le fichier (ex. relevé PDF d'un seul client) — voir ci-dessous |
 | Partenaire | Manuel ou colonne (voir en-tête) |
 | Produit | **Manuel** ou **Colonne**. En mode colonne, une **colonne discriminante d'activité** optionnelle permet de scinder un produit selon la valeur observée (cas des produits multi-activités CIF / Courtage) — voir [Configuration produits](/features/import/pre-analysis#scinder-les-produits-multi-activites) |
 | Détail partenaire | Manuel ou colonne |
@@ -51,7 +51,24 @@ Chaque section s'active par un interrupteur. Une section désactivée n'écrit r
 
 #### Bordereau sans numéro de contrat
 
-En mode **Manuel**, choisissez le contrat qui recevra toutes les lignes du fichier :
+Deux solutions, selon le bordereau.
+
+**Par le client**, quand le bordereau porte plusieurs clients et que leurs contrats sont déjà dans Conance : choisissez la colonne du nom du client, et celle du prénom s'il est à part. Le contrat est cherché ligne par ligne parmi les contrats de **ce partenaire**, quelle que soit la forme du nom (« BORDE Jean », « Jean BORDE », « SAS MAVERICK IMMO », nom de famille seul) :
+
+| Ce que Conance trouve | Ce qui se passe |
+|---|---|
+| Le même nom en au moins deux mots, et un seul contrat | La ligne va sur ce contrat, sans question |
+| Un seul mot (« BORDE », « 5B ») ou un nom incomplet (« M ou Mme BORDE », « BORDE J. », nom coupé) | Le contrat est proposé, à valider la première fois |
+| Un contrat, mais sur un autre produit que la ligne | Le contrat est proposé, marqué « Autre produit » |
+| Plusieurs contrats pour ce client | Vous choisissez. Si le bordereau a un produit, il écarte d'abord les autres contrats |
+| Plusieurs contrats et plusieurs lignes dans le fichier | Vous choisissez ligne par ligne, avec le contenu de la ligne sous les yeux |
+| Aucun contrat | Vous en cherchez un, ou vous laissez les lignes de côté : elles rejoignent le fichier des lignes en erreur |
+
+Un choix peut être **retenu** pour les prochains bordereaux, ou redemandé à chaque fois (case à cocher dans la fenêtre). Il vaut pour ce client chez ce partenaire et se retire dans les [associations mémorisées](/features/import/smart-matching#associations-memorisees). Un choix fait pour une seule ligne n'est jamais retenu : l'ordre des lignes change d'un bordereau à l'autre.
+
+Dans ce mode, les clients du fichier ne sont pas importés (c'est eux que l'on cherche) et aucun contrat n'est créé, faute de numéro. L'import complète un contrat retrouvé (produit, entité, détail partenaire vides) mais ne remplace jamais ce qu'il contient déjà. Un contrat sans client rattaché ne peut pas être retrouvé automatiquement.
+
+**Manuel**, quand tout le fichier concerne un seul contrat, choisissez le contrat qui recevra toutes les lignes :
 
 - **un contrat existant**, dans la liste avec recherche (numéro, client, conseiller…). Si le partenaire est en mode manuel, seuls ses contrats sont proposés ; sinon, le partenaire s'affiche sous chaque numéro ;
 - **un nouveau contrat** : bouton **+**, puis saisissez son numéro. Il est créé à l'import, chez le partenaire du fichier, sans passer par la résolution des numéros inconnus.
@@ -71,7 +88,7 @@ Le contrat choisi n'est jamais enregistré dans une [configuration](/features/im
 | Code ISIN | Colonne |
 | Code apporteur | Colonne |
 | Période | Colonne ou valeur unique (voir en-tête) |
-| **Commissions sans numéro de contrat** | **Créer un contrat générique** (`SANS_CONTRAT`) ou **Mettre ces commissions en erreur**. Sans objet quand le numéro de contrat est en mode manuel |
+| **Commissions sans numéro de contrat** | **Créer un contrat générique** (`SANS_CONTRAT`) ou **Mettre ces commissions en erreur**. Sans objet quand le numéro de contrat est en mode manuel ; en mode **Par le client**, vaut pour les lignes sans nom |
 
 ### Conseillers
 
