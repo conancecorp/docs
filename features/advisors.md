@@ -35,7 +35,7 @@ Un conseiller ne peut être supprimé que s'il n'a touché **aucune commission**
 
 ## Import
 
-La section **Conseillers** du [mapping](/features/import/mapping#conseillers) crée les conseillers à partir du code et du nom (une colonne « Prénom Nom » ou deux colonnes).
+La section **Conseillers** du [mapping](/features/import/mapping#conseillers) crée les conseillers à partir du code et du nom (une colonne « Prénom Nom » ou deux colonnes). Un conseiller qui a déjà sa fiche est reconnu sans tenir compte des majuscules, des accents, des tirets ni de l'ordre du prénom et du nom : l'import ne crée pas de seconde fiche et garde l'orthographe de la vôtre.
 
 ::: tip Un contrat = un conseiller à la fois
 Dans Conance, un contrat est suivi par un seul conseiller à la fois, et garde l'historique de ses conseillers : chaque commission reste à celui qui suivait le contrat à sa période. Pour réaffecter un portefeuille (départ, réorganisation), utilisez la [modification en masse](/features/bulk-actions) des contrats : filtrez par conseiller, sélectionnez tout, changez le conseiller *À partir du* la date voulue → [Historique du conseiller](/features/contracts/advisor-history).

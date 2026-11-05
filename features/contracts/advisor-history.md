@@ -40,7 +40,16 @@ Sur **Contrats**, filtrez par le conseiller qui part, sélectionnez tout, **Modi
 
 ## À l'import
 
-Quand une base contrats donne un autre conseiller pour un contrat existant, le nouveau conseiller le prend **à partir du jour de l'import**. Le contrôle de l'import, à l'étape de [pré-analyse](/features/import/pre-analysis), l'annonce avant de lancer (« 3 contrats changent de conseiller »), à titre d'information.
+Quand une base contrats donne un autre conseiller pour un contrat existant, le nouveau conseiller le prend **à partir du jour de l'import**, même si vous aviez choisi le conseiller précédent à la main. Les commissions dont la période a commencé avant l'import restent à l'ancien, et celles attribuées à la main ne bougent pas.
+
+Le contrôle de l'import, à l'étape de [pré-analyse](/features/import/pre-analysis), l'annonce avant de lancer :
+
+- **Contrat modifié à la main** : c'est un point à vérifier (« 1 contrat modifié à la main change de conseiller »), et l'assistant s'arrête sur cette étape.
+- **Autres contrats** : c'est une simple information (« 3 contrats changent de conseiller »), et l'étape peut être sautée si elle n'a rien d'autre à montrer.
+
+Un contrat qui n'avait aucun conseiller et en a reçu un à la main compte parmi les autres contrats.
+
+Pour garder votre choix, corrigez le fichier ou décochez *Activer l'import des conseillers* à l'étape des correspondances. Une cellule vide ou un contrat absent du fichier ne change rien.
 
 [Annuler l'import](/features/import/undo) remet le conseiller d'avant, l'historique et l'attribution des commissions comme avant l'import.
 
