@@ -10,12 +10,14 @@ export default defineConfig({
   // not a page of the site
   srcExclude: ['README.md'],
 
+  sitemap: { hostname: 'https://docs.conance.io' },
+
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['link', { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' }],
     ['meta', { name: 'theme-color', content: '#062924' }],
-    ['meta', { name: 'og:type', content: 'website' }],
-    ['meta', { name: 'og:site_name', content: 'Conance Documentation' }],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:site_name', content: 'Conance Documentation' }],
   ],
 
   themeConfig: {
