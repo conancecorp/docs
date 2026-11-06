@@ -18,7 +18,7 @@ Pour ventiler l'activité **d'un seul** cabinet entre agences, ce sont les [enti
 | Par cabinet | 3 utilisateurs · 500 000 commissions · 10 partenaires · 10 Go | idem | idem |
 | Fonctionnalités IA | ✓ | ✓ | ✓ |
 
-Tarifs sur [conance.io](https://conance.io/#tarifs) (onglet *Multi-Cabinets*). Au-delà des cabinets inclus, des cabinets supplémentaires peuvent être ajoutés ; contactez-nous.
+Tarifs sur [conance.io](https://conance.io/tarifs#multi-cabinets) (onglet *Multi-Cabinets*). Au-delà des cabinets inclus, des cabinets supplémentaires peuvent être ajoutés ; contactez-nous.
 
 ## Organisation
 

@@ -12,7 +12,7 @@ Hébergement en France (Scaleway et OVHcloud), échanges chiffrés en HTTPS, mot
 
 ### Où sont les tarifs ?
 
-Sur [conance.io](https://conance.io/#tarifs). Les limites de chaque plan sont détaillées dans [Abonnement](/company/subscription).
+Sur [conance.io](https://conance.io/tarifs). Les limites de chaque plan sont détaillées dans [Abonnement](/company/subscription).
 
 ## Compte et connexion
 

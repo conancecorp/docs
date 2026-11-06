@@ -13,7 +13,7 @@ L'onglet **Abonnement** de la gestion d'entreprise affiche votre formule, son ut
 | Fonctionnalités IA | — | ✓ | ✓ | ✓ | ✓ |
 | Support | Communautaire | Email | Email | Email | Dédié |
 
-Les tarifs (mensuel ou annuel, deux mois offerts à l'année) sont sur [conance.io](https://conance.io/#tarifs). Les plans **Groupe** (multi-cabinets) ont leur propre grille → [Multi-cabinets](/company/multi-cabinets).
+Les tarifs (mensuel ou annuel, deux mois offerts à l'année) sont sur [conance.io](https://conance.io/tarifs). Les plans **Groupe** (multi-cabinets) ont leur propre grille → [Multi-cabinets](/company/multi-cabinets).
 
 ## Votre abonnement
 
