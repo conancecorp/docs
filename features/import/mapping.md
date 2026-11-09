@@ -62,11 +62,19 @@ Deux solutions, selon le bordereau.
 | Un contrat, mais sur un autre produit que la ligne | Le contrat est proposé, marqué « Autre produit » |
 | Plusieurs contrats pour ce client | Vous choisissez. Si le bordereau a un produit, il écarte d'abord les autres contrats |
 | Plusieurs contrats et plusieurs lignes dans le fichier | Vous choisissez ligne par ligne, avec le contenu de la ligne sous les yeux |
-| Aucun contrat | Vous en cherchez un, ou vous laissez les lignes de côté : elles rejoignent le fichier des lignes en erreur |
+| Aucun contrat | Vous en cherchez un, vous créez un **contrat sans numéro** (voir ci-dessous), ou vous laissez les lignes de côté : elles rejoignent le fichier des lignes en erreur |
 
 Un choix peut être **retenu** pour les prochains bordereaux, ou redemandé à chaque fois (case à cocher dans la fenêtre). Il vaut pour ce client chez ce partenaire et se retire dans les [associations mémorisées](/features/import/smart-matching#associations-memorisees). Un choix fait pour une seule ligne n'est jamais retenu : l'ordre des lignes change d'un bordereau à l'autre.
 
-Dans ce mode, les clients du fichier ne sont pas importés (c'est eux que l'on cherche) et aucun contrat n'est créé, faute de numéro. L'import complète un contrat retrouvé (produit, entité, détail partenaire vides) mais ne remplace jamais ce qu'il contient déjà. Un contrat sans client rattaché ne peut pas être retrouvé automatiquement.
+Dans ce mode, les clients du fichier ne sont pas importés (c'est eux que l'on cherche). L'import complète un contrat retrouvé (produit, entité, détail partenaire vides) mais ne remplace jamais ce qu'il contient déjà. Un contrat sans client rattaché ne peut pas être retrouvé automatiquement.
+
+##### Contrat sans numéro
+
+Un placement que votre logiciel n'a jamais remonté n'a pas de contrat dans Conance. Plutôt que de laisser ses lignes de côté, choisissez **Créer un contrat sans numéro** dans la fenêtre : Conance le numérote lui-même d'après son client (`SANS-NUMERO-JEAN-BORDE-1`, puis `-2` pour un deuxième placement du même client chez ce partenaire).
+
+- Le client est obligatoire : c'est par lui que les bordereaux suivants retrouvent le contrat. La fenêtre propose le client de vos fiches qui porte le même nom, sinon un client à créer d'après le bordereau, à compléter si le nom est incomplet.
+- **Sans numéro pour les clients sans contrat** crée d'un coup ceux des clients pour lesquels Conance n'a trouvé aucun contrat chez ce partenaire. Les autres restent à choisir.
+- Le contrat peut rester sans numéro aussi longtemps que nécessaire. Le jour où une [base](/features/import/) apporte le vrai contrat, il prend son numéro et garde ses commissions, si la base apporte **un seul** nouveau contrat pour ce client chez ce partenaire. Sinon, le contrôle de l'import le signale (« 1 contrat sans numéro à rapprocher ») et vous le [fusionnez](/features/contracts/merge) avec le bon contrat après l'import.
 
 **Manuel**, quand tout le fichier concerne un seul contrat, choisissez le contrat qui recevra toutes les lignes :
 

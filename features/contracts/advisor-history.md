@@ -40,6 +40,8 @@ Sur **Contrats**, filtrez par le conseiller qui part, sélectionnez tout, **Modi
 
 ## À l'import
 
+Un bordereau de commissions ne change jamais le conseiller d'un contrat : si les conseillers sont reliés, il le renseigne seulement quand le contrat n'en a pas. C'est la base contrats qui dit qui suit un contrat.
+
 Quand une base contrats donne un autre conseiller pour un contrat existant, le nouveau conseiller le prend **à partir du jour de l'import**, même si vous aviez choisi le conseiller précédent à la main. Les commissions dont la période a commencé avant l'import restent à l'ancien, et celles attribuées à la main ne bougent pas.
 
 Le contrôle de l'import, à l'étape de [pré-analyse](/features/import/pre-analysis), l'annonce avant de lancer :
