@@ -4,11 +4,11 @@
 
 ### Qu'est-ce que Conance ?
 
-Une plateforme SaaS de pilotage des commissions pour les cabinets de gestion de patrimoine : import des bordereaux partenaires, fiabilisation, analyse (encours, prévisionnel, commissions attendues) et préparation de la FRA CIF.
+Une plateforme SaaS de pilotage des commissions pour les cabinets de conseil en gestion de patrimoine : import des bordereaux partenaires, fiabilisation, analyse (encours, prévisionnel, commissions attendues) et préparation de la FRA CIF.
 
 ### Mes données sont-elles sécurisées ?
 
-Hébergement en France (Scaleway et OVHcloud), échanges chiffrés en HTTPS, mots de passe hachés, secrets 2FA chiffrés, sauvegardes quotidiennes externalisées, limitation des tentatives de connexion, double authentification disponible et imposable au cabinet, sessions révocables. Les fonctionnalités IA sont désactivées par défaut et nécessitent le consentement explicite d'un administrateur. Contact sécurité : [security@conance.io](mailto:security@conance.io).
+Hébergement en France (Scaleway et OVHcloud), échanges chiffrés en HTTPS, mots de passe hachés, secrets 2FA chiffrés, sauvegardes quotidiennes externalisées, limitation des tentatives de connexion, double authentification disponible et pouvant être rendue obligatoire pour tout le cabinet, sessions révocables. Les fonctionnalités IA sont désactivées par défaut et nécessitent le consentement explicite d'un administrateur. Contact sécurité : [security@conance.io](mailto:security@conance.io).
 
 ### Où sont les tarifs ?
 

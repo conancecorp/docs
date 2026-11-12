@@ -1,6 +1,6 @@
 # Introduction
 
-Bienvenue dans la documentation de **Conance**, la plateforme de pilotage des commissions pour les cabinets de gestion de patrimoine.
+Bienvenue dans la documentation de **Conance**, la plateforme de pilotage des commissions pour les cabinets de conseil en gestion de patrimoine.
 
 ## Ce que fait Conance
 
@@ -17,7 +17,7 @@ Un cabinet reçoit chaque mois des dizaines de bordereaux, chacun dans le format
 
 ## À qui s'adresse Conance
 
-- Les **cabinets de gestion de patrimoine** (CGP) et **conseillers en investissements financiers** (CIF)
+- Les **cabinets de conseil en gestion de patrimoine** (CGP) et **conseillers en investissements financiers** (CIF)
 - Les **courtiers** en assurance et produits financiers
 - Les **groupements et prestataires** qui tiennent le back-office de plusieurs cabinets
 

@@ -4,7 +4,7 @@ const currentYear = new Date().getFullYear()
 
 export default defineConfig({
   title: 'Conance Documentation',
-  description: 'Documentation officielle de Conance - Pilotage des commissions pour cabinets de gestion de patrimoine',
+  description: 'Documentation officielle de Conance - Pilotage des commissions pour cabinets de conseil en gestion de patrimoine',
   lang: 'fr-FR',
   // The repository README (local setup, deployment) is for the people who maintain the docs,
   // not a page of the site

@@ -1,6 +1,6 @@
 # Conance Documentation
 
-Documentation officielle de Conance - Pilotage des commissions pour cabinets de gestion de patrimoine.
+Documentation officielle de Conance - Pilotage des commissions pour cabinets de conseil en gestion de patrimoine.
 
 ## Développement local
 
